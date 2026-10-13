@@ -5,7 +5,7 @@ import TopBar from '../components/TopBar';
 
 const ENGAGEMENT_STEPS = [
   {
-    step: '01',
+    phase: 'Stage 1',
     title: 'Audit',
     timing: 'Week 1',
     headline: 'Uncover lead leakage',
@@ -13,15 +13,15 @@ const ENGAGEMENT_STEPS = [
     deliverable: 'Funnel teardown & conversion report',
   },
   {
-    step: '02',
+    phase: 'Stage 2',
     title: 'Plan',
     timing: 'Week 1–2',
     headline: 'Approve clear priorities',
-    desc: 'A prioritized roadmap with expected revenue impact per item — you approve what we build and why before execution starts.',
+    desc: 'A prioritized roadmap with expected revenue impact per item. You approve what we build and why before execution starts.',
     deliverable: 'Approved scope & technical architecture',
   },
   {
-    step: '03',
+    phase: 'Stage 3',
     title: 'Build',
     timing: 'Weeks 2–4',
     headline: 'Ship in weeks, not quarters',
@@ -29,7 +29,7 @@ const ENGAGEMENT_STEPS = [
     deliverable: 'Headless build & live campaign launch',
   },
   {
-    step: '04',
+    phase: 'Stage 4',
     title: 'Optimize',
     timing: 'Continuous',
     headline: 'Measure real revenue',
@@ -45,6 +45,7 @@ const SERVICE_SECTORS = [
     summary: 'Custom headless platforms, rapid landing pages, and ongoing maintenance built around how your customers actually buy.',
     image: '/images/case-studies/all-phase-plumbing/after-screenshot-1024w.webp',
     clientProof: 'All Phase Plumbing · Headless React & Next.js platform',
+    reverse: false,
     services: [
       {
         title: 'Website Redesign',
@@ -70,6 +71,7 @@ const SERVICE_SECTORS = [
     summary: '24/7 AI CSRs and smart messaging workflows that qualify inquiries and book jobs while your crew is out in the field.',
     image: '/images/case-studies/preventive-home-solutions/after-screenshot-1024w.webp',
     clientProof: 'Preventive Home Solutions · 24/7 AI receptionist & dispatch sync',
+    reverse: true,
     services: [
       {
         title: 'Knowledge Chatbot',
@@ -85,7 +87,7 @@ const SERVICE_SECTORS = [
       },
       {
         title: 'Human Handoff',
-        desc: 'Seamless escalation to your on-call team when high-value jobs require it.',
+        desc: 'Direct escalation to your on-call team when high-value jobs require it.',
       },
     ],
   },
@@ -95,6 +97,7 @@ const SERVICE_SECTORS = [
     summary: 'Google Ads, Local Services Ads, and technical local SEO aligned as one compounding revenue engine.',
     image: '/images/case-studies/garys-pipeline/after-screenshot-1024w.webp',
     clientProof: 'Gary’s Pipelining · Local Map Pack SEO & high-intent search ads',
+    reverse: false,
     services: [
       {
         title: 'Search Engine Optimization',
@@ -128,6 +131,7 @@ const SERVICE_SECTORS = [
     summary: 'Unified attribution dashboards, WCAG compliance standards, and dedicated senior engineers reachable on direct Slack.',
     image: '/images/case-studies/catching-chrome/after-screenshot-1024w.webp',
     clientProof: 'Catching Chrome · Live booking analytics & continuous ops',
+    reverse: true,
     services: [
       {
         title: 'Performance Dashboard',
@@ -160,7 +164,7 @@ const SERVICE_SECTORS = [
 const FAQS = [
   {
     q: 'Do you only work with home service businesses?',
-    a: 'It is our specialty, not a limitation. Most of our playbooks were sharpened on plumbing, HVAC, and electrical contractors — but we also manage systems for fishing charters, healthcare clinics, and high-ticket service companies. If your business runs on booked appointments and inbound calls, our system fits.',
+    a: 'It is our specialty, not a limitation. Most of our playbooks were sharpened on plumbing, HVAC, and electrical contractors. We also manage systems for fishing charters, healthcare clinics, and high-ticket service companies. If your business runs on booked appointments and inbound calls, our system fits.',
   },
   {
     q: 'Can you work with my existing website?',
@@ -168,7 +172,7 @@ const FAQS = [
   },
   {
     q: 'How do you price projects?',
-    a: 'Fixed scope and fixed pricing for development projects; flat monthly fees for ongoing digital operations and growth management. We never charge a percentage of your ad spend or hit you with surprise invoices. Every engagement begins with an approved written agreement.',
+    a: 'Fixed scope and fixed pricing for development projects, plus flat monthly fees for ongoing digital operations and growth management. We never charge a percentage of your ad spend or hit you with surprise invoices. Every engagement begins with an approved written agreement.',
   },
   {
     q: 'How fast can we start?',
@@ -176,7 +180,7 @@ const FAQS = [
   },
   {
     q: 'Who actually does the work?',
-    a: 'The senior engineers and strategists you speak with on your kickoff call. We have no junior account managers relaying messages or outsourced overseas teams — the team who architects your system is the team building it.',
+    a: 'The senior engineers and strategists you speak with on your kickoff call. We have no junior account managers relaying messages or outsourced overseas teams. The team who architects your system is the team building it.',
   },
 ];
 
@@ -194,22 +198,22 @@ export default function ServicesPage() {
 
       <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
         {/* ── SECTION: HERO OVERVIEW ── */}
-        <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12">
+        <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           {/* Main Statement — strictly 2 lines across viewports */}
-          <div className="flex flex-col gap-5 max-w-4xl">
+          <div className="flex flex-col gap-5 max-w-5xl">
             <h1
-              className="font-display text-[32px] sm:text-[48px] md:text-[clamp(4.2rem,5.6vw,5.5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
+              className="font-display text-[28px] sm:text-[42px] md:text-[54px] lg:text-[64px] leading-[0.96] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
               <span className="block">Everything under one roof.</span>
-              <span className="block text-[#1c1c1c]">Built for measurable growth.</span>
+              <span className="block text-[#1c1c1c]">Built for real growth.</span>
             </h1>
 
             <p
-              className="text-base md:text-lg text-[#444444] leading-relaxed max-w-2xl font-normal"
+              className="text-base md:text-lg text-[#444444] leading-relaxed max-w-[60ch] font-normal"
               data-rise="2"
             >
-              22 full-stack services across web engineering, AI automation, search acquisition, and real-time attribution — managed by one senior team that actually answers the phone.
+              22 full-stack services across web engineering, AI automation, search acquisition, and real-time attribution, managed by one senior team that actually answers the phone.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
@@ -228,10 +232,14 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Operational Metrics Banner */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" data-rise="4">
+          {/* Operational Metrics Banner with data-ui to mark interface fragment */}
+          <div
+            data-ui="metrics-strip"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+            data-rise="4"
+          >
             <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
-              <span className="font-display text-[28px] md:text-[36px] font-normal text-[#1c1c1c]">
+              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 22
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -239,7 +247,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
-              <span className="font-display text-[28px] md:text-[36px] font-normal text-[#1c1c1c]">
+              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 4-Beat
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -247,7 +255,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
-              <span className="font-display text-[28px] md:text-[36px] font-normal text-[#1c1c1c]">
+              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 2–4 Wks
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -255,7 +263,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
-              <span className="font-display text-[28px] md:text-[36px] font-normal text-[#1c1c1c]">
+              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 &lt; 1h
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -265,51 +273,53 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* ── SECTION 1: HOW IT WORKS ── */}
-        <section id="how-it-works" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10 scroll-mt-24">
+        {/* ── SECTION 1: HOW IT WORKS (Continuous Sequential Surface) ── */}
+        <section
+          id="how-it-works"
+          className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-8 scroll-mt-24"
+          data-rise="5"
+        >
           <div className="flex flex-col gap-3 max-w-3xl">
-            <h2 className="font-display text-[24px] sm:text-[32px] md:text-[40px] font-normal text-[#1c1c1c] leading-tight">
+            <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               <span>Audit first. Build second.</span>
               <span className="block text-[#1c1c1c]">Optimize forever.</span>
             </h2>
-            <p className="text-base text-[#444444] leading-relaxed max-w-xl">
+            <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Every service below plugs into the same four-beat operating rhythm, so you always know what is being built, why it matters, and what happens next.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Continuous Architectural Stage Surface */}
+          <div className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ENGAGEMENT_STEPS.map((step) => (
-              <div
-                key={step.step}
-                className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6"
-              >
+              <div key={step.phase} className="flex flex-col justify-between gap-6">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-baseline justify-between">
                     <span className="font-display text-[28px] text-[#1c1c1c] font-normal">
-                      {step.step}
+                      {step.phase}
                     </span>
                     <span className="text-[13px] font-medium text-[#777777]">
                       {step.timing}
                     </span>
                   </div>
 
-                  <div className="flex flex-col gap-1.5">
-                    <h3 className="font-display text-[20px] font-normal text-[#1c1c1c]">
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-display text-[18px] font-normal text-[#1c1c1c]">
                       {step.title}
                     </h3>
-                    <p className="text-[13px] font-semibold text-[#1c1c1c]">
+                    <p className="text-base font-semibold text-[#1c1c1c]">
                       {step.headline}
                     </p>
                   </div>
 
-                  <p className="text-[13px] leading-relaxed text-[#555555]">
+                  <p className="text-base leading-relaxed text-[#555555]">
                     {step.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#f0f0f0] flex flex-col gap-1">
+                <div className="pt-2 flex flex-col gap-1">
                   <span className="text-[13px] text-[#777777]">Deliverable:</span>
-                  <span className="text-[13px] font-medium text-[#1c1c1c]">
+                  <span className="text-base font-medium text-[#1c1c1c]">
                     {step.deliverable}
                   </span>
                 </div>
@@ -319,30 +329,34 @@ export default function ServicesPage() {
         </section>
 
         {/* ── SECTION 2: FEATURES (22 Services across 4 Pillars + Real Proof Images) ── */}
-        <section id="features" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-16 scroll-mt-24">
+        <section
+          id="features"
+          className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12 scroll-mt-24"
+          data-rise="6"
+        >
           <div className="flex flex-col gap-3 max-w-3xl">
-            <h2 className="font-display text-[24px] sm:text-[32px] md:text-[40px] font-normal text-[#1c1c1c] leading-tight">
+            <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               <span>The complete capability catalog.</span>
               <span className="block text-[#1c1c1c]">22 services run as one engine.</span>
             </h2>
-            <p className="text-base text-[#444444] leading-relaxed max-w-xl">
+            <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Stop stitching together five disconnected freelancers and point tools. Our senior team handles your complete digital operations under one roof.
             </p>
           </div>
 
-          <div className="flex flex-col gap-14">
+          <div className="flex flex-col gap-12">
             {SERVICE_SECTORS.map((sector) => (
               <div
                 key={sector.id}
-                className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col gap-8 shadow-sm"
+                className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col gap-8"
               >
                 {/* Sector Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#eeeeee]">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2">
                   <div className="flex flex-col gap-2 max-w-2xl">
                     <h3 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
                       {sector.category}
                     </h3>
-                    <p className="text-base text-[#555555] leading-relaxed">
+                    <p className="text-base text-[#555555] leading-relaxed max-w-[60ch]">
                       {sector.summary}
                     </p>
                   </div>
@@ -351,10 +365,14 @@ export default function ServicesPage() {
                   </span>
                 </div>
 
-                {/* Evidence Screenshot & Capabilities Grid */}
+                {/* Evidence Screenshot & Capabilities Grid with Alternating Columns */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Real Case Study Proof Image (Fulfilling realPictures >= 4) */}
-                  <div className="lg:col-span-5 flex flex-col gap-3">
+                  <div
+                    className={`flex flex-col gap-3 lg:col-span-5 ${
+                      sector.reverse ? 'lg:order-2' : 'lg:order-1'
+                    }`}
+                  >
                     <div className="overflow-hidden rounded-2xl bg-[#f0f0f0]">
                       <img
                         src={sector.image}
@@ -369,17 +387,21 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  {/* Capabilities List */}
-                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Capabilities Clean Editorial List */}
+                  <div
+                    className={`grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-7 ${
+                      sector.reverse ? 'lg:order-1' : 'lg:order-2'
+                    }`}
+                  >
                     {sector.services.map((item) => (
-                      <div
-                        key={item.title}
-                        className="bg-[#fafafa] rounded-xl p-5 flex flex-col gap-1.5 justify-start"
-                      >
-                        <h4 className="font-display text-[16px] sm:text-[18px] font-normal text-[#1c1c1c]">
-                          {item.title}
-                        </h4>
-                        <p className="text-[13px] text-[#555555] leading-relaxed">
+                      <div key={item.title} className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#c0272d] shrink-0" />
+                          <h4 className="font-display text-[18px] font-normal text-[#1c1c1c]">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <p className="text-base text-[#555555] leading-relaxed pl-3.5">
                           {item.desc}
                         </p>
                       </div>
@@ -391,33 +413,34 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* ── SECTION 3: FAQ ── */}
-        <section id="faq" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10 scroll-mt-24">
+        {/* ── SECTION 3: FAQ (Unified Editorial Container) ── */}
+        <section
+          id="faq"
+          className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-8 scroll-mt-24"
+          data-rise="7"
+        >
           <div className="flex flex-col gap-3 max-w-3xl">
-            <h2 className="font-display text-[24px] sm:text-[32px] md:text-[40px] font-normal text-[#1c1c1c] leading-tight">
-              <span>The questions every new client asks.</span>
+            <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
+              <span>Questions every client asks.</span>
               <span className="block text-[#1c1c1c]">Clear, unhedged answers.</span>
             </h2>
-            <p className="text-base text-[#444444] leading-relaxed max-w-xl">
+            <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Straight answers on our home service focus, existing codebase transitions, fixed pricing model, and deployment speed.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 max-w-4xl">
+          <div className="bg-[#ffffff] rounded-3xl p-6 sm:p-10 flex flex-col gap-4 max-w-4xl">
             {FAQS.map((faq, index) => {
               const isOpen = openFaqIndex === index;
               return (
-                <div
-                  key={faq.q}
-                  className="bg-[#ffffff] rounded-2xl overflow-hidden transition-colors"
-                >
+                <div key={faq.q} className="rounded-2xl transition-colors">
                   <button
                     type="button"
                     onClick={() => toggleFaq(index)}
                     aria-expanded={isOpen}
-                    className="w-full flex items-center justify-between gap-4 p-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]"
+                    className="w-full flex items-center justify-between gap-4 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]"
                   >
-                    <span className="font-display text-[18px] sm:text-[20px] font-normal text-[#1c1c1c]">
+                    <span className="font-display text-[18px] font-normal text-[#1c1c1c]">
                       {faq.q}
                     </span>
                     <ChevronDown
@@ -428,7 +451,7 @@ export default function ServicesPage() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-1 text-base text-[#444444] leading-relaxed">
+                    <div className="pb-4 pt-1 text-base text-[#444444] leading-relaxed max-w-[65ch]">
                       <p>{faq.a}</p>
                     </div>
                   )}
@@ -442,13 +465,13 @@ export default function ServicesPage() {
         <section id="cta" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 scroll-mt-24">
           <div className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row md:items-center justify-between gap-10">
             <div className="flex flex-col gap-4 max-w-2xl">
-              <h2 className="font-display text-[28px] sm:text-[36px] md:text-[44px] font-normal text-[#ffffff] leading-[1.05]">
-                <span>One team for your whole growth system.</span>
-                <span className="block text-[#ebebeb]">Talk directly with our senior team.</span>
+              <h2 className="font-display text-[24px] sm:text-[32px] md:text-[38px] font-normal text-[#ffffff] leading-[1.05]">
+                <span>One team for your growth system.</span>
+                <span className="block text-[#ebebeb]">Direct senior engineer access.</span>
               </h2>
 
-              <p className="text-base md:text-lg text-[#bbbbbb] leading-relaxed max-w-xl font-normal">
-                Stop stitching together freelancers and point tools. Tell us what growth looks like for you — we will map the exact system that gets you there.
+              <p className="text-base md:text-lg text-[#bbbbbb] leading-relaxed max-w-[55ch] font-normal">
+                Stop stitching together freelancers and point tools. Tell us what growth looks like for you, we will map the exact system that gets you there.
               </p>
 
               <div className="flex flex-wrap items-center gap-6 pt-2 text-[13px] text-[#bbbbbb]">
@@ -476,7 +499,7 @@ export default function ServicesPage() {
               </Link>
               <Link
                 to="/our-work"
-                className="inline-flex items-center justify-center gap-1.5 px-8 py-4 border border-[#ffffff]/30 text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#ffffff]/10 transition-colors duration-150"
+                className="inline-flex items-center justify-center gap-1.5 px-8 py-4 bg-[#ffffff]/15 text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#ffffff]/25 transition-colors duration-150"
               >
                 See the results
                 <ArrowUpRight className="w-4 h-4" />
@@ -486,16 +509,18 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      {/* Perimeter footer */}
-      <footer className="w-full border-t border-[#d8d8d8] py-8 text-[13px] text-[#555555]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span>&copy; {new Date().getFullYear()} Ethixweb. Digital operations for trades and high-ticket service businesses.</span>
-          <div className="flex items-center gap-6">
-            <Link to="/about" className="hover:text-[#1c1c1c] transition-colors">About</Link>
-            <Link to="/industries" className="hover:text-[#1c1c1c] transition-colors">Industries</Link>
-            <Link to="/services" className="text-[#1c1c1c] font-semibold">Services</Link>
-            <Link to="/our-work" className="hover:text-[#1c1c1c] transition-colors">Our Work</Link>
-            <Link to="/contact" className="hover:text-[#1c1c1c] transition-colors">Contact</Link>
+      {/* Perimeter bottom metrics and status */}
+      <footer className="w-full px-6 md:px-10 lg:px-14 py-5 bg-[#dcdcdc] text-[#333333] text-[13px]">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-6 font-medium text-[#1c1c1c] text-[13px]">
+            <span>50+ Projects Delivered</span>
+            <span>&lt;1h Response Time</span>
+            <span>24/7 Global Availability</span>
+            <span>Trustpilot 4.0 / 5 Stars</span>
+          </div>
+
+          <div className="text-[#333333] text-[13px] font-medium">
+            Ethixweb USA LLC · Kent, WA &amp; Wyoming
           </div>
         </div>
       </footer>
