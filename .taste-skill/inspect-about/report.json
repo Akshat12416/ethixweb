@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/about",
- "at": "2026-10-13T23:35:02.528Z",
+ "at": "2026-10-13T23:38:10.592Z",
  "allow": [],
  "viewports": [
   {
@@ -9,10 +9,10 @@
    "load": "load",
    "screens": 4,
    "filled": [
-    0.47,
-    0.59,
-    0.5,
-    0.68
+    0.51,
+    0.56,
+    0.53,
+    0.65
    ],
    "motion": {
     "elements": 29,
@@ -28,13 +28,13 @@
      "h": 900
     },
     "page": {
-     "height": 3193,
+     "height": 3106,
      "screens": 3.5,
-     "words": 449,
+     "words": 445,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 23,
+     "svg": 13,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -59,8 +59,8 @@
      "words": 6,
      "chars": 41,
      "lines": 2,
-     "size": 72,
-     "vw": 5,
+     "size": 80.6,
+     "vw": 5.6,
      "font": "Harmond",
      "weight": 400,
      "tracking": -0.025,
@@ -79,7 +79,7 @@
      "text": "Direct senior craft. No account managers.",
      "words": 6,
      "lines": 2,
-     "size": 72,
+     "size": 80.6,
      "font": "Harmond"
     },
     "headings": [
@@ -88,8 +88,8 @@
       "words": 6,
       "chars": 41,
       "lines": 2,
-      "size": 72,
-      "vw": 5,
+      "size": 80.6,
+      "vw": 5.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -105,12 +105,12 @@
       "kind": "heading"
      },
      {
-      "text": "Built for businesses tired of big agency theater.",
-      "words": 8,
-      "chars": 49,
+      "text": "Built for businesses tired of agency theater.",
+      "words": 7,
+      "chars": 45,
       "lines": 2,
-      "size": 30,
-      "vw": 2.1,
+      "size": 28,
+      "vw": 1.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -121,7 +121,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.36,
-      "top": 580,
+      "top": 603,
       "tag": "h2",
       "kind": "heading"
      },
@@ -130,8 +130,8 @@
       "words": 5,
       "chars": 42,
       "lines": 1,
-      "size": 30,
-      "vw": 2.1,
+      "size": 28,
+      "vw": 1.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -142,7 +142,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 1077,
+      "top": 1097,
       "tag": "h2",
       "kind": "heading"
      },
@@ -151,8 +151,8 @@
       "words": 7,
       "chars": 36,
       "lines": 1,
-      "size": 36,
-      "vw": 2.5,
+      "size": 28,
+      "vw": 1.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -163,7 +163,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 1586,
+      "top": 1612,
       "tag": "h2",
       "kind": "heading"
      },
@@ -172,8 +172,8 @@
       "words": 2,
       "chars": 7,
       "lines": 1,
-      "size": 60,
-      "vw": 4.2,
+      "size": 56,
+      "vw": 3.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -184,7 +184,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.19,
-      "top": 1743,
+      "top": 1759,
       "tag": "p",
       "kind": "statement"
      },
@@ -193,8 +193,8 @@
       "words": 1,
       "chars": 4,
       "lines": 1,
-      "size": 60,
-      "vw": 4.2,
+      "size": 56,
+      "vw": 3.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -205,7 +205,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.19,
-      "top": 1743,
+      "top": 1759,
       "tag": "p",
       "kind": "statement"
      },
@@ -214,8 +214,8 @@
       "words": 1,
       "chars": 3,
       "lines": 1,
-      "size": 60,
-      "vw": 4.2,
+      "size": 56,
+      "vw": 3.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -226,7 +226,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.19,
-      "top": 1743,
+      "top": 1759,
       "tag": "p",
       "kind": "statement"
      },
@@ -235,8 +235,8 @@
       "words": 3,
       "chars": 7,
       "lines": 1,
-      "size": 60,
-      "vw": 4.2,
+      "size": 56,
+      "vw": 3.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -247,7 +247,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.19,
-      "top": 1743,
+      "top": 1759,
       "tag": "p",
       "kind": "statement"
      },
@@ -256,8 +256,8 @@
       "words": 7,
       "chars": 37,
       "lines": 1,
-      "size": 36,
-      "vw": 2.5,
+      "size": 28,
+      "vw": 1.9,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -268,38 +268,17 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 1982,
+      "top": 1981,
       "tag": "h2",
       "kind": "heading"
-     },
-     {
-      "text": "“The team was easy to work with, great communication and done in efficient time.”",
-      "words": 14,
-      "chars": 81,
-      "lines": 3,
-      "size": 30,
-      "vw": 2.1,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.38,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.34,
-      "top": 2180,
-      "tag": "p",
-      "kind": "statement"
      },
      {
       "text": "Ready for a sharper digital operation?",
       "words": 6,
       "chars": 38,
-      "lines": 2,
-      "size": 48,
-      "vw": 3.3,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -309,31 +288,31 @@
       "mono": false,
       "align": "center",
       "position": "center",
-      "widthRatio": 0.53,
-      "top": 2715,
+      "widthRatio": 0.5,
+      "top": 2689,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 11,
-     "maxLines": 3,
+     "count": 10,
+     "maxLines": 2,
      "over2Lines": 0,
-     "statements": 5,
+     "statements": 4,
      "centered": 1,
-     "medianWords": 6,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
        "family": "Roobert",
-       "share": 0.88,
+       "share": 0.91,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.12,
+       "share": 0.09,
        "mono": false
       }
      ],
@@ -344,13 +323,12 @@
       16,
       18,
       24,
-      30,
-      36,
-      48,
-      60,
-      72
+      28,
+      44,
+      56,
+      81
      ],
-     "sizeCount": 10,
+     "sizeCount": 9,
      "notLoaded": [],
      "body": {
       "font": "Roobert",
@@ -362,8 +340,8 @@
      },
      "measureChars": 66,
      "max": {
-      "size": 72,
-      "vw": 5,
+      "size": 80.6,
+      "vw": 5.6,
       "font": "Harmond",
       "text": "Direct senior craft."
      },
@@ -378,18 +356,7 @@
      "centerShare": 0.07,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Featured Client Review",
-      "above": "“The team was easy to work with, great c",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 2145
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -411,7 +378,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 512,
+       "top": 533,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -420,7 +387,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 2659,
+       "top": 2633,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -447,7 +414,7 @@
       },
       {
        "color": "#c0272d",
-       "share": 0.04
+       "share": 0.03
       }
      ],
      "button": {
@@ -465,7 +432,7 @@
      "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -498,7 +465,7 @@
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 2105
+       "top": 2094
       }
      ]
     },
@@ -523,10 +490,10 @@
    "load": "load",
    "screens": 5,
    "filled": [
+    0.65,
+    0.9,
+    0.31,
     0.62,
-    0.81,
-    0.6,
-    0.68,
     0.74
    ],
    "motion": {
@@ -543,13 +510,13 @@
      "h": 1024
     },
     "page": {
-     "height": 4147,
+     "height": 4116,
      "screens": 4,
-     "words": 444,
+     "words": 440,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 23,
+     "svg": 13,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -574,8 +541,8 @@
      "words": 6,
      "chars": 41,
      "lines": 2,
-     "size": 51.2,
-     "vw": 6.7,
+     "size": 67.2,
+     "vw": 8.8,
      "font": "Harmond",
      "weight": 400,
      "tracking": -0.025,
@@ -594,7 +561,7 @@
      "text": "Direct senior craft. No account managers.",
      "words": 6,
      "lines": 2,
-     "size": 51.2,
+     "size": 67.2,
      "font": "Harmond"
     },
     "headings": [
@@ -603,8 +570,8 @@
       "words": 6,
       "chars": 41,
       "lines": 2,
-      "size": 51.2,
-      "vw": 6.7,
+      "size": 67.2,
+      "vw": 8.8,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -620,12 +587,12 @@
       "kind": "heading"
      },
      {
-      "text": "Built for businesses tired of big agency theater.",
-      "words": 8,
-      "chars": 49,
-      "lines": 2,
-      "size": 30,
-      "vw": 3.9,
+      "text": "Built for businesses tired of agency theater.",
+      "words": 7,
+      "chars": 45,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -636,7 +603,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 521,
+      "top": 555,
       "tag": "h2",
       "kind": "heading"
      },
@@ -645,8 +612,8 @@
       "words": 5,
       "chars": 42,
       "lines": 1,
-      "size": 30,
-      "vw": 3.9,
+      "size": 28,
+      "vw": 3.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -657,7 +624,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 1438,
+      "top": 1432,
       "tag": "h2",
       "kind": "heading"
      },
@@ -666,8 +633,8 @@
       "words": 7,
       "chars": 36,
       "lines": 1,
-      "size": 36,
-      "vw": 4.7,
+      "size": 28,
+      "vw": 3.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -678,7 +645,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 2047,
+      "top": 2115,
       "tag": "h2",
       "kind": "heading"
      },
@@ -687,8 +654,8 @@
       "words": 2,
       "chars": 7,
       "lines": 1,
-      "size": 60,
-      "vw": 7.8,
+      "size": 56,
+      "vw": 7.3,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -699,7 +666,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.43,
-      "top": 2204,
+      "top": 2262,
       "tag": "p",
       "kind": "statement"
      },
@@ -708,8 +675,8 @@
       "words": 1,
       "chars": 4,
       "lines": 1,
-      "size": 60,
-      "vw": 7.8,
+      "size": 56,
+      "vw": 7.3,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -720,7 +687,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.43,
-      "top": 2204,
+      "top": 2262,
       "tag": "p",
       "kind": "statement"
      },
@@ -729,8 +696,8 @@
       "words": 1,
       "chars": 3,
       "lines": 1,
-      "size": 60,
-      "vw": 7.8,
+      "size": 56,
+      "vw": 7.3,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -741,7 +708,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.43,
-      "top": 2379,
+      "top": 2436,
       "tag": "p",
       "kind": "statement"
      },
@@ -750,8 +717,8 @@
       "words": 3,
       "chars": 7,
       "lines": 1,
-      "size": 60,
-      "vw": 7.8,
+      "size": 56,
+      "vw": 7.3,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -762,7 +729,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.43,
-      "top": 2379,
+      "top": 2436,
       "tag": "p",
       "kind": "statement"
      },
@@ -771,8 +738,8 @@
       "words": 7,
       "chars": 37,
       "lines": 1,
-      "size": 36,
-      "vw": 4.7,
+      "size": 28,
+      "vw": 3.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -783,38 +750,17 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 2617,
+      "top": 2658,
       "tag": "h2",
       "kind": "heading"
-     },
-     {
-      "text": "“The team was easy to work with, great communication and done in efficient time.”",
-      "words": 14,
-      "chars": 81,
-      "lines": 2,
-      "size": 30,
-      "vw": 3.9,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.38,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.79,
-      "top": 2815,
-      "tag": "p",
-      "kind": "statement"
      },
      {
       "text": "Ready for a sharper digital operation?",
       "words": 6,
       "chars": 38,
       "lines": 2,
-      "size": 48,
-      "vw": 6.3,
+      "size": 44,
+      "vw": 5.7,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -825,47 +771,45 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 3625,
+      "top": 3601,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 11,
+     "count": 10,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 5,
+     "statements": 4,
      "centered": 1,
-     "medianWords": 6,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
        "family": "Roobert",
-       "share": 0.88,
+       "share": 0.91,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.12,
+       "share": 0.09,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
       13,
-      14,
       16,
       18,
       24,
-      30,
-      36,
-      48,
-      51,
-      60
+      28,
+      44,
+      56,
+      67
      ],
-     "sizeCount": 10,
+     "sizeCount": 8,
      "notLoaded": [],
      "body": {
       "font": "Roobert",
@@ -877,10 +821,10 @@
      },
      "measureChars": 76,
      "max": {
-      "size": 60,
-      "vw": 7.8,
+      "size": 67.2,
+      "vw": 8.8,
       "font": "Harmond",
-      "text": "2–4 wks"
+      "text": "Direct senior craft."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -893,18 +837,7 @@
      "centerShare": 0.07,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Featured Client Review",
-      "above": "“The team was easy to work with, great c",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 2780
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -926,7 +859,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 481,
+       "top": 515,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -935,7 +868,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 3569,
+       "top": 3545,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -946,7 +879,7 @@
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.41
+       "share": 0.42
       },
       {
        "color": "#1c1c1c",
@@ -962,7 +895,7 @@
       },
       {
        "color": "#c0272d",
-       "share": 0.04
+       "share": 0.03
       }
      ],
      "button": {
@@ -980,7 +913,7 @@
      "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -1013,7 +946,7 @@
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3041
+       "top": 3032
       }
      ]
     },
@@ -1038,12 +971,12 @@
    "load": "load",
    "screens": 6,
    "filled": [
-    0.65,
+    0.68,
     0.86,
+    0.63,
+    0.51,
     0.79,
-    0.29,
-    0.73,
-    0.68
+    0.74
    ],
    "motion": {
     "elements": 23,
@@ -1059,13 +992,13 @@
      "h": 844
     },
     "page": {
-     "height": 4749,
-     "screens": 5.6,
-     "words": 448,
+     "height": 4639,
+     "screens": 5.5,
+     "words": 439,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 23,
+     "svg": 13,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -1131,12 +1064,12 @@
       "kind": "heading"
      },
      {
-      "text": "Built for businesses tired of big agency theater.",
-      "words": 8,
-      "chars": 49,
+      "text": "Built for businesses tired of agency theater.",
+      "words": 7,
+      "chars": 45,
       "lines": 2,
-      "size": 24,
-      "vw": 6.2,
+      "size": 22,
+      "vw": 5.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -1147,7 +1080,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 493,
+      "top": 497,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1156,8 +1089,8 @@
       "words": 5,
       "chars": 42,
       "lines": 2,
-      "size": 24,
-      "vw": 6.2,
+      "size": 22,
+      "vw": 5.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -1168,7 +1101,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 1335,
+      "top": 1334,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1177,8 +1110,8 @@
       "words": 7,
       "chars": 36,
       "lines": 2,
-      "size": 24,
-      "vw": 6.2,
+      "size": 22,
+      "vw": 5.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -1189,7 +1122,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2305,
+      "top": 2136,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1198,8 +1131,8 @@
       "words": 2,
       "chars": 7,
       "lines": 1,
-      "size": 48,
-      "vw": 12.3,
+      "size": 56,
+      "vw": 14.4,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -1210,7 +1143,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2503,
+      "top": 2329,
       "tag": "p",
       "kind": "statement"
      },
@@ -1219,8 +1152,8 @@
       "words": 1,
       "chars": 4,
       "lines": 1,
-      "size": 48,
-      "vw": 12.3,
+      "size": 56,
+      "vw": 14.4,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -1231,7 +1164,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2666,
+      "top": 2504,
       "tag": "p",
       "kind": "statement"
      },
@@ -1240,8 +1173,8 @@
       "words": 1,
       "chars": 3,
       "lines": 1,
-      "size": 48,
-      "vw": 12.3,
+      "size": 56,
+      "vw": 14.4,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -1252,7 +1185,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2828,
+      "top": 2678,
       "tag": "p",
       "kind": "statement"
      },
@@ -1261,8 +1194,8 @@
       "words": 3,
       "chars": 7,
       "lines": 1,
-      "size": 48,
-      "vw": 12.3,
+      "size": 56,
+      "vw": 14.4,
       "font": "Harmond",
       "weight": 400,
       "tracking": -0.025,
@@ -1273,7 +1206,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2990,
+      "top": 2852,
       "tag": "p",
       "kind": "statement"
      },
@@ -1282,8 +1215,8 @@
       "words": 7,
       "chars": 37,
       "lines": 2,
-      "size": 24,
-      "vw": 6.2,
+      "size": 22,
+      "vw": 5.6,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -1294,38 +1227,17 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 3184,
+      "top": 3058,
       "tag": "h2",
       "kind": "heading"
-     },
-     {
-      "text": "“The team was easy to work with, great communication and done in efficient time.”",
-      "words": 14,
-      "chars": 81,
-      "lines": 3,
-      "size": 24,
-      "vw": 6.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.38,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 3408,
-      "tag": "p",
-      "kind": "statement"
      },
      {
       "text": "Ready for a sharper digital operation?",
       "words": 6,
       "chars": 38,
       "lines": 2,
-      "size": 30,
-      "vw": 7.7,
+      "size": 24,
+      "vw": 6.2,
       "font": "Harmond",
       "weight": 400,
       "tracking": 0,
@@ -1336,43 +1248,43 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.71,
-      "top": 4168,
+      "top": 4065,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 11,
-     "maxLines": 3,
+     "count": 10,
+     "maxLines": 2,
      "over2Lines": 0,
-     "statements": 5,
+     "statements": 4,
      "centered": 1,
-     "medianWords": 6,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
        "family": "Roobert",
-       "share": 0.88,
+       "share": 0.91,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.12,
+       "share": 0.09,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
       13,
-      14,
       16,
+      18,
       20,
+      22,
       24,
-      30,
       32,
-      48
+      56
      ],
      "sizeCount": 8,
      "notLoaded": [],
@@ -1386,8 +1298,8 @@
      },
      "measureChars": 37,
      "max": {
-      "size": 48,
-      "vw": 12.3,
+      "size": 56,
+      "vw": 14.4,
       "font": "Harmond",
       "text": "2–4 wks"
      },
@@ -1424,7 +1336,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 469,
+       "top": 473,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1432,8 +1344,17 @@
        }
       },
       {
+       "color": "#f9f9f9",
+       "top": 1413,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.98
+       }
+      },
+      {
        "color": "#1c1c1c",
-       "top": 4136,
+       "top": 4033,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1448,11 +1369,11 @@
       },
       {
        "color": "#1c1c1c",
-       "share": 0.38
+       "share": 0.37
       },
       {
        "color": "#555555",
-       "share": 0.11
+       "share": 0.09
       },
       {
        "color": "#bbbbbb",
@@ -1478,7 +1399,7 @@
      "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -1500,7 +1421,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 12,
+     "roundedBoxes": 8,
      "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1508,16 +1429,10 @@
      "textShadow": 0,
      "cardRows": [
       {
-       "count": 5,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 1419
-      },
-      {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3634
+       "top": 3456
       }
      ]
     },
@@ -1539,38 +1454,11 @@
  ],
  "findings": [
   {
-   "level": "FAIL",
-   "id": "eyebrow",
-   "width": 1440,
-   "message": "1 eyebrow/kicker label(s) above headings: \"Featured Client Review\" above \"“The team was easy to work with, great c\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
-   "level": "WARN",
-   "id": "size-count",
-   "width": 1440,
-   "message": "10 different font sizes (13, 14, 16, 18, 24, 30, 36, 48, 60, 72).",
-   "fix": "A page needs about five: display, heading, lead, body, small.",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
    "level": "WARN",
    "id": "no-footage",
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "FAIL",
-   "id": "icon-cards",
-   "width": 390,
-   "message": "1 row(s) of identical cards each topped with a small icon (5 cards).",
-   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item."
   }
  ],
  "images": [

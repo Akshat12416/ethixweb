@@ -107,13 +107,13 @@ export default function AboutPage() {
       {/* Perimeter top navigation */}
       <TopBar />
 
-      <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
+      <main className="w-full flex flex-col gap-16 md:gap-20 py-8 md:py-12 flex-1">
         {/* ── SECTION 1: ABOUT (HERO, NARRATIVE, COLLABORATION EVIDENCE, COMPARISON) ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12">
           {/* Hero statement */}
           <div className="flex flex-col gap-5 max-w-4xl">
             <h1
-              className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5vw,5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
+              className="font-display text-[32px] sm:text-[48px] md:text-[clamp(4.2rem,5.6vw,5.5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
               <span className="block">Direct senior craft.</span>
@@ -132,13 +132,13 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-sm hover:bg-[#333333] transition-colors duration-150"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#333333] transition-colors duration-150"
               >
                 Start a project
               </Link>
               <Link
                 to="/our-work"
-                className="inline-flex items-center gap-1.5 px-5 py-3.5 text-sm font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
+                className="inline-flex items-center gap-1.5 px-5 py-3.5 text-base font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
               >
                 See our work
                 <ArrowUpRight className="w-4 h-4" />
@@ -152,8 +152,8 @@ export default function AboutPage() {
             data-rise="4"
           >
             <div className="w-full lg:w-1/2 flex flex-col gap-4">
-              <h2 className="font-display text-2xl md:text-3xl font-normal text-[#1c1c1c] leading-tight">
-                Built for businesses tired of big agency theater.
+              <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
+                Built for businesses tired of agency theater.
               </h2>
               <p className="text-base text-[#444444] leading-relaxed">
                 We started Ethixweb in 2020 because we watched business owners get handed off to junior coordinators
@@ -186,15 +186,15 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Signature Comparison Table */}
+          {/* Signature Comparison Block */}
           <div className="bg-[#ffffff] rounded-2xl p-6 md:p-10 flex flex-col gap-6" data-rise="10">
-            <h2 className="font-display text-2xl md:text-3xl font-normal text-[#1c1c1c] leading-tight">
+            <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               Ethixweb compared to traditional agencies.
             </h2>
 
             {/* Desktop / Tablet Semantic Table */}
             <div className="hidden sm:block overflow-x-auto">
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-base">
                 <thead>
                   <tr className="bg-[#f4f4f4] text-[#1c1c1c]">
                     <th className="p-4 rounded-l-lg font-semibold">Operational Area</th>
@@ -224,18 +224,16 @@ export default function AboutPage() {
               </table>
             </div>
 
-            {/* Mobile Stacked Cards (Zero Side-Scroll) */}
-            <div className="sm:hidden flex flex-col gap-3">
+            {/* Mobile Stacked Container (Single block, zero side-scroll) */}
+            <div className="sm:hidden flex flex-col gap-4 bg-[#f9f9f9] rounded-xl p-5">
               {COMPARISON.map((row) => (
-                <div key={row.topic} className="p-4 bg-[#f9f9f9] rounded-xl flex flex-col gap-2.5">
-                  <span className="font-semibold text-sm text-[#1c1c1c]">{row.topic}</span>
-                  <div className="flex items-start gap-2 text-[13px] text-[#1c1c1c]">
-                    <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0 mt-0.5" />
-                    <span><strong className="font-semibold">Ethixweb:</strong> {row.us}</span>
+                <div key={row.topic} className="flex flex-col gap-1.5">
+                  <span className="font-semibold text-base text-[#1c1c1c]">{row.topic}</span>
+                  <div className="text-[13px] text-[#1c1c1c]">
+                    <span className="font-semibold text-[#c0272d]">Ethixweb:</span> {row.us}
                   </div>
-                  <div className="flex items-start gap-2 text-[13px] text-[#555555]">
-                    <X className="w-4 h-4 text-[#888888] shrink-0 mt-0.5" />
-                    <span><strong className="font-semibold">Typical Agency:</strong> {row.them}</span>
+                  <div className="text-[13px] text-[#555555]">
+                    <span className="font-semibold text-[#666666]">Typical:</span> {row.them}
                   </div>
                 </div>
               ))}
@@ -246,7 +244,7 @@ export default function AboutPage() {
         {/* ── SECTION 2: STATS (TYPOGRAPHIC SET PIECE, NOT IDENTICAL BOXED CARDS) ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-3xl" data-rise="11">
-            <h2 className="font-display text-2xl md:text-4xl font-normal text-[#1c1c1c] leading-tight">
+            <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               The metrics that govern how we ship.
             </h2>
             <p className="text-base text-[#444444] leading-relaxed">
@@ -261,10 +259,10 @@ export default function AboutPage() {
                 className="flex flex-col gap-2"
                 data-rise={String(idx + 13)}
               >
-                <p className="font-display text-5xl md:text-6xl font-normal text-[#1c1c1c] tracking-tight">
+                <p className="font-display text-[56px] font-normal text-[#1c1c1c] tracking-tight leading-none">
                   {item.value}
                 </p>
-                <p className="text-sm font-semibold text-[#c0272d]">
+                <p className="text-base font-semibold text-[#c0272d]">
                   {item.label}
                 </p>
                 <p className="text-[13px] text-[#444444] leading-relaxed mt-1">
@@ -278,7 +276,7 @@ export default function AboutPage() {
         {/* ── SECTION 3: TESTIMONIALS (ASYMMETRICAL EDITORIAL COMPOSITION) ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-3xl" data-rise="17">
-            <h2 className="font-display text-2xl md:text-4xl font-normal text-[#1c1c1c] leading-tight">
+            <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               What clients say when the tech works.
             </h2>
             <p className="text-base text-[#444444] leading-relaxed">
@@ -287,14 +285,11 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6" data-rise="18">
-            {/* Featured quote card */}
+            {/* Featured quote panel (size <= 24px so it is treated as a quotation, not a headline) */}
             <div className="lg:col-span-6 bg-[#ffffff] rounded-2xl p-6 md:p-10 flex flex-col justify-between gap-6">
-              <div className="flex flex-col gap-4">
-                <span className="text-[13px] font-semibold text-[#c0272d]">Featured Client Review</span>
-                <p className="font-display text-2xl md:text-3xl text-[#1c1c1c] leading-snug font-normal">
-                  &ldquo;{FEATURED_TESTIMONIAL.quote}&rdquo;
-                </p>
-              </div>
+              <blockquote className="text-lg md:text-2xl text-[#1c1c1c] leading-relaxed font-normal">
+                &ldquo;{FEATURED_TESTIMONIAL.quote}&rdquo;
+              </blockquote>
 
               <div className="flex items-center justify-between pt-4 text-[13px]">
                 <div>
@@ -315,7 +310,7 @@ export default function AboutPage() {
                   className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col justify-between gap-3"
                   data-rise={String(idx + 19)}
                 >
-                  <p className="text-sm md:text-base text-[#1c1c1c] leading-relaxed font-normal">
+                  <p className="text-base text-[#1c1c1c] leading-relaxed font-normal">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex items-center justify-between text-[13px]">
@@ -334,7 +329,7 @@ export default function AboutPage() {
             className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-8 md:p-14 flex flex-col items-center text-center gap-6"
             data-rise="22"
           >
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-normal text-[#ffffff] max-w-3xl leading-tight">
+            <h2 className="font-display text-[24px] sm:text-[36px] md:text-[44px] font-normal text-[#ffffff] max-w-3xl leading-tight">
               Ready for a sharper digital operation?
             </h2>
 
@@ -346,13 +341,13 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-[#ffffff] text-[#1c1c1c] font-semibold rounded-lg text-sm hover:bg-[#e5e5e5] transition-colors duration-150"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-[#ffffff] text-[#1c1c1c] font-semibold rounded-lg text-base hover:bg-[#e5e5e5] transition-colors duration-150"
               >
                 Start a project
               </Link>
               <Link
                 to="/our-work"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#ffffff] hover:text-[#c0272d] transition-colors duration-150"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-[#ffffff] hover:text-[#c0272d] transition-colors duration-150"
               >
                 See our work
                 <ArrowUpRight className="w-4 h-4" />
