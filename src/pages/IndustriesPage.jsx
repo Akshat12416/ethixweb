@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import TopBar from '../components/TopBar';
 
 const TRADES_CAPABILITIES = [
@@ -50,14 +50,14 @@ export default function IndustriesPage() {
       <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
         {/* ── SECTION 1: LIST / HERO OVERVIEW ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12">
-          {/* Main Statement */}
+          {/* Main Statement — 2 lines strictly across all viewports */}
           <div className="flex flex-col gap-5 max-w-4xl">
             <h1
               className="font-display text-[32px] sm:text-[48px] md:text-[clamp(4.2rem,5.6vw,5.5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
-              <span className="block">Specialized systems.</span>
-              <span className="block text-[#1c1c1c]">Built for trades and charters.</span>
+              <span className="block">Built for the trades.</span>
+              <span className="block text-[#1c1c1c]">Ready for the water.</span>
             </h1>
 
             <p
@@ -89,11 +89,10 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-rise="4">
             <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="flex flex-col gap-3">
-                <span className="text-[13px] font-semibold text-[#c0272d]">Primary Focus: 01</span>
                 <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
                   HVAC, Plumbing &amp; Field Services
                 </h2>
-                <p className="text-base text-[#444444] leading-relaxed">
+                <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                   Field service management integration, 24/7 AI call protection, and local search dominance built for high-ticket emergency dispatch.
                 </p>
               </div>
@@ -111,11 +110,10 @@ export default function IndustriesPage() {
 
             <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="flex flex-col gap-3">
-                <span className="text-[13px] font-semibold text-[#c0272d]">Primary Focus: 02</span>
                 <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
                   Fishing Charters &amp; Marine Outfitters
                 </h2>
-                <p className="text-base text-[#444444] leading-relaxed">
+                <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                   Real-time booking engine integration, Shopify merchandise stores, and weekly catch-log SEO that captures bookings while you are at sea.
                 </p>
               </div>
@@ -136,38 +134,32 @@ export default function IndustriesPage() {
         {/* ── SECTION 2: FEATURES ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-20">
           {/* Feature Pillar 1: Trades (HVAC & Plumbing) */}
-          <div id="trades" className="flex flex-col gap-10 scroll-mt-24" data-rise="5">
-            <div className="flex flex-col gap-4 max-w-3xl">
+          <div id="trades" className="flex flex-col gap-8 scroll-mt-24" data-rise="5">
+            <div className="flex flex-col gap-3 max-w-2xl">
               <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
                 You handle the pipes. We handle the tech.
               </h2>
-              <p className="text-base text-[#444444] leading-relaxed">
+              <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                 You spend $200+ per lead on advertising, but miss up to 30% of your incoming calls while working on a job.
-                In home services, that translates to thousands of dollars in lost revenue every single month. We deploy the systems that capture every lead.
+                We deploy the systems that capture every lead.
               </p>
             </div>
 
             {/* Evidence & Case Study Visuals */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* Left Column: 4 Specific Capabilities */}
-              <div className="lg:col-span-7 flex flex-col gap-3.5">
-                {TRADES_CAPABILITIES.map((cap, idx) => (
-                  <div
-                    key={cap.title}
-                    className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-2"
-                    data-rise={String(idx + 6)}
-                  >
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0" />
-                      <h3 className="font-semibold text-base text-[#1c1c1c]">{cap.title}</h3>
-                    </div>
-                    <p className="text-base text-[#444444] leading-relaxed pl-6">{cap.desc}</p>
+              {/* Left Column: Composed Editorial Surface */}
+              <div className="lg:col-span-6 bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col gap-6" data-rise="6">
+                <h3 className="font-semibold text-base text-[#c0272d]">Built for Service Contractors</h3>
+                {TRADES_CAPABILITIES.map((cap) => (
+                  <div key={cap.title} className="flex flex-col gap-1.5">
+                    <h4 className="font-semibold text-base text-[#1c1c1c]">{cap.title}</h4>
+                    <p className="text-base text-[#444444] leading-relaxed">{cap.desc}</p>
                   </div>
                 ))}
               </div>
 
               {/* Right Column: Real Case Study Screenshots & Metrics */}
-              <div className="lg:col-span-5 flex flex-col gap-4" data-rise="10">
+              <div className="lg:col-span-6 flex flex-col gap-4" data-rise="7">
                 <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-4">
                   <div className="aspect-[16/10] rounded-xl overflow-hidden bg-[#e5e5e5]">
                     <img
@@ -204,38 +196,32 @@ export default function IndustriesPage() {
           </div>
 
           {/* Feature Pillar 2: Marine Charters & Outfitters */}
-          <div id="charters" className="flex flex-col gap-10 scroll-mt-24" data-rise="11">
-            <div className="flex flex-col gap-4 max-w-3xl">
+          <div id="charters" className="flex flex-col gap-8 scroll-mt-24" data-rise="8">
+            <div className="flex flex-col gap-3 max-w-2xl">
               <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
                 Your business shouldn't stop at the shoreline.
               </h2>
-              <p className="text-base text-[#444444] leading-relaxed">
-                You are at sea 10 hours a day with your hands on the wheel and fishing rods. While you are on the water, customers are trying to book trips.
-                If they cannot confirm a seat and pay their deposit instantly, they book another boat. We automate your entire dock-to-departure workflow.
+              <p className="text-base text-[#444444] leading-relaxed max-w-xl">
+                You are at sea 10 hours a day with your hands on the wheel and fishing rods.
+                If customers cannot confirm a seat and pay their deposit instantly, they book another boat.
               </p>
             </div>
 
             {/* Evidence & Case Study Visuals */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* Left Column: 4 Specific Capabilities */}
-              <div className="lg:col-span-7 flex flex-col gap-3.5">
-                {CHARTER_CAPABILITIES.map((cap, idx) => (
-                  <div
-                    key={cap.title}
-                    className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-2"
-                    data-rise={String(idx + 12)}
-                  >
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0" />
-                      <h3 className="font-semibold text-base text-[#1c1c1c]">{cap.title}</h3>
-                    </div>
-                    <p className="text-base text-[#444444] leading-relaxed pl-6">{cap.desc}</p>
+              {/* Left Column: Composed Editorial Surface */}
+              <div className="lg:col-span-6 bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col gap-6" data-rise="9">
+                <h3 className="font-semibold text-base text-[#c0272d]">Built for Charter Fleets</h3>
+                {CHARTER_CAPABILITIES.map((cap) => (
+                  <div key={cap.title} className="flex flex-col gap-1.5">
+                    <h4 className="font-semibold text-base text-[#1c1c1c]">{cap.title}</h4>
+                    <p className="text-base text-[#444444] leading-relaxed">{cap.desc}</p>
                   </div>
                 ))}
               </div>
 
               {/* Right Column: Real Case Study Screenshots & Metrics */}
-              <div className="lg:col-span-5 flex flex-col gap-4" data-rise="16">
+              <div className="lg:col-span-6 flex flex-col gap-4" data-rise="10">
                 <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-4">
                   <div className="aspect-[16/10] rounded-xl overflow-hidden bg-[#e5e5e5]">
                     <img
@@ -255,7 +241,7 @@ export default function IndustriesPage() {
                 <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-4">
                   <div className="aspect-[16/10] rounded-xl overflow-hidden bg-[#e5e5e5]">
                     <img
-                      src="/images/case-studies/garys-pipelining/after-screenshot.webp"
+                      src="/images/case-studies/garys-pipeline/after-screenshot.webp"
                       alt="Gary's Pipelining high-ticket commercial specialization"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -276,7 +262,7 @@ export default function IndustriesPage() {
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-8">
           <div
             className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-8 md:p-14 flex flex-col items-center text-center gap-6"
-            data-rise="20"
+            data-rise="11"
           >
             <h2 className="font-display text-[24px] sm:text-[36px] md:text-[44px] font-normal text-[#ffffff] max-w-3xl leading-tight">
               Which industry are you in?
