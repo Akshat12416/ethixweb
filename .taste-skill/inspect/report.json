@@ -1,29 +1,22 @@
 {
- "url": "https://ethixweb.com",
- "at": "2026-10-13T22:51:03.604Z",
+ "url": "http://localhost:4173/",
+ "at": "2026-10-13T23:10:20.678Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 9,
+   "screens": 2,
    "filled": [
-    0.94,
-    1,
-    0.98,
-    0.99,
-    0.99,
-    0.98,
-    0.99,
-    0.99,
-    0.57
+    0.6,
+    0.71
    ],
    "motion": {
-    "elements": 123,
-    "css": 65,
-    "transitions": 40,
-    "scripted": 18,
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
     "videos": 0,
     "playingVideos": 0
    },
@@ -33,22 +26,28 @@
      "h": 900
     },
     "page": {
-     "height": 7957,
-     "screens": 8.8,
-     "words": 1975,
-     "img": 6,
+     "height": 1047,
+     "screens": 1.2,
+     "words": 168,
+     "img": 5,
      "video": 0,
-     "canvas": 1,
-     "svg": 161,
-     "sections": 8,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 5,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -58,738 +57,229 @@
      "text": "We run the tech. You run the business.",
      "words": 8,
      "chars": 38,
-     "lines": 4,
-     "size": 91.3,
-     "vw": 6.3,
-     "font": "Kumbh Sans",
-     "weight": 800,
-     "tracking": 0,
-     "leading": 0.9,
+     "lines": 2,
+     "size": 79.2,
+     "vw": 5.5,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.38,
-     "top": 266,
-     "gradientText": true,
+     "widthRatio": 0.62,
+     "top": 32,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
      "text": "We run the tech. You run the business.",
      "words": 8,
-     "lines": 4,
-     "size": 91.3,
-     "font": "Kumbh Sans"
+     "lines": 2,
+     "size": 79.2,
+     "font": "Harmond"
     },
     "headings": [
      {
       "text": "We run the tech. You run the business.",
       "words": 8,
       "chars": 38,
-      "lines": 4,
-      "size": 91.3,
-      "vw": 6.3,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 0.9,
+      "lines": 2,
+      "size": 79.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.38,
-      "top": 266,
-      "gradientText": true,
+      "widthRatio": 0.62,
+      "top": 32,
       "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "Senior operators for the systems that grow the revenue.",
-      "words": 9,
-      "chars": 55,
-      "lines": 2,
-      "size": 58.7,
-      "vw": 4.1,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.53,
-      "top": 1119,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "22 services, one accountable team.",
-      "words": 5,
-      "chars": 34,
-      "lines": 2,
-      "size": 58.7,
-      "vw": 4.1,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.47,
-      "top": 2155,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Built for fast moving teams across time zones.",
-      "words": 8,
-      "chars": 46,
-      "lines": 2,
-      "size": 58.7,
-      "vw": 4.1,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.53,
-      "top": 3180,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "50+",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.04,
-      "top": 4395,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "<1h",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.04,
-      "top": 4395,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "US First",
-      "words": 2,
-      "chars": 8,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.09,
-      "top": 4395,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.05,
-      "top": 4395,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "Trustpilot",
-      "words": 1,
-      "chars": 10,
-      "lines": 1,
-      "size": 29.7,
-      "vw": 2.1,
-      "font": "Kumbh Sans",
-      "weight": 700,
-      "tracking": -0.025,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.21,
-      "top": 4717,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "4.0",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 93.2,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.09,
-      "top": 4797,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Trusted by businesses worldwide.",
-      "words": 4,
-      "chars": 32,
-      "lines": 2,
-      "size": 47.1,
-      "vw": 3.3,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.4,
-      "top": 4835,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 29.7,
-      "vw": 2.1,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.21,
-      "top": 4967,
-      "tag": "p",
-      "kind": "statement"
-     },
-     {
-      "text": "Built like an internal technology team.",
-      "words": 6,
-      "chars": 39,
-      "lines": 2,
-      "size": 58.7,
-      "vw": 4.1,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.47,
-      "top": 5854,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.05,
-      "top": 6544,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "<1h",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.04,
-      "top": 6544,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "US",
-      "words": 1,
-      "chars": 2,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.03,
-      "top": 6544,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "AI",
-      "words": 1,
-      "chars": 2,
-      "lines": 1,
-      "size": 35.5,
-      "vw": 2.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.03,
-      "top": 6544,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "Want to work with us?",
-      "words": 5,
-      "chars": 21,
-      "lines": 2,
-      "size": 80,
-      "vw": 5.6,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.37,
-      "top": 6959,
-      "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 18,
-     "maxLines": 4,
-     "over2Lines": 1,
-     "statements": 1,
-     "centered": 12,
-     "medianWords": 1,
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Kumbh Sans",
-       "share": 0.99,
+       "family": "Roobert",
+       "share": 0.96,
        "mono": false
       },
       {
-       "family": "ui-monospace",
-       "share": 0.01,
+       "family": "Harmond",
+       "share": 0.04,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      9,
-      10,
-      11,
       12,
       14,
       16,
       18,
-      20,
       24,
-      30,
-      36,
-      47,
-      59,
-      80,
-      91,
-      93
+      79
      ],
-     "sizeCount": 16,
+     "sizeCount": 6,
      "notLoaded": [],
      "body": {
-      "font": "Kumbh Sans",
-      "size": 14,
-      "leading": 1.71,
+      "font": "Roobert",
+      "size": 18,
+      "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": null
+      "contrast": 8.2
      },
-     "measureChars": 44,
+     "measureChars": 75,
      "max": {
-      "size": 93.2,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "text": "4.0"
+      "size": 79.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "text": "We run the tech."
      },
-     "monoShare": 0.01,
-     "monoProseShare": 0.01,
-     "monoFamilies": [
-      "ui-monospace"
-     ],
-     "monoSamples": [
-      "04:21:14 AM",
-      "03:51:14 PM",
-      "04:51:14 PM",
-      "06:51:14 PM",
-      "06:51:14 PM",
-      "11:51:14 PM"
-     ],
-     "microLabels": 36,
-     "microLabelShare": 0.068,
-     "microSamples": [
-      "Robust Solutions",
-      "Full service catalog",
-      "Global Operations Network",
-      "Drag to rotate · auto-spins when idle",
-      "Live Network Activity",
-      "Projects Delivered"
-     ],
-     "upperShare": 0.1,
-     "centerShare": 0.09,
-     "smallText": 34
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 16
     },
-    "eyebrows": [
-     {
-      "text": "Premium digital operations team",
-      "above": "We run the tech. You run the business.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": true,
-      "size": 12,
-      "top": 208
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Senior operators for the systems that gr",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 1083
-     },
-     {
-      "text": "Full service catalog",
-      "above": "22 services, one accountable team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 2119
-     },
-     {
-      "text": "Global Operations Network",
-      "above": "Built for fast moving teams across time ",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 3144
-     },
-     {
-      "text": "Client Reviews",
-      "above": "Trusted by businesses worldwide.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 4803
-     },
-     {
-      "text": "Trustpilot Rating",
-      "above": "24/7",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 4934
-     },
-     {
-      "text": "Operating model",
-      "above": "Built like an internal technology team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 5818
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Want to work with us?",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 6923
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0c0d10",
+     "bodyBg": "#ebebeb",
      "bodyBgHsl": {
-      "h": 225,
-      "s": 0.14,
-      "l": 0.05
+      "h": 0,
+      "s": 0,
+      "l": 0.92
      },
-     "dark": true,
+     "dark": false,
      "sectionBgs": [
       {
-       "color": "#0c0d10",
+       "color": "#ebebeb",
        "top": 0,
        "hsl": {
-        "h": 225,
-        "s": 0.14,
-        "l": 0.05
+        "h": 0,
+        "s": 0,
+        "l": 0.92
        }
       },
       {
-       "color": "#180f0f",
-       "top": 6809,
+       "color": "#ffffff",
+       "top": 641,
        "hsl": {
         "h": 0,
-        "s": 0.23,
-        "l": 0.08
+        "s": 0,
+        "l": 1
        }
       }
      ],
      "textColors": [
       {
-       "color": "#b0a39f",
-       "share": 0.65
+       "color": "#444444",
+       "share": 0.32
       },
       {
-       "color": "#f6efee",
-       "share": 0.11
+       "color": "#1c1c1c",
+       "share": 0.24
       },
       {
-       "color": "#f5efee",
-       "share": 0.1
+       "color": "#555555",
+       "share": 0.15
       },
       {
-       "color": "#b1a39e",
-       "share": 0.04
+       "color": "#222222",
+       "share": 0.08
       },
       {
-       "color": "#b1a2a0",
-       "share": 0.02
+       "color": "#333333",
+       "share": 0.08
       }
      ],
-     "button": {
-      "bg": "#f5efee",
-      "hsl": {
-       "h": 9,
-       "s": 0.26,
-       "l": 0.95
-      },
-      "fg": "#0c0d10"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 8,
-     "inHero": 3,
-     "radius": "pill",
-     "height": 54,
-     "withShadow": 7,
-     "withGradient": 2,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": [
-      "Start a project",
-      "Start a project",
-      "See our work"
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Ethixweb USA LLC · Kent, WA & Wyoming",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#666666",
+       "bg": "#e2e2e2"
+      }
      ]
     },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
     "surfaces": {
-     "shadowStatic": 69,
-     "shadowOverlay": 1,
-     "shadowSamples": [
-      "a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px",
-      "a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1"
-     ],
-     "gradients": 32,
-     "scrims": 48,
-     "gradientSamples": [
-      "div.dust-field → radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.18) 0px, rgba(255, 255, 255, 0.18) 1px, rgba(0, 0, 0,",
-      "div.relative.-mt-24 → radial-gradient(70% 48% at 72% 6%, rgba(138, 24, 28, 0.2), rgba(0, 0, 0, 0) 68%), radial-gradient(55% 40% at 1",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)"
-     ],
-     "gradientText": 14,
-     "hairlines": 25,
-     "hairlineSamples": [
-      "div.signal-strip.overflow-hidden 1440px",
-      "span.relative.mt-6 334px",
-      "span.relative.mt-6 334px",
-      "span.relative.mt-6 334px",
-      "span.relative.mt-6 334px"
-     ],
-     "outlinedBoxes": 45,
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 18,
-     "roundedBoxes": 53,
-     "boxRadius": 18,
-     "squareMedia": 3,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
      "textShadow": 0,
      "cardRows": [
       {
-       "count": 3,
-       "iconTopped": true,
+       "count": 4,
+       "iconTopped": false,
        "rounded": true,
-       "top": 3611
-      },
-      {
-       "count": 16,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 5224
+       "top": 369
       }
      ]
     },
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.54
-     },
-     {
-      "type": "svg",
-      "ratio": 0.54
+      "ratio": 0.12
      }
     ],
     "nav": {
-     "links": 8,
-     "fixed": true,
-     "height": 82,
+     "links": 6,
+     "fixed": false,
+     "height": 32,
      "floatingPill": false,
      "blur": false
     },
     "fontsLoaded": [
-     "kumbh sans"
+     "roobert",
+     "harmond"
     ]
    },
    "consoleErrors": []
@@ -798,25 +288,16 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 11,
+   "screens": 2,
    "filled": [
-    0.95,
-    1,
-    0.96,
-    1,
-    1,
-    0.96,
-    1,
-    1,
-    1,
-    0.58,
-    0.44
+    0.87,
+    1
    ],
    "motion": {
-    "elements": 117,
-    "css": 65,
-    "transitions": 40,
-    "scripted": 12,
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
     "videos": 0,
     "playingVideos": 0
    },
@@ -826,55 +307,60 @@
      "h": 1024
     },
     "page": {
-     "height": 10382,
-     "screens": 10.1,
-     "words": 1948,
-     "img": 7,
+     "height": 1714,
+     "screens": 1.7,
+     "words": 168,
+     "img": 5,
      "video": 0,
-     "canvas": 1,
-     "svg": 156,
-     "sections": 8,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 5,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Senior operators for the systems that grow the revenue.",
-     "words": 9,
-     "chars": 55,
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "chars": 38,
      "lines": 2,
-     "size": 49.9,
-     "vw": 6.5,
-     "font": "Kumbh Sans",
-     "weight": 800,
-     "tracking": 0,
-     "leading": 1.25,
+     "size": 42.2,
+     "vw": 5.5,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "center",
-     "widthRatio": 0.94,
-     "top": 862,
-     "gradientText": true,
-     "tag": "h2",
+     "widthRatio": 1,
+     "top": 32,
+     "tag": "h1",
      "kind": "heading"
     },
     "h1": {
      "text": "We run the tech. You run the business.",
      "words": 8,
      "lines": 2,
-     "size": 48.7,
-     "font": "Kumbh Sans"
+     "size": 42.2,
+     "font": "Harmond"
     },
     "headings": [
      {
@@ -882,698 +368,220 @@
       "words": 8,
       "chars": 38,
       "lines": 2,
-      "size": 48.7,
-      "vw": 6.3,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 0.9,
+      "size": 42.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
-      "top": 250,
-      "gradientText": true,
+      "widthRatio": 1,
+      "top": 32,
       "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "Senior operators for the systems that grow the revenue.",
-      "words": 9,
-      "chars": 55,
-      "lines": 2,
-      "size": 49.9,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.94,
-      "top": 862,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "22 services, one accountable team.",
-      "words": 5,
-      "chars": 34,
-      "lines": 2,
-      "size": 49.9,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 2309,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Built for fast moving teams across time zones.",
-      "words": 8,
-      "chars": 46,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.94,
-      "top": 3622,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "50+",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.07,
-      "top": 5362,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "<1h",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.06,
-      "top": 5362,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "US First",
-      "words": 2,
-      "chars": 8,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.15,
-      "top": 5488,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.09,
-      "top": 5488,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "Trusted by businesses worldwide.",
-      "words": 4,
-      "chars": 32,
-      "lines": 2,
-      "size": 40.4,
-      "vw": 5.3,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 5748,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Trustpilot",
-      "words": 1,
-      "chars": 10,
-      "lines": 1,
-      "size": 27.5,
-      "vw": 3.6,
-      "font": "Kumbh Sans",
-      "weight": 700,
-      "tracking": -0.025,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.39,
-      "top": 6130,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "4.0",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 73.3,
-      "vw": 9.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.14,
-      "top": 6207,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 27.5,
-      "vw": 3.6,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.39,
-      "top": 6358,
-      "tag": "p",
-      "kind": "statement"
-     },
-     {
-      "text": "Built like an internal technology team.",
-      "words": 6,
-      "chars": 39,
-      "lines": 2,
-      "size": 49.9,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 7227,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.09,
-      "top": 8282,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "<1h",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.06,
-      "top": 8282,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "US",
-      "words": 1,
-      "chars": 2,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "left",
-      "widthRatio": 0.06,
-      "top": 8412,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "AI",
-      "words": 1,
-      "chars": 2,
-      "lines": 1,
-      "size": 32.2,
-      "vw": 4.2,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.11,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "right",
-      "widthRatio": 0.04,
-      "top": 8412,
-      "gradientText": true,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "Want to work with us?",
-      "words": 5,
-      "chars": 21,
-      "lines": 2,
-      "size": 49.9,
-      "vw": 6.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 8773,
-      "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 18,
+     "count": 1,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 1,
-     "centered": 14,
-     "medianWords": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Kumbh Sans",
-       "share": 0.99,
+       "family": "Roobert",
+       "share": 0.96,
        "mono": false
       },
       {
-       "family": "ui-monospace",
-       "share": 0.01,
+       "family": "Harmond",
+       "share": 0.04,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      10,
-      11,
       12,
       14,
       16,
       18,
-      20,
-      23,
-      28,
-      32,
-      40,
-      49,
-      50,
-      73
+      24,
+      42
      ],
-     "sizeCount": 14,
+     "sizeCount": 6,
      "notLoaded": [],
      "body": {
-      "font": "Kumbh Sans",
-      "size": 14,
-      "leading": 1.71,
+      "font": "Roobert",
+      "size": 18,
+      "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": null
+      "contrast": 8.2
      },
-     "measureChars": 44,
+     "measureChars": 75,
      "max": {
-      "size": 73.3,
-      "vw": 9.5,
-      "font": "Kumbh Sans",
-      "text": "4.0"
+      "size": 42.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "text": "We run the tech."
      },
-     "monoShare": 0.01,
-     "monoProseShare": 0.01,
-     "monoFamilies": [
-      "ui-monospace"
-     ],
-     "monoSamples": [
-      "04:21:27 AM",
-      "03:51:27 PM",
-      "04:51:27 PM",
-      "06:51:27 PM",
-      "06:51:27 PM",
-      "11:51:27 PM"
-     ],
-     "microLabels": 36,
-     "microLabelShare": 0.069,
-     "microSamples": [
-      "Robust Solutions",
-      "Full service catalog",
-      "Global Operations Network",
-      "Drag to rotate · auto-spins when idle",
-      "Live Network Activity",
-      "Projects Delivered"
-     ],
-     "upperShare": 0.1,
-     "centerShare": 0.12,
-     "smallText": 34
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 16
     },
-    "eyebrows": [
-     {
-      "text": "Premium digital operations team",
-      "above": "We run the tech. You run the business.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": true,
-      "size": 12,
-      "top": 192
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Senior operators for the systems that gr",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 826
-     },
-     {
-      "text": "Full service catalog",
-      "above": "22 services, one accountable team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 2273
-     },
-     {
-      "text": "Global Operations Network",
-      "above": "Built for fast moving teams across time ",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 3586
-     },
-     {
-      "text": "Client Reviews",
-      "above": "Trusted by businesses worldwide.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 5716
-     },
-     {
-      "text": "Trustpilot Rating",
-      "above": "24/7",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 6325
-     },
-     {
-      "text": "Operating model",
-      "above": "Built like an internal technology team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 7191
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Want to work with us?",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 8737
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0c0d10",
+     "bodyBg": "#ebebeb",
      "bodyBgHsl": {
-      "h": 225,
-      "s": 0.14,
-      "l": 0.05
+      "h": 0,
+      "s": 0,
+      "l": 0.92
      },
-     "dark": true,
+     "dark": false,
      "sectionBgs": [
       {
-       "color": "#0c0d10",
+       "color": "#ebebeb",
        "top": 0,
        "hsl": {
-        "h": 225,
-        "s": 0.14,
-        "l": 0.05
+        "h": 0,
+        "s": 0,
+        "l": 0.92
        }
       },
       {
-       "color": "#180f0f",
-       "top": 8673,
+       "color": "#ffffff",
+       "top": 916,
        "hsl": {
         "h": 0,
-        "s": 0.23,
-        "l": 0.08
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e5e5e5",
+       "top": 1178,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.9
        }
       }
      ],
      "textColors": [
       {
-       "color": "#b0a39f",
-       "share": 0.65
+       "color": "#444444",
+       "share": 0.32
       },
       {
-       "color": "#f6efee",
-       "share": 0.11
+       "color": "#1c1c1c",
+       "share": 0.24
       },
       {
-       "color": "#f5efee",
-       "share": 0.1
+       "color": "#555555",
+       "share": 0.15
       },
       {
-       "color": "#b1a39e",
-       "share": 0.04
+       "color": "#222222",
+       "share": 0.08
       },
       {
-       "color": "#b1a2a0",
-       "share": 0.02
+       "color": "#333333",
+       "share": 0.08
       }
      ],
-     "button": {
-      "bg": "#f5efee",
-      "hsl": {
-       "h": 9,
-       "s": 0.26,
-       "l": 0.95
-      },
-      "fg": "#f5efee"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 7,
-     "inHero": 2,
-     "radius": "pill",
-     "height": 54,
-     "withShadow": 6,
-     "withGradient": 2,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": [
-      "Start a project",
-      "See our work"
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Ethixweb USA LLC · Kent, WA & Wyoming",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#666666",
+       "bg": "#e2e2e2"
+      }
      ]
     },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
     "surfaces": {
-     "shadowStatic": 68,
-     "shadowOverlay": 1,
-     "shadowSamples": [
-      "a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1"
-     ],
-     "gradients": 32,
-     "scrims": 48,
-     "gradientSamples": [
-      "div.dust-field → radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.18) 0px, rgba(255, 255, 255, 0.18) 1px, rgba(0, 0, 0,",
-      "div.relative.-mt-24 → radial-gradient(70% 48% at 72% 6%, rgba(138, 24, 28, 0.2), rgba(0, 0, 0, 0) 68%), radial-gradient(55% 40% at 1",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)"
-     ],
-     "gradientText": 11,
-     "hairlines": 25,
-     "hairlineSamples": [
-      "div.signal-strip.overflow-hidden 768px",
-      "span.relative.mt-6 292px",
-      "span.relative.mt-6 292px",
-      "span.relative.mt-6 292px",
-      "span.relative.mt-6 292px"
-     ],
-     "outlinedBoxes": 45,
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 13,
-     "roundedBoxes": 53,
-     "boxRadius": 18,
-     "squareMedia": 3,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
      "textShadow": 0,
      "cardRows": [
       {
-       "count": 16,
-       "iconTopped": true,
+       "count": 4,
+       "iconTopped": false,
        "rounded": true,
-       "top": 6613
+       "top": 299
       }
      ]
     },
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.76
+      "ratio": 0.12
      },
      {
-      "type": "svg",
-      "ratio": 0.76
+      "type": "img",
+      "ratio": 0.11
+     },
+     {
+      "type": "img",
+      "ratio": 0.11
+     },
+     {
+      "type": "img",
+      "ratio": 0.11
      }
     ],
     "nav": {
-     "links": 1,
-     "fixed": true,
-     "height": 82,
+     "links": 6,
+     "fixed": false,
+     "height": 32,
      "floatingPill": false,
      "blur": false
     },
     "fontsLoaded": [
-     "kumbh sans"
+     "roobert",
+     "harmond"
     ]
    },
    "consoleErrors": []
@@ -1582,26 +590,17 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 12,
+   "screens": 3,
    "filled": [
-    0.93,
-    0.99,
-    0.99,
-    0.97,
-    0.99,
-    0.99,
-    0.99,
-    0.99,
     0.96,
-    0.99,
-    0.99,
-    0.99
+    0.93,
+    1
    ],
    "motion": {
-    "elements": 127,
-    "css": 61,
-    "transitions": 53,
-    "scripted": 13,
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
     "videos": 0,
     "playingVideos": 0
    },
@@ -1611,585 +610,265 @@
      "h": 844
     },
     "page": {
-     "height": 11985,
-     "screens": 14.2,
-     "words": 1957,
-     "img": 7,
+     "height": 2183,
+     "screens": 2.6,
+     "words": 163,
+     "img": 5,
      "video": 0,
-     "canvas": 1,
-     "svg": 156,
-     "sections": 8,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 5,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Senior operators for the systems that grow the pipeline.",
-     "words": 9,
-     "chars": 56,
-     "lines": 4,
-     "size": 44.9,
-     "vw": 11.5,
-     "font": "Kumbh Sans",
-     "weight": 800,
-     "tracking": 0,
-     "leading": 1.25,
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "chars": 38,
+     "lines": 2,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "center",
-     "widthRatio": 0.92,
-     "top": 779,
-     "gradientText": true,
-     "tag": "h2",
+     "widthRatio": 1,
+     "top": 31,
+     "tag": "h1",
      "kind": "heading"
     },
     "h1": {
      "text": "We run the tech. You run the business.",
      "words": 8,
-     "lines": 3,
-     "size": 41.8,
-     "font": "Kumbh Sans"
+     "lines": 2,
+     "size": 40,
+     "font": "Harmond"
     },
     "headings": [
      {
       "text": "We run the tech. You run the business.",
       "words": 8,
       "chars": 38,
-      "lines": 3,
-      "size": 41.8,
-      "vw": 10.7,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 0.9,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.92,
-      "top": 154,
-      "gradientText": true,
-      "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "Senior operators for the systems that grow the pipeline.",
-      "words": 9,
-      "chars": 56,
-      "lines": 4,
-      "size": 44.9,
-      "vw": 11.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.92,
-      "top": 779,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "22 services, one accountable team.",
-      "words": 5,
-      "chars": 34,
       "lines": 2,
-      "size": 36.7,
-      "vw": 9.4,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 3215,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Built for fast moving teams across time zones.",
-      "words": 8,
-      "chars": 46,
-      "lines": 3,
-      "size": 30.3,
-      "vw": 7.8,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 5225,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Trusted by businesses worldwide.",
-      "words": 4,
-      "chars": 32,
-      "lines": 3,
-      "size": 36.7,
-      "vw": 9.4,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.92,
-      "top": 7040,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Trustpilot",
-      "words": 1,
-      "chars": 10,
-      "lines": 1,
-      "size": 26.2,
-      "vw": 6.7,
-      "font": "Kumbh Sans",
-      "weight": 700,
-      "tracking": -0.025,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 7406,
-      "tag": "div",
-      "kind": "heading"
-     },
-     {
-      "text": "4.0",
-      "words": 1,
-      "chars": 3,
-      "lines": 1,
-      "size": 62.1,
-      "vw": 15.9,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.23,
-      "top": 7482,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "24/7",
-      "words": 1,
-      "chars": 4,
-      "lines": 1,
-      "size": 26.2,
-      "vw": 6.7,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 7617,
-      "tag": "p",
-      "kind": "statement"
-     },
-     {
-      "text": "Built like an internal technology team.",
-      "words": 6,
-      "chars": 39,
-      "lines": 4,
-      "size": 44.9,
-      "vw": 11.5,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.92,
-      "top": 8422,
-      "gradientText": true,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Want to work with us?",
-      "words": 5,
-      "chars": 21,
-      "lines": 3,
-      "size": 44,
-      "vw": 11.3,
-      "font": "Kumbh Sans",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.67,
-      "top": 9951,
-      "tag": "h2",
+      "widthRatio": 1,
+      "top": 31,
+      "tag": "h1",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 10,
-     "maxLines": 4,
-     "over2Lines": 6,
-     "statements": 1,
-     "centered": 6,
-     "medianWords": 5,
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Kumbh Sans",
-       "share": 0.99,
+       "family": "Roobert",
+       "share": 0.96,
        "mono": false
       },
       {
-       "family": "ui-monospace",
-       "share": 0.01,
+       "family": "Harmond",
+       "share": 0.04,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      10,
-      11,
       12,
       14,
       16,
-      18,
       20,
-      22,
-      26,
-      30,
-      37,
-      42,
-      44,
-      45,
-      62
+      40
      ],
-     "sizeCount": 15,
+     "sizeCount": 5,
      "notLoaded": [],
      "body": {
-      "font": "Kumbh Sans",
-      "size": 14,
-      "leading": 1.71,
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": null
+      "contrast": 8.2
      },
-     "measureChars": 34,
+     "measureChars": 49,
      "max": {
-      "size": 62.1,
-      "vw": 15.9,
-      "font": "Kumbh Sans",
-      "text": "4.0"
+      "size": 40,
+      "vw": 10.3,
+      "font": "Harmond",
+      "text": "We run the tech."
      },
-     "monoShare": 0.01,
-     "monoProseShare": 0.01,
-     "monoFamilies": [
-      "ui-monospace"
-     ],
-     "monoSamples": [
-      "04:21:39 AM",
-      "03:51:39 PM",
-      "04:51:39 PM",
-      "06:51:39 PM",
-      "06:51:39 PM",
-      "11:51:39 PM"
-     ],
-     "microLabels": 36,
-     "microLabelShare": 0.069,
-     "microSamples": [
-      "Robust Solutions",
-      "Full service catalog",
-      "Global Operations Network",
-      "Drag to rotate · auto-spins when idle",
-      "Live Network Activity",
-      "Projects Delivered"
-     ],
-     "upperShare": 0.1,
-     "centerShare": 0.13,
-     "smallText": 49
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 20
     },
-    "eyebrows": [
-     {
-      "text": "Premium digital operations team",
-      "above": "We run the tech. You run the business.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": true,
-      "size": 12,
-      "top": 96
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Senior operators for the systems that gr",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 743
-     },
-     {
-      "text": "Full service catalog",
-      "above": "22 services, one accountable team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 3179
-     },
-     {
-      "text": "Global Operations Network",
-      "above": "Built for fast moving teams across time ",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 5189
-     },
-     {
-      "text": "Client Reviews",
-      "above": "Trusted by businesses worldwide.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 7008
-     },
-     {
-      "text": "Trustpilot Rating",
-      "above": "24/7",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 7584
-     },
-     {
-      "text": "Operating model",
-      "above": "Built like an internal technology team.",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 14,
-      "top": 8386
-     },
-     {
-      "text": "Robust Solutions",
-      "above": "Want to work with us?",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 9919
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0c0d10",
+     "bodyBg": "#ebebeb",
      "bodyBgHsl": {
-      "h": 225,
-      "s": 0.14,
-      "l": 0.05
+      "h": 0,
+      "s": 0,
+      "l": 0.92
      },
-     "dark": true,
+     "dark": false,
      "sectionBgs": [
       {
-       "color": "#0c0d10",
+       "color": "#ebebeb",
        "top": 0,
        "hsl": {
-        "h": 225,
-        "s": 0.14,
-        "l": 0.05
+        "h": 0,
+        "s": 0,
+        "l": 0.92
        }
       },
       {
-       "color": "#180f0f",
-       "top": 9863,
+       "color": "#ffffff",
+       "top": 310,
        "hsl": {
         "h": 0,
-        "s": 0.23,
-        "l": 0.08
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f2f2f2",
+       "top": 620,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.95
        }
       }
      ],
      "textColors": [
       {
-       "color": "#b0a39f",
-       "share": 0.65
+       "color": "#444444",
+       "share": 0.33
       },
       {
-       "color": "#f6efee",
-       "share": 0.11
+       "color": "#1c1c1c",
+       "share": 0.24
       },
       {
-       "color": "#f5efee",
-       "share": 0.1
+       "color": "#555555",
+       "share": 0.12
       },
       {
-       "color": "#b1a39e",
-       "share": 0.04
+       "color": "#222222",
+       "share": 0.09
       },
       {
-       "color": "#b1a2a0",
-       "share": 0.02
+       "color": "#333333",
+       "share": 0.08
       }
      ],
-     "button": {
-      "bg": "#f5efee",
-      "hsl": {
-       "h": 9,
-       "s": 0.26,
-       "l": 0.95
-      },
-      "fg": "#f5efee"
-     },
-     "lowContrast": []
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Ethixweb USA LLC · Kent, WA & Wyoming",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#666666",
+       "bg": "#e2e2e2"
+      }
+     ]
     },
     "buttons": {
-     "count": 7,
-     "inHero": 2,
-     "radius": "pill",
-     "height": 48,
-     "withShadow": 6,
-     "withGradient": 2,
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
      "mono": 0,
      "upper": 0,
-     "heroLabels": [
-      "Start a project",
-      "See our work"
-     ]
+     "heroLabels": []
     },
     "surfaces": {
-     "shadowStatic": 71,
-     "shadowOverlay": 1,
-     "shadowSamples": [
-      "a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-      "div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1"
-     ],
-     "gradients": 33,
-     "scrims": 48,
-     "gradientSamples": [
-      "div.dust-field → radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.18) 0px, rgba(255, 255, 255, 0.18) 1px, rgba(0, 0, 0,",
-      "div.relative.-mt-24 → radial-gradient(70% 48% at 72% 6%, rgba(138, 24, 28, 0.2), rgba(0, 0, 0, 0) 68%), radial-gradient(55% 40% at 1",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)",
-      "div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)"
-     ],
-     "gradientText": 8,
-     "hairlines": 9,
-     "hairlineSamples": [
-      "div.signal-strip.overflow-hidden 390px",
-      "span.relative.mt-6 300px",
-      "span.relative.mt-6 300px",
-      "span.relative.mt-6 300px",
-      "span.relative.mt-6 300px"
-     ],
-     "outlinedBoxes": 45,
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 16,
-     "roundedBoxes": 53,
-     "boxRadius": 18,
-     "squareMedia": 3,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 3,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 6103
-      },
-      {
-       "count": 16,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 7870
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.5
+      "ratio": 0.3
      },
      {
-      "type": "svg",
-      "ratio": 0.5
+      "type": "img",
+      "ratio": 0.27
      }
     ],
     "nav": {
      "links": 1,
-     "fixed": true,
-     "height": 82,
+     "fixed": false,
+     "height": 31,
      "floatingPill": false,
      "blur": false
     },
     "fontsLoaded": [
-     "kumbh sans"
+     "roobert",
+     "harmond"
     ]
    },
    "consoleErrors": []
@@ -2197,106 +876,11 @@
  ],
  "findings": [
   {
-   "level": "FAIL",
-   "id": "headline-lines",
+   "level": "WARN",
+   "id": "contrast",
    "width": 1440,
-   "message": "1 headline(s) wrap past two lines at 1440px: \"We run the tech. You run the business.\" → 4 lines (8 words, 91.3px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "eyebrow",
-   "width": 1440,
-   "message": "8 eyebrow/kicker label(s) above headings: \"Premium digital operations team\" (pill) above \"We run the tech. You run the business.\"; \"Robust Solutions\" above \"Senior operators for the systems that gr\"; \"Full service catalog\" above \"22 services, one accountable team.\"; \"Global Operations Network\" above \"Built for fast moving teams across time \"; \"Client Reviews\" above \"Trusted by businesses worldwide.\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "mono",
-   "width": 1440,
-   "message": "Monospace type outside code: ui-monospace — e.g. \"04:21:14 AM\", \"03:51:14 PM\", \"04:51:14 PM\", \"06:51:14 PM\"",
-   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "micro-label",
-   "width": 1440,
-   "message": "36 tiny uppercase letter-spaced labels (e.g. \"Robust Solutions\", \"Full service catalog\", \"Global Operations Network\", \"Drag to rotate · auto-spins when idle\").",
-   "fix": "Use sentence-case text at a readable size, or delete the label.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "gradient",
-   "width": 1440,
-   "message": "32 gradient fill(s): div.dust-field → radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.18) 0px, rgba(255, 255, 255, 0.18) 1px, rgba(0, 0, 0, | div.relative.-mt-24 → radial-gradient(70% 48% at 72% 6%, rgba(138, 24, 28, 0.2), rgba(0, 0, 0, 0) 68%), radial-gradient(55% 40% at 1 | div.web-spotlight → radial-gradient(110px at 85% 10%, rgba(233, 54, 63, 0.6), rgba(0, 0, 0, 0) 70%)",
-   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "gradient-text",
-   "width": 1440,
-   "message": "14 gradient-filled text element(s).",
-   "fix": "Solid colour text.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "shadow",
-   "width": 1440,
-   "message": "69 box-shadow(s) on elements at rest: a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px | a.btn-primary.group → rgba(0, 0, 0, 0.35) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px | div.group.premium-card → rgba(0, 0, 0, 0.55) 0px 12px 28px -16px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1",
-   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "button-fx",
-   "width": 1440,
-   "message": "Buttons with gradient fill and shadow/glow.",
-   "fix": "Flat fill, one colour.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "hairline",
-   "width": 1440,
-   "message": "25 thin rule(s)/divider line(s): div.signal-strip.overflow-hidden 1440px | span.relative.mt-6 334px | span.relative.mt-6 334px | span.relative.mt-6 334px",
-   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "outlined-box",
-   "width": 1440,
-   "message": "45 boxes drawn with a 1px outline.",
-   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "message": "Low-contrast text: \"Ethixweb USA LLC · Kent, WA & Wyoming\" 4.4:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
    "alsoAt": [
     768,
     390
@@ -2304,54 +888,14 @@
   },
   {
    "level": "WARN",
-   "id": "glass",
+   "id": "first-action",
    "width": 1440,
-   "message": "18 backdrop-blur surfaces.",
-   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
    "alsoAt": [
     768,
     390
    ]
-  },
-  {
-   "level": "FAIL",
-   "id": "icon-cards",
-   "width": 1440,
-   "message": "2 row(s) of identical cards each topped with a small icon (3, 16 cards).",
-   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "WARN",
-   "id": "size-count",
-   "width": 1440,
-   "message": "16 different font sizes (9, 10, 11, 12, 14, 16, 18, 20, 24, 30, 36, 47, 59, 80, 91, 93).",
-   "fix": "A page needs about five: display, heading, lead, body, small.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "body-size",
-   "width": 1440,
-   "message": "Body text is 14px (the size most of the running text is set in).",
-   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
   },
   {
    "level": "WARN",
@@ -2364,7 +908,7 @@
    "level": "FAIL",
    "id": "small-text",
    "width": 1440,
-   "message": "34 text blocks under 13px.",
+   "message": "16 text blocks under 13px.",
    "fix": "Nothing meant to be read goes below 13px.",
    "alsoAt": [
     768,
@@ -2373,10 +917,10 @@
   },
   {
    "level": "FAIL",
-   "id": "headline-lines",
-   "width": 390,
-   "message": "6 headline(s) wrap past two lines at 390px: \"We run the tech. You run the business.\" → 3 lines (8 words, 41.8px); \"Senior operators for the systems that grow the p\" → 4 lines (9 words, 44.9px); \"Built for fast moving teams across time zones.\" → 3 lines (8 words, 30.3px); \"Trusted by businesses worldwide.\" → 3 lines (4 words, 36.7px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 0 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
   }
  ],
  "images": [
@@ -2385,9 +929,7 @@
    "width": 1440,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-01.jpg",
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-02.jpg",
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-03.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-01.jpg"
    ]
   },
   {
@@ -2395,8 +937,7 @@
    "width": 768,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-01.jpg",
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-02.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-01.jpg"
    ]
   },
   {
@@ -2404,8 +945,7 @@
    "width": 390,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-01.jpg",
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-02.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-01.jpg"
    ]
   }
  ]
