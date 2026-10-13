@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/industries",
- "at": "2026-10-13T23:43:05.585Z",
+ "at": "2026-10-13T23:44:24.255Z",
  "allow": [],
  "viewports": [
   {
@@ -9,15 +9,15 @@
    "load": "load",
    "screens": 5,
    "filled": [
-    0.43,
-    0.6,
-    0.44,
-    0.44,
-    0.51
+    0.41,
+    0.58,
+    0.56,
+    0.5,
+    0.54
    ],
    "motion": {
-    "elements": 24,
-    "css": 24,
+    "elements": 18,
+    "css": 18,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -29,38 +29,37 @@
      "h": 900
     },
     "page": {
-     "height": 3639,
-     "screens": 4,
-     "words": 526,
+     "height": 3673,
+     "screens": 4.1,
+     "words": 496,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 11,
+     "svg": 3,
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
+      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
-     "brokenImages": [
-      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
-     ],
+     "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "chars": 51,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "chars": 42,
+     "lines": 2,
      "size": 80.6,
      "vw": 5.6,
      "font": "Harmond",
@@ -78,18 +77,18 @@
      "kind": "heading"
     },
     "h1": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "lines": 2,
      "size": 80.6,
      "font": "Harmond"
     },
     "headings": [
      {
-      "text": "Specialized systems. Built for trades and charters.",
-      "words": 7,
-      "chars": 51,
-      "lines": 3,
+      "text": "Built for the trades. Ready for the water.",
+      "words": 8,
+      "chars": 42,
+      "lines": 2,
       "size": 80.6,
       "vw": 5.6,
       "font": "Harmond",
@@ -123,7 +122,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.35,
-      "top": 643,
+      "top": 535,
       "tag": "h2",
       "kind": "heading"
      },
@@ -144,7 +143,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.35,
-      "top": 643,
+      "top": 535,
       "tag": "h2",
       "kind": "heading"
      },
@@ -164,8 +163,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.53,
-      "top": 921,
+      "widthRatio": 0.47,
+      "top": 814,
       "tag": "h2",
       "kind": "heading"
      },
@@ -185,8 +184,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.53,
-      "top": 2029,
+      "widthRatio": 0.47,
+      "top": 1970,
       "tag": "h2",
       "kind": "heading"
      },
@@ -207,15 +206,15 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.35,
-      "top": 3222,
+      "top": 3256,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
      "count": 6,
-     "maxLines": 3,
-     "over2Lines": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
      "statements": 0,
      "centered": 1,
      "medianWords": 5,
@@ -255,12 +254,12 @@
       "tracking": 0,
       "contrast": 9.7
      },
-     "measureChars": 96,
+     "measureChars": 75,
      "max": {
       "size": 80.6,
       "vw": 5.6,
       "font": "Harmond",
-      "text": "Specialized systems."
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -273,28 +272,7 @@
      "centerShare": 0.07,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Primary Focus: 01",
-      "above": "HVAC, Plumbing & Field Services",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 611
-     },
-     {
-      "text": "Primary Focus: 02",
-      "above": "Fishing Charters & Marine Outfitters",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 611
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -316,7 +294,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 3166,
+       "top": 3200,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -327,19 +305,19 @@
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.55
+       "share": 0.52
       },
       {
        "color": "#1c1c1c",
-       "share": 0.21
+       "share": 0.22
       },
       {
        "color": "#555555",
-       "share": 0.11
+       "share": 0.12
       },
       {
        "color": "#c0272d",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#bbbbbb",
@@ -383,26 +361,13 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 19,
+     "roundedBoxes": 13,
      "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 1090
-      },
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 2198
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [],
     "nav": {
@@ -425,16 +390,16 @@
    "load": "load",
    "screens": 6,
    "filled": [
-    0.57,
-    0.81,
-    0.84,
-    0.79,
-    0.79,
+    0.54,
+    0.91,
+    0.72,
+    0.86,
+    0.73,
     0.74
    ],
    "motion": {
-    "elements": 19,
-    "css": 19,
+    "elements": 13,
+    "css": 13,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -446,38 +411,37 @@
      "h": 1024
     },
     "page": {
-     "height": 5509,
-     "screens": 5.4,
-     "words": 521,
+     "height": 5249,
+     "screens": 5.1,
+     "words": 491,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 11,
+     "svg": 3,
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
+      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
-     "brokenImages": [
-      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
-     ],
+     "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "chars": 51,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "chars": 42,
+     "lines": 2,
      "size": 67.2,
      "vw": 8.8,
      "font": "Harmond",
@@ -495,18 +459,18 @@
      "kind": "heading"
     },
     "h1": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "lines": 2,
      "size": 67.2,
      "font": "Harmond"
     },
     "headings": [
      {
-      "text": "Specialized systems. Built for trades and charters.",
-      "words": 7,
-      "chars": 51,
-      "lines": 3,
+      "text": "Built for the trades. Ready for the water.",
+      "words": 8,
+      "chars": 42,
+      "lines": 2,
       "size": 67.2,
       "vw": 8.8,
       "font": "Harmond",
@@ -540,7 +504,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.35,
-      "top": 613,
+      "top": 518,
       "tag": "h2",
       "kind": "heading"
      },
@@ -561,7 +525,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.35,
-      "top": 613,
+      "top": 518,
       "tag": "h2",
       "kind": "heading"
      },
@@ -581,8 +545,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.9,
-      "top": 1024,
+      "widthRatio": 0.88,
+      "top": 929,
       "tag": "h2",
       "kind": "heading"
      },
@@ -602,8 +566,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.9,
-      "top": 2970,
+      "widthRatio": 0.88,
+      "top": 2779,
       "tag": "h2",
       "kind": "heading"
      },
@@ -624,15 +588,15 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.66,
-      "top": 5020,
+      "top": 4759,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
      "count": 6,
-     "maxLines": 3,
-     "over2Lines": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
      "statements": 0,
      "centered": 1,
      "medianWords": 5,
@@ -671,12 +635,12 @@
       "tracking": 0,
       "contrast": 9.7
      },
-     "measureChars": 86,
+     "measureChars": 75,
      "max": {
       "size": 67.2,
       "vw": 8.8,
       "font": "Harmond",
-      "text": "Specialized systems."
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -689,28 +653,7 @@
      "centerShare": 0.07,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Primary Focus: 01",
-      "above": "HVAC, Plumbing & Field Services",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 581
-     },
-     {
-      "text": "Primary Focus: 02",
-      "above": "Fishing Charters & Marine Outfitters",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 581
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -732,7 +675,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 1795,
+       "top": 1060,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -741,7 +684,7 @@
       },
       {
        "color": "#e5e5e5",
-       "top": 1819,
+       "top": 1628,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -750,7 +693,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 4964,
+       "top": 4703,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -761,19 +704,19 @@
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.55
+       "share": 0.52
       },
       {
        "color": "#1c1c1c",
-       "share": 0.21
+       "share": 0.22
       },
       {
        "color": "#555555",
-       "share": 0.1
+       "share": 0.11
       },
       {
        "color": "#c0272d",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#bbbbbb",
@@ -817,26 +760,13 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 19,
+     "roundedBoxes": 13,
      "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 1193
-      },
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 3139
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [],
     "nav": {
@@ -859,17 +789,17 @@
    "load": "load",
    "screens": 7,
    "filled": [
-    0.59,
-    0.71,
-    0.84,
-    0.79,
+    0.65,
+    0.76,
     0.85,
     0.79,
+    0.79,
+    0.74,
     0.73
    ],
    "motion": {
-    "elements": 18,
-    "css": 18,
+    "elements": 12,
+    "css": 12,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -881,38 +811,37 @@
      "h": 844
     },
     "page": {
-     "height": 5489,
-     "screens": 6.5,
-     "words": 516,
+     "height": 5079,
+     "screens": 6,
+     "words": 486,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 11,
+     "svg": 3,
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
+      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
-     "brokenImages": [
-      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
-     ],
+     "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "chars": 51,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "chars": 42,
+     "lines": 2,
      "size": 32,
      "vw": 8.2,
      "font": "Harmond",
@@ -930,18 +859,18 @@
      "kind": "heading"
     },
     "h1": {
-     "text": "Specialized systems. Built for trades and charters.",
-     "words": 7,
-     "lines": 3,
+     "text": "Built for the trades. Ready for the water.",
+     "words": 8,
+     "lines": 2,
      "size": 32,
      "font": "Harmond"
     },
     "headings": [
      {
-      "text": "Specialized systems. Built for trades and charters.",
-      "words": 7,
-      "chars": 51,
-      "lines": 3,
+      "text": "Built for the trades. Ready for the water.",
+      "words": 8,
+      "chars": 42,
+      "lines": 2,
       "size": 32,
       "vw": 8.2,
       "font": "Harmond",
@@ -975,7 +904,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 534,
+      "top": 471,
       "tag": "h2",
       "kind": "heading"
      },
@@ -996,7 +925,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 879,
+      "top": 785,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1017,7 +946,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 1209,
+      "top": 1115,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1038,7 +967,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 3052,
+      "top": 2826,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1059,15 +988,15 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.71,
-      "top": 4918,
+      "top": 4508,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
      "count": 6,
-     "maxLines": 3,
-     "over2Lines": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
      "statements": 0,
      "centered": 1,
      "medianWords": 5,
@@ -1110,7 +1039,7 @@
       "size": 32,
       "vw": 8.2,
       "font": "Harmond",
-      "text": "Specialized systems."
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -1145,7 +1074,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 478,
+       "top": 447,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1154,7 +1083,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 4886,
+       "top": 4476,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1165,11 +1094,11 @@
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.55
+       "share": 0.52
       },
       {
        "color": "#1c1c1c",
-       "share": 0.21
+       "share": 0.22
       },
       {
        "color": "#555555",
@@ -1177,7 +1106,7 @@
       },
       {
        "color": "#c0272d",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#bbbbbb",
@@ -1221,26 +1150,13 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 19,
+     "roundedBoxes": 13,
      "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 1476
-      },
-      {
-       "count": 4,
-       "iconTopped": true,
-       "rounded": true,
-       "top": 3345
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [],
     "nav": {
@@ -1260,78 +1176,11 @@
  ],
  "findings": [
   {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 1440,
-   "message": "1 headline(s) wrap past two lines at 1440px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 80.6px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "eyebrow",
-   "width": 1440,
-   "message": "2 eyebrow/kicker label(s) above headings: \"Primary Focus: 01\" above \"HVAC, Plumbing & Field Services\"; \"Primary Focus: 02\" above \"Fishing Charters & Marine Outfitters\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "icon-cards",
-   "width": 1440,
-   "message": "2 row(s) of identical cards each topped with a small icon (4, 4 cards).",
-   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 3 picture(s) on the page (3 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
-  },
-  {
    "level": "WARN",
    "id": "no-footage",
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "WARN",
-   "id": "measure",
-   "width": 1440,
-   "message": "Longest paragraph runs about 96 characters per line.",
-   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
-  },
-  {
-   "level": "FAIL",
-   "id": "broken-image",
-   "width": 1440,
-   "message": "Broken image(s): http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp",
-   "fix": "Fix the URL or replace the asset.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 768,
-   "message": "1 headline(s) wrap past two lines at 768px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 67.2px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 390,
-   "message": "1 headline(s) wrap past two lines at 390px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 32px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
   }
  ],
  "images": [
