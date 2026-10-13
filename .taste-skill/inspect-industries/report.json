@@ -1,0 +1,1364 @@
+{
+ "url": "http://localhost:4173/industries",
+ "at": "2026-10-13T23:43:05.585Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.43,
+    0.6,
+    0.44,
+    0.44,
+    0.51
+   ],
+   "motion": {
+    "elements": 24,
+    "css": 24,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3639,
+     "screens": 4,
+     "words": 526,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
+     ],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "chars": 51,
+     "lines": 3,
+     "size": 80.6,
+     "vw": 5.6,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.62,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "lines": 3,
+     "size": 80.6,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "Specialized systems. Built for trades and charters.",
+      "words": 7,
+      "chars": 51,
+      "lines": 3,
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 643,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 643,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 921,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 2029,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.35,
+      "top": 3222,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      24,
+      28,
+      44,
+      81
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.7
+     },
+     "measureChars": 96,
+     "max": {
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "Harmond",
+      "text": "Specialized systems."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "Primary Focus: 01",
+      "above": "HVAC, Plumbing & Field Services",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 611
+     },
+     {
+      "text": "Primary Focus: 02",
+      "above": "Fishing Charters & Marine Outfitters",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 611
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 3166,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#444444",
+       "share": 0.55
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.21
+      },
+      {
+       "color": "#555555",
+       "share": 0.11
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.05
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 19,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1090
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 2198
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.57,
+    0.81,
+    0.84,
+    0.79,
+    0.79,
+    0.74
+   ],
+   "motion": {
+    "elements": 19,
+    "css": 19,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5509,
+     "screens": 5.4,
+     "words": 521,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
+     ],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "chars": 51,
+     "lines": 3,
+     "size": 67.2,
+     "vw": 8.8,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "lines": 3,
+     "size": 67.2,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "Specialized systems. Built for trades and charters.",
+      "words": 7,
+      "chars": 51,
+      "lines": 3,
+      "size": 67.2,
+      "vw": 8.8,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 613,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 613,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1024,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2970,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 44,
+      "vw": 5.7,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.66,
+      "top": 5020,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      18,
+      24,
+      28,
+      44,
+      67
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 67.2,
+      "vw": 8.8,
+      "font": "Harmond",
+      "text": "Specialized systems."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "Primary Focus: 01",
+      "above": "HVAC, Plumbing & Field Services",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 581
+     },
+     {
+      "text": "Primary Focus: 02",
+      "above": "Fishing Charters & Marine Outfitters",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 581
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1795,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e5e5e5",
+       "top": 1819,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.9
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 4964,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#444444",
+       "share": 0.55
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.21
+      },
+      {
+       "color": "#555555",
+       "share": 0.1
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.05
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 19,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1193
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 3139
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.59,
+    0.71,
+    0.84,
+    0.79,
+    0.85,
+    0.79,
+    0.73
+   ],
+   "motion": {
+    "elements": 18,
+    "css": 18,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5489,
+     "screens": 6.5,
+     "words": 516,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp"
+     ],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "chars": 51,
+     "lines": 3,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.96,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.88,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Specialized systems. Built for trades and charters.",
+     "words": 7,
+     "lines": 3,
+     "size": 32,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "Specialized systems. Built for trades and charters.",
+      "words": 7,
+      "chars": 51,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.96,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 534,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 879,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1209,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3052,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 4918,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      20,
+      22,
+      24,
+      32
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Harmond",
+      "text": "Specialized systems."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 478,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 4886,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#444444",
+       "share": 0.55
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.21
+      },
+      {
+       "color": "#555555",
+       "share": 0.11
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.05
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 19,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1476
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 3345
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 80.6px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"Primary Focus: 01\" above \"HVAC, Plumbing & Field Services\"; \"Primary Focus: 02\" above \"Fishing Charters & Marine Outfitters\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "2 row(s) of identical cards each topped with a small icon (4, 4 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 3 picture(s) on the page (3 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 96 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "FAIL",
+   "id": "broken-image",
+   "width": 1440,
+   "message": "Broken image(s): http://localhost:4173/images/case-studies/garys-pipelining/after-screenshot.webp",
+   "fix": "Fix the URL or replace the asset.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 67.2px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Specialized systems. Built for trades and charte\" → 3 lines (7 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/desktop-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/desktop-page-01.jpg",
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/desktop-page-02.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/tablet-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/mobile-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-industries/mobile-page-01.jpg"
+   ]
+  }
+ ]
+}
