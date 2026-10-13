@@ -140,6 +140,12 @@
   [data-rise="18"] { animation-delay: 900ms; }
   [data-rise="19"] { animation-delay: 950ms; }
   [data-rise="20"] { animation-delay: 1000ms; }
+  [data-rise="21"] { animation-delay: 1050ms; }
+  [data-rise="22"] { animation-delay: 1100ms; }
+  [data-rise="23"] { animation-delay: 1150ms; }
+  [data-rise="24"] { animation-delay: 1200ms; }
+  [data-rise="25"] { animation-delay: 1250ms; }
+  [data-rise="26"] { animation-delay: 1300ms; }
 }
 
 /* Custom Scrollbar suppression */
