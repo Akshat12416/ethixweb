@@ -74,6 +74,15 @@ const server = http.createServer((req, res) => {
       return;
     }
     res.writeHead(404); res.end();
+  } else if (pathname.startsWith('/work/')) {
+    const workFile = path.resolve(WORK_DIR, pathname.slice(6));
+    const ext = path.extname(workFile);
+    if (fs.existsSync(workFile)) {
+      res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+      fs.createReadStream(workFile).pipe(res);
+      return;
+    }
+    res.writeHead(404); res.end();
   } else {
     res.writeHead(404); res.end('Not found');
   }

@@ -1,13 +1,11 @@
 import wave
 import math
 import struct
-import os
 
 SAMPLE_RATE = 44100
-DURATION = 22.0
+DURATION = 24.0
 TOTAL_SAMPLES = int(SAMPLE_RATE * DURATION)
 
-# Sound generation buffers (left and right channels)
 left_channel = [0.0] * TOTAL_SAMPLES
 right_channel = [0.0] * TOTAL_SAMPLES
 
@@ -20,20 +18,19 @@ def noise():
     import random
     return random.uniform(-1.0, 1.0)
 
-# 1. SYNTH CHORDS / PADS
-# Chord progression (D minor scale):
-# 0s - 4.4s: Dm9 (D3=146.83, F3=174.61, A3=220.0, C4=261.63, E4=329.63)
-# 4.4s - 8.8s: Bbmaj7 (Bb2=116.54, D3=146.83, F3=174.61, A3=220.0)
-# 8.8s - 13.2s: Fmaj9 (F2=87.31, C3=130.81, G3=196.0, A3=220.0, E4=329.63)
-# 13.2s - 17.6s: C9 (C3=130.81, G3=196.0, D4=293.66, E4=329.63)
-# 17.6s - 22.0s: Dm (D2=73.42, A2=110.0, D3=146.83, F3=174.61)
+# 1. SYNTH CHORDS / PADS (D minor progression across 24s)
+# 0s - 4.8s: Dm9 (D3=146.83, F3=174.61, A3=220.0, C4=261.63, E4=329.63)
+# 4.8s - 9.6s: Bbmaj7 (Bb2=116.54, D3=146.83, F3=174.61, A3=220.0)
+# 9.6s - 14.4s: Fadd9 (F2=87.31, C3=130.81, G3=196.0, A3=220.0, E4=329.63)
+# 14.4s - 19.2s: C9 (C3=130.81, G3=196.0, D4=293.66, E4=329.63)
+# 19.2s - 24.0s: Dm (D2=73.42, A2=110.0, D3=146.83, F3=174.61)
 
 chords = [
-    (0.0, 4.4, [146.83, 174.61, 220.0, 261.63, 329.63]),
-    (4.4, 8.8, [116.54, 146.83, 174.61, 220.0]),
-    (8.8, 13.2, [87.31, 130.81, 196.0, 220.0, 329.63]),
-    (13.2, 17.6, [130.81, 196.0, 293.66, 329.63]),
-    (17.6, 22.0, [73.42, 110.0, 146.83, 174.61])
+    (0.0, 4.8, [146.83, 174.61, 220.0, 261.63, 329.63]),
+    (4.8, 9.6, [116.54, 146.83, 174.61, 220.0]),
+    (9.6, 14.4, [87.31, 130.81, 196.0, 220.0, 329.63]),
+    (14.4, 19.2, [130.81, 196.0, 293.66, 329.63]),
+    (19.2, 24.0, [73.42, 110.0, 146.83, 174.61])
 ]
 
 for start_t, end_t, freqs in chords:
@@ -43,17 +40,15 @@ for start_t, end_t, freqs in chords:
     for i in range(chord_len):
         t = i / SAMPLE_RATE
         cur_s = start_s + i
-        # Envelope: soft attack, sustained, soft release
         fade_in = min(1.0, t / 0.3)
         time_left = (end_s - cur_s) / SAMPLE_RATE
         fade_out = min(1.0, time_left / 0.4)
-        if cur_s / SAMPLE_RATE > 20.0:
-            fade_out *= max(0.0, (22.0 - cur_s / SAMPLE_RATE) / 2.0)
+        if cur_s / SAMPLE_RATE > 22.0:
+            fade_out *= max(0.0, (24.0 - cur_s / SAMPLE_RATE) / 2.0)
         env = fade_in * fade_out * 0.12
 
         sample_val = 0.0
         for f_idx, f in enumerate(freqs):
-            # Rich detuned saw/sine mixture with stereo widening
             detune = 1.0 + 0.003 * math.sin(t * 3.0 + f_idx)
             val = (math.sin(2 * math.pi * f * t) * 0.6 + 
                    (math.sin(2 * math.pi * f * detune * t) ** 3) * 0.4)
@@ -65,11 +60,11 @@ for start_t, end_t, freqs in chords:
 
 # 2. BASSLINE / 808 SUB
 bass_notes = [
-    (0.0, 4.4, 73.42),    # D2
-    (4.4, 8.8, 58.27),    # Bb1
-    (8.8, 13.2, 43.65),   # F1
-    (13.2, 17.6, 65.41),  # C2
-    (17.6, 21.5, 73.42)   # D2
+    (0.0, 4.8, 73.42),    # D2
+    (4.8, 9.6, 58.27),    # Bb1
+    (9.6, 14.4, 43.65),   # F1
+    (14.4, 19.2, 65.41),  # C2
+    (19.2, 23.5, 73.42)   # D2
 ]
 
 for start_t, end_t, base_f in bass_notes:
@@ -80,17 +75,15 @@ for start_t, end_t, base_f in bass_notes:
         cur_s = s_start + i
         if cur_s >= TOTAL_SAMPLES:
             break
-        # Soft sub-bass with gentle saturation
         fade = min(1.0, t / 0.1) * min(1.0, (s_end - cur_s) / (SAMPLE_RATE * 0.2))
-        if cur_s / SAMPLE_RATE > 20.0:
-            fade *= max(0.0, (22.0 - cur_s / SAMPLE_RATE) / 2.0)
+        if cur_s / SAMPLE_RATE > 22.0:
+            fade *= max(0.0, (24.0 - cur_s / SAMPLE_RATE) / 2.0)
         sub = math.sin(2 * math.pi * base_f * t)
-        # 2nd harmonic for audibility on laptop speakers
         harm2 = math.sin(2 * math.pi * (base_f * 2) * t) * 0.35
         bass_val = (sub + harm2) * 0.22 * fade
         add_sample(cur_s, bass_val, bass_val)
 
-# 3. DRUMS: KICK, CLAP/SNARE, HI-HATS
+# 3. DRUMS: KICK, CLAP/SNARE, HI-HATS (110 BPM)
 BPM = 110.0
 BEAT_DUR = 60.0 / BPM  # ~0.5454s
 
@@ -102,10 +95,8 @@ def add_kick(hit_time, punch=1.0):
         cur_s = start_s + i
         if cur_s >= TOTAL_SAMPLES:
             break
-        # Pitch envelope 140Hz -> 45Hz
         f = 45.0 + 95.0 * math.exp(-t * 28.0)
         env = math.exp(-t * 12.0)
-        # click transient
         click = noise() * math.exp(-t * 80.0) * 0.2
         val = (math.sin(2 * math.pi * f * t) + click) * env * 0.45 * punch
         add_sample(cur_s, val, val)
@@ -135,13 +126,11 @@ def add_hihat(hit_time, vol=0.15):
         pan = 0.4 + 0.2 * ((cur_s % 3) / 3.0)
         add_sample(cur_s, val * pan, val * (1.0 - pan))
 
-# Beat rhythm schedule
 current_beat = 0
-while current_beat * BEAT_DUR < 20.5:
+while current_beat * BEAT_DUR < 22.5:
     t = current_beat * BEAT_DUR
     bar_pos = current_beat % 4
 
-    # Kick on 0 and 2.5
     if bar_pos == 0:
         add_kick(t, 1.0)
     elif bar_pos == 2.5:
@@ -149,11 +138,9 @@ while current_beat * BEAT_DUR < 20.5:
     elif bar_pos == 2 and current_beat > 8:
         add_kick(t, 0.9)
 
-    # Snare on 2
     if bar_pos == 2:
         add_snare(t, 0.95)
 
-    # Hihats on eighth notes
     add_hihat(t, 0.12)
     add_hihat(t + BEAT_DUR * 0.5, 0.08)
     
@@ -197,39 +184,43 @@ def add_whoosh(start_t, vol=0.25):
         val = noise() * env
         add_sample(cur_s, val, val)
 
-# Impact at t=2.0s (ETHIXWEB logo drop)
-add_kick(2.0, 1.3)
-add_whoosh(1.7, 0.3)
+# Cue points for the 5 scenes:
+# Scene 1: t=0.0s (Intro drop)
+add_kick(0.0, 1.2)
+add_whoosh(0.1, 0.25)
+add_ui_click(1.2, 1400.0, 0.2)
 
-# Riser into Scene 2 (t=3.8s)
-add_riser(3.0, 1.0, 120.0, 500.0, 0.15)
-add_ui_click(4.0, 1500.0, 0.2)
-add_ui_click(4.15, 1800.0, 0.2)
+# Scene 2: t=4.5s (Multi-Page Architecture)
+add_riser(3.8, 0.7, 120.0, 600.0, 0.16)
+add_whoosh(4.5, 0.3)
+add_kick(4.5, 1.1)
+add_ui_click(5.5, 1046.5, 0.15)
+add_ui_click(6.5, 1318.5, 0.15)
+add_ui_click(7.5, 1567.9, 0.15)
 
-# Terminal tick clicks in Scene 2
-for tick_i in range(8):
-    add_ui_click(5.0 + tick_i * 0.22, 900.0 + tick_i * 80.0, 0.08)
+# Scene 3: t=9.0s (Backend & Postgres CRM)
+add_riser(8.3, 0.7, 180.0, 750.0, 0.18)
+add_whoosh(9.0, 0.3)
+add_snare(9.0, 1.1)
+add_ui_click(9.8, 1200.0, 0.18)
+add_ui_click(10.4, 1500.0, 0.2)
+add_ui_click(11.2, 1800.0, 0.22)
 
-# Riser into Scene 3 (t=8.2s)
-add_riser(7.8, 0.7, 200.0, 700.0, 0.18)
-add_whoosh(8.4, 0.25)
-# Security verification chimes
-add_ui_click(9.2, 1046.5, 0.18) # C6
-add_ui_click(9.5, 1318.5, 0.18) # E6
-add_ui_click(9.8, 1567.9, 0.22) # G6
-
-# Counter ticks in Scene 4 (t=13.0s - 15.0s)
+# Scene 4: t=14.0s (Core Web Vitals 90+ Everywhere)
+add_riser(13.2, 0.8, 160.0, 850.0, 0.2)
+add_whoosh(14.0, 0.35)
+add_kick(14.0, 1.3)
 for cnt_i in range(12):
-    add_ui_click(13.4 + cnt_i * 0.12, 1200.0 + (cnt_i % 3) * 200.0, 0.09)
+    add_ui_click(14.4 + cnt_i * 0.12, 1100.0 + (cnt_i % 4) * 220.0, 0.08)
 
-# Shutter snap and resolution into Scene 5 (t=17.5s)
-add_whoosh(17.2, 0.3)
-add_snare(17.5, 1.2)
-add_kick(17.5, 1.2)
-add_ui_click(18.2, 880.0, 0.15)
-add_ui_click(18.5, 1174.6, 0.18)
+# Scene 5: t=19.0s (Shutter Outro & Deliverables)
+add_whoosh(18.6, 0.35)
+add_snare(19.0, 1.2)
+add_kick(19.0, 1.3)
+add_ui_click(20.0, 1046.5, 0.18)
+add_ui_click(20.5, 1318.5, 0.2)
 
-# Master limiting & 16-bit PCM conversion
+# Master Limiting
 wav_file = wave.open("brag-output/work/soundtrack.wav", "w")
 wav_file.setnchannels(2)
 wav_file.setsampwidth(2)
@@ -239,16 +230,13 @@ max_peak = 0.001
 for i in range(TOTAL_SAMPLES):
     max_peak = max(max_peak, abs(left_channel[i]), abs(right_channel[i]))
 
-# Target -1.5 dB headroom peak
 gain = 0.85 / max_peak
 
 frames_data = bytearray()
 for i in range(TOTAL_SAMPLES):
     l = max(-1.0, min(1.0, left_channel[i] * gain))
     r = max(-1.0, min(1.0, right_channel[i] * gain))
-    l_int = int(l * 32767.0)
-    r_int = int(r * 32767.0)
-    frames_data.extend(struct.pack('<hh', l_int, r_int))
+    frames_data.extend(struct.pack('<hh', int(l * 32767.0), int(r * 32767.0)))
 
 wav_file.writeframes(frames_data)
 wav_file.close()
