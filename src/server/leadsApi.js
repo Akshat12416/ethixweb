@@ -1,14 +1,16 @@
 import { neon } from '@neondatabase/serverless';
 
-const DATABASE_URL =
-  process.env.DATABASE_URL ||
-  'postgresql://user:password@ep-sample-pooler.region.aws.neon.tech/neondb?sslmode=require';
-
+const DATABASE_URL = process.env.DATABASE_URL;
 const ADMIN_SECRET = process.env.ADMIN_SECRET || 'ethix2026';
 
 let sqlClient = null;
 function getSql() {
   if (!sqlClient) {
+    if (!DATABASE_URL) {
+      throw new Error(
+        'DATABASE_URL environment variable is missing. Please define it in your .env file.'
+      );
+    }
     sqlClient = neon(DATABASE_URL);
   }
   return sqlClient;

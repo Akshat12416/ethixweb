@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,12 +7,14 @@ import 'lenis/dist/lenis.css';
 
 import { TransitionProvider } from './context/TransitionContext';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import IndustriesPage from './pages/IndustriesPage';
-import ServicesPage from './pages/ServicesPage';
-import OurWorkPage from './pages/OurWorkPage';
-import ContactPage from './pages/ContactPage';
-import AdminPage from './pages/AdminPage';
+
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const IndustriesPage = lazy(() => import('./pages/IndustriesPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const OurWorkPage = lazy(() => import('./pages/OurWorkPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const AdminPage = lazy(() => import('./pages/AdminPage'));
+
 import './styles/landing.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -167,15 +169,17 @@ function AnimatedRoutes() {
 
   return (
     <>
-      <Routes location={displayLocation}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/industries" element={<IndustriesPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/our-work" element={<OurWorkPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes location={displayLocation}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/our-work" element={<OurWorkPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
+      </Suspense>
 
       <div className="home-transition-overlay" ref={overlayRef} aria-hidden="true">
         <div className="home-transition-text">

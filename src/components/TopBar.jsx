@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import emblemImg from '../assets/emblem-transparent-sm.webp';
 import { useTransition } from '../context/TransitionContext';
 import '../styles/landing.css';
 
@@ -50,17 +51,8 @@ export default function TopBar({ className = '' }) {
     <>
       <header className={`nav ${className}`}>
         {/* LEFT */}
-        <div className="nav-left">
-          <svg
-            viewBox="0 0 24 24"
-            className="w-7 h-7 shrink-0 text-[#1c1c1c] stroke-[#1c1c1c]"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
-          </svg>
+        <div className="nav-left flex items-center gap-2.5">
+          <img src={emblemImg} alt="Ethixweb" className="w-6 h-6 object-contain shrink-0" />
           <span>
             DIGITAL OPERATIONS<br />
             FOR US TEAMS<br />
@@ -72,9 +64,10 @@ export default function TopBar({ className = '' }) {
         <a
           href="/"
           onClick={handleHomeClick}
-          className="nav-center cursor-pointer"
+          className="nav-center cursor-pointer flex items-center gap-2"
         >
-          ETHIXWEB.COM
+          <img src={emblemImg} alt="Ethixweb" className="w-5 h-5 object-contain inline-block md:hidden shrink-0" />
+          <span>ETHIXWEB.COM</span>
         </a>
 
         {/* RIGHT */}
