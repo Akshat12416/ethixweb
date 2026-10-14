@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { ArrowUpRight, CheckCircle2, X } from 'lucide-react';
 import TopBar from '../components/TopBar';
+import MiddleNav from '../components/MiddleNav';
+import PageCurtain from '../components/PageCurtain';
 import { useTransition } from '../context/TransitionContext';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
@@ -110,10 +112,12 @@ export default function AboutPage() {
 
   return (
     <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
+      <PageCurtain />
       {/* Perimeter top navigation */}
       <TopBar />
+      <MiddleNav />
 
-      <main className="w-full flex flex-col gap-16 md:gap-20 py-8 md:py-12 flex-1">
+      <main className="w-full flex flex-col gap-16 md:gap-20 pt-24 md:pt-32 pb-16 flex-1">
         {/* ── SECTION 1: ABOUT (HERO, NARRATIVE, COLLABORATION EVIDENCE, COMPARISON) ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12">
           {/* Hero statement */}

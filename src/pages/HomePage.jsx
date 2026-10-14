@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { Menu, X } from 'lucide-react';
-import { useTransition } from '../context/TransitionContext';
 import InteractiveWeb from '../components/InteractiveWeb';
 import '../styles/landing.css';
 
@@ -9,8 +9,14 @@ export default function HomePage() {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [displayHover, setDisplayHover] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const navigate = useNavigate();
+
   const hasAnimated = useRef(false);
-  const { navigateWithTransition, isTransitioning } = useTransition();
+  const webAnimTargetRef = useRef(null);
+  const leftColRef = useRef(null);
+  const rightColRef = useRef(null);
 
   useEffect(() => {
     if (hoveredItem && !isTransitioning) {
@@ -18,14 +24,130 @@ export default function HomePage() {
     }
   }, [hoveredItem, isTransitioning]);
 
-  // ── ENTRANCE ANIMATIONS (huyml.co / portfolio style) ──
+  // ── ENTRANCE ANIMATIONS (huyml.co / portfolio style with preloader drop) ──
   useEffect(() => {
+    // If returning from another page, skip preloader animation
+    const shouldSkip = sessionStorage.getItem('skipPreloader') === 'true';
+    if (shouldSkip) {
+      sessionStorage.removeItem('skipPreloader');
+      setIsPreloading(false);
+      hasAnimated.current = true;
+
+      const webEl = webAnimTargetRef.current;
+      const leftColEl = leftColRef.current;
+      const rightColEl = rightColRef.current;
+
+      if (webEl) gsap.set(webEl, { y: 0 });
+      if (leftColEl) gsap.set(leftColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+      if (rightColEl) gsap.set(rightColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+
+      gsap.set('.hello-title-char', { yPercent: 0 });
+      gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
+      gsap.set('.landing-root .nav-row', { opacity: 1, y: 0 });
+      gsap.set('.tagline', { opacity: 1 });
+      return;
+    }
+
     if (!hasAnimated.current) {
       hasAnimated.current = true;
 
-      const tl = gsap.timeline({ delay: 0.05 });
+      const webEl = webAnimTargetRef.current;
+      const leftColEl = leftColRef.current;
+      const rightColEl = rightColRef.current;
 
-      // 1. Giant Marquee Title — per-character curtain reveal with center-out wave
+      if (!webEl || !leftColEl || !rightColEl) return;
+
+      // Compute geometric offsets for preloader centering and emergence
+      const webRect = webEl.getBoundingClientRect();
+      const viewportCenterY = window.innerHeight / 2;
+      const webCenterY = webRect.top + webRect.height / 2;
+      const deltaY = viewportCenterY - webCenterY;
+
+      const isDesktop = window.innerWidth > 768;
+      const webCenterX = webRect.left + webRect.width / 2;
+      const leftRect = leftColEl.getBoundingClientRect();
+      const rightRect = rightColEl.getBoundingClientRect();
+
+      // Shift side columns behind the center web
+      const leftOffsetX = isDesktop ? webCenterX - (leftRect.left + leftRect.width / 2) : 0;
+      const rightOffsetX = isDesktop ? webCenterX - (rightRect.left + rightRect.width / 2) : 0;
+      const initialY = isDesktop ? 0 : 25;
+
+      // 1. Initial Preloader State:
+      // Web is dead-centered vertically on the blank white canvas
+      gsap.set(webEl, { y: deltaY });
+
+      // Side columns start tucked directly behind the web with opacity 0
+      gsap.set(leftColEl, { x: leftOffsetX, y: initialY, scale: 0.92, opacity: 0 });
+      gsap.set(rightColEl, { x: rightOffsetX, y: initialY, scale: 0.92, opacity: 0 });
+
+      // All other hero elements start hidden
+      gsap.set('.hello-title-char', { yPercent: 110 });
+      gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 0 });
+      gsap.set('.landing-root .nav-row', { opacity: 0 });
+      gsap.set('.tagline', { opacity: 0 });
+
+      // 2. Preloader finishes after 1.0s, starting the fall and emergence choreography
+      const PRELOADER_DURATION = 1.0;
+
+      const tl = gsap.timeline({
+        delay: PRELOADER_DURATION,
+        onStart: () => {
+          setIsPreloading(false);
+        },
+      });
+
+      // 1. The web falls down to its current place in hero section
+      tl.to(
+        webEl,
+        {
+          y: 0,
+          duration: 0.9,
+          ease: 'power4.out',
+        },
+        0
+      );
+
+      // 2. Bottom left and right texts come from behind it moving to their respective places with a little fade in
+      tl.to(
+        leftColEl,
+        {
+          x: 0,
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.85,
+          ease: 'power3.out',
+        },
+        0.12
+      );
+
+      tl.to(
+        rightColEl,
+        {
+          x: 0,
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.85,
+          ease: 'power3.out',
+        },
+        0.12
+      );
+
+      // 3. Tagline fades in below the web as it settles
+      tl.to(
+        '.tagline',
+        {
+          opacity: 1,
+          duration: 0.65,
+          ease: 'power2.out',
+        },
+        0.45
+      );
+
+      // 4. REST ALL ANIMATIONS REMAIN EXACTLY THE SAME:
+      // Giant Marquee Title — per-character curtain reveal with center-out wave
       tl.fromTo(
         '.hello-title-char',
         { yPercent: 110 },
@@ -35,56 +157,34 @@ export default function HomePage() {
           stagger: { each: 0.03, from: 'center' },
           ease: 'power4.out',
         },
-        0
+        0.15
       );
 
-      // 2. Top nav — slide down with fade
+      // Top nav — slide down with fade
       tl.fromTo(
         '.landing-root .nav-left',
         { y: -25, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
-        0.15
+        0.25
       );
       tl.fromTo(
         '.landing-root .nav-center',
         { y: -15, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
-        0.2
+        0.3
       );
       tl.fromTo(
         '.landing-root .nav-right',
         { y: -25, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
-        0.15
-      );
-
-      // 3. Bottom side texts — split from center outward
-      tl.fromTo(
-        '.person-col2-left',
-        { x: 60, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.75, ease: 'power3.out' },
-        0.25
-      );
-      tl.fromTo(
-        '.person-col2-right',
-        { x: -60, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.75, ease: 'power3.out' },
         0.25
       );
 
-      // 4. Nav row — slides up from below
+      // Nav row — slides up from below
       tl.fromTo(
         '.landing-root .nav-row',
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
-        0.3
-      );
-
-      // 5. Bottom center spiderweb & tagline
-      tl.fromTo(
-        '.person-col-center',
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
         0.35
       );
     }
@@ -93,12 +193,38 @@ export default function HomePage() {
   const handleNavClick = (e, path, label) => {
     e.preventDefault();
     if (isTransitioning) return;
+    setIsTransitioning(true);
     setIsMobileMenuOpen(false);
-    navigateWithTransition(path, label.toUpperCase());
+
+    if (label) setDisplayHover(label);
+
+    const banner = document.querySelector('.nav-hover-banner');
+    if (banner) {
+      banner.classList.add('is-transitioning');
+      gsap.to(banner, {
+        height: '100vh',
+        duration: 0.8,
+        ease: 'power3.inOut',
+        onComplete: () => {
+          sessionStorage.setItem('showCurtain', 'true');
+          navigate(path);
+        },
+      });
+
+      gsap.to('.hover-char', {
+        color: '#ffffff',
+        scale: 1.1,
+        duration: 0.8,
+        ease: 'power3.inOut',
+      });
+    } else {
+      sessionStorage.setItem('showCurtain', 'true');
+      navigate(path);
+    }
   };
 
   return (
-    <div className="landing-root">
+    <div className={`landing-root ${isPreloading ? 'is-preloading' : ''}`}>
       {/* ── TOP NAV (Matching Portfolio Layout) ── */}
       <header className="nav">
         <div className="nav-left">
@@ -222,7 +348,7 @@ export default function HomePage() {
       {/* ── NUMBERED NAV ROW WITH FULL-WIDTH HOVER BANNER ── */}
       <nav
         data-ui="nav"
-        className={`nav-row ${hoveredItem || isTransitioning ? 'has-hover' : ''}`}
+        className={`nav-row ${hoveredItem || isTransitioning ? 'has-hover' : ''} ${isTransitioning ? 'is-transitioning' : ''}`}
         onMouseLeave={() => {
           if (!isTransitioning) setHoveredItem(null);
         }}
@@ -310,7 +436,7 @@ export default function HomePage() {
       {/* ── BOTTOM THREE-COLUMN TIER: LEFT STATEMENT, CENTER WEB, RIGHT STATEMENT ── */}
       <footer className="person-wrap">
         {/* LEFT COLUMN */}
-        <div className="person-col2 person-col2-left">
+        <div ref={leftColRef} className="person-col2 person-col2-left">
           {/* Vector 4-point sparkle matching portfolio star */}
           <svg
             viewBox="0 0 24 24"
@@ -328,12 +454,14 @@ export default function HomePage() {
 
         {/* CENTER COLUMN: INTERACTIVE SPIDERWEB NETWORK (Replaces Retro Computer) */}
         <div className="person-col-center">
-          <InteractiveWeb />
+          <div ref={webAnimTargetRef} className="web-anim-target w-full flex justify-center">
+            <InteractiveWeb isPreloading={isPreloading} />
+          </div>
           <p className="tagline">WE RUN THE TECH. YOU RUN THE BUSINESS.</p>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="person-col2 person-col2-right">
+        <div ref={rightColRef} className="person-col2 person-col2-right">
           {/* Vector 4-point sparkle matching portfolio star */}
           <svg
             viewBox="0 0 24 24"

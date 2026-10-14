@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,27 +12,173 @@ import IndustriesPage from './pages/IndustriesPage';
 import ServicesPage from './pages/ServicesPage';
 import OurWorkPage from './pages/OurWorkPage';
 import ContactPage from './pages/ContactPage';
+import './styles/landing.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function ScrollSync() {
+function AnimatedRoutes() {
   const location = useLocation();
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [isHomeTransitioning, setIsHomeTransitioning] = useState(false);
+  const pendingLocation = useRef(null);
+  const overlayRef = useRef(null);
 
   useEffect(() => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true });
+    const isSameLocation =
+      location.pathname === displayLocation.pathname &&
+      location.search === displayLocation.search &&
+      location.hash === displayLocation.hash;
+
+    if (isSameLocation || isHomeTransitioning) return;
+
+    const isReturningHome = location.pathname === '/' && displayLocation.pathname !== '/';
+
+    if (!isReturningHome) {
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      }
+      window.scrollTo(0, 0);
+      setDisplayLocation(location);
+
+      const timer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 120);
+      return () => clearTimeout(timer);
     }
-    window.scrollTo(0, 0);
 
-    // Refresh ScrollTrigger calculations after route rendering
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 120);
+    pendingLocation.current = location;
+    setIsHomeTransitioning(true);
+  }, [displayLocation, isHomeTransitioning, location]);
 
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+  useEffect(() => {
+    if (!isHomeTransitioning || !overlayRef.current) return;
 
-  return null;
+    const overlay = overlayRef.current;
+    const chars = overlay.querySelectorAll('.home-transition-char');
+
+    const revealHome = () => {
+      sessionStorage.setItem('skipPreloader', 'true');
+      setDisplayLocation(pendingLocation.current || location);
+    };
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        pendingLocation.current = null;
+        setIsHomeTransitioning(false);
+        gsap.set(overlay, { autoAlpha: 0 });
+      },
+    });
+
+    tl.set(overlay, {
+      autoAlpha: 1,
+      height: '16vh',
+      scaleY: 0,
+      top: '50%',
+      yPercent: -50,
+      transformOrigin: 'center center',
+    });
+
+    tl.set(chars, {
+      y: 60,
+      opacity: 0,
+      scale: 1,
+      color: 'rgb(70, 70, 70)',
+    });
+
+    tl.to(
+      overlay,
+      {
+        scaleY: 1,
+        duration: 0.55,
+        ease: 'power3.inOut',
+      },
+      0
+    );
+
+    tl.to(
+      chars,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.05,
+        ease: 'power4.out',
+      },
+      0.12
+    );
+
+    tl.to(
+      chars,
+      {
+        color: '#ffffff',
+        scale: 1.1,
+        duration: 0.45,
+        ease: 'power3.inOut',
+      },
+      0.4
+    );
+
+    tl.to(
+      overlay,
+      {
+        height: '100vh',
+        duration: 0.9,
+        ease: 'power3.inOut',
+      },
+      0.62
+    );
+
+    tl.add(revealHome, 1.55);
+
+    tl.to(
+      overlay,
+      {
+        height: '16vh',
+        duration: 0.75,
+        ease: 'power3.inOut',
+      },
+      1.65
+    );
+
+    tl.to(
+      overlay,
+      {
+        scaleY: 0,
+        duration: 0.45,
+        ease: 'power3.inOut',
+      },
+      2.3
+    );
+
+    return () => tl.kill();
+  }, [isHomeTransitioning, location]);
+
+  return (
+    <>
+      <Routes location={displayLocation}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/our-work" element={<OurWorkPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+
+      <div className="home-transition-overlay" ref={overlayRef} aria-hidden="true">
+        <div className="home-transition-text">
+          {'Home'.split('').map((char, i) => (
+            <span
+              key={`home-${i}`}
+              className="home-transition-char"
+              style={{ '--char-index': i, '--char-total': 4 }}
+            >
+              {char}
+            </span>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default function App() {
@@ -67,15 +213,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <TransitionProvider>
-        <ScrollSync />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/our-work" element={<OurWorkPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <AnimatedRoutes />
       </TransitionProvider>
     </BrowserRouter>
   );

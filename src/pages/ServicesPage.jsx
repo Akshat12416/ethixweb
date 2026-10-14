@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { ArrowUpRight, ChevronDown, CheckCircle2 } from 'lucide-react';
 import TopBar from '../components/TopBar';
+import MiddleNav from '../components/MiddleNav';
+import PageCurtain from '../components/PageCurtain';
 import { useTransition } from '../context/TransitionContext';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
@@ -198,8 +200,10 @@ export default function ServicesPage() {
 
   return (
     <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
+      <PageCurtain />
       {/* Perimeter top navigation */}
       <TopBar />
+      <MiddleNav />
 
       <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
         {/* ── SECTION: HERO OVERVIEW ── */}

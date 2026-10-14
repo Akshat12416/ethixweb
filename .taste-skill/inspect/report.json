@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/",
- "at": "2026-10-14T01:26:00.243Z",
+ "at": "2026-10-14T01:39:08.136Z",
  "allow": [
   "few-pictures",
   "numbering"
@@ -15,10 +15,10 @@
     0.2
    ],
    "motion": {
-    "elements": 65,
-    "css": 49,
-    "transitions": 0,
-    "scripted": 16,
+    "elements": 91,
+    "css": 61,
+    "transitions": 4,
+    "scripted": 26,
     "videos": 0,
     "playingVideos": 0
    },
@@ -395,10 +395,10 @@
     0.22
    ],
    "motion": {
-    "elements": 65,
-    "css": 49,
-    "transitions": 0,
-    "scripted": 16,
+    "elements": 91,
+    "css": 59,
+    "transitions": 6,
+    "scripted": 26,
     "videos": 0,
     "playingVideos": 0
    },
@@ -779,10 +779,10 @@
     0.19
    ],
    "motion": {
-    "elements": 65,
-    "css": 49,
-    "transitions": 0,
-    "scripted": 16,
+    "elements": 91,
+    "css": 61,
+    "transitions": 4,
+    "scripted": 26,
     "videos": 0,
     "playingVideos": 0
    },

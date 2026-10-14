@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useTransition } from '../context/TransitionContext';
+import '../styles/landing.css';
 
-export default function TopBar() {
+/**
+ * Shared top bar across all pages matching akshatg-portfolio.
+ * Features 3-part layout: Left info, Center branding, Right volume tag.
+ * The numbered navbar is rendered via MiddleNav at its original center position.
+ */
+export default function TopBar({ className = '' }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const { navigateWithTransition, isTransitioning } = useTransition();
+  const navigate = useNavigate();
+  const { navigateWithTransition } = useTransition();
 
   const navLinks = [
     { label: 'Work', to: '/our-work' },
@@ -16,89 +23,102 @@ export default function TopBar() {
     { label: 'Contact', to: '/contact' },
   ];
 
-  const handleNavClick = (e, to, label) => {
+  const handleHomeClick = (e) => {
     e.preventDefault();
-    if (isTransitioning) return;
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    navigate('/');
+  };
+
+  const handleMobileNavClick = (e, to) => {
+    e.preventDefault();
     setMobileOpen(false);
-    navigateWithTransition(to, label);
+    if (location.pathname === to) return;
+    navigateWithTransition(to);
   };
 
   return (
-    <header className="w-full pt-6 pb-4 px-6 md:px-10 lg:px-14 flex items-center justify-between text-[#1c1c1c] select-none transition-transform duration-300">
-      <a
-        href="/"
-        onClick={(e) => handleNavClick(e, '/', 'ETHIXWEB')}
-        className="text-xl md:text-2xl tracking-tight text-[#1c1c1c] hover:opacity-80 transition-opacity flex items-center"
-        data-rise="1"
-      >
-        <span className="font-display font-medium">ETHIX</span>
-        <span className="font-serif italic font-normal text-[#1c1c1c] ml-0.5">WEB</span>
-      </a>
-
-      <div className="flex items-center gap-6 md:gap-8">
-        <div className="hidden sm:flex items-center gap-2.5" data-rise="2">
-          <span className="inline-block w-2 h-2 rounded-full bg-[#c0272d]" />
-          <span className="text-[13px] font-medium text-[#444444]">
-            Digital operations for US teams
+    <>
+      <header className={`nav ${className}`}>
+        {/* LEFT */}
+        <div className="nav-left">
+          <svg
+            viewBox="0 0 24 24"
+            className="w-7 h-7 shrink-0 text-[#1c1c1c] stroke-[#1c1c1c]"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+          </svg>
+          <span>
+            DIGITAL OPERATIONS<br />
+            FOR US TEAMS<br />
+            &amp; FOUNDERS
           </span>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
-          {navLinks.map((item, idx) => {
-            const isActive = location.pathname === item.to;
-            return (
-              <a
-                key={item.to}
-                href={item.to}
-                onClick={(e) => handleNavClick(e, item.to, item.label.toUpperCase())}
-                data-rise={String(idx + 3)}
-                className={`relative py-1 transition-[color,transform] duration-200 group flex items-center gap-1.5 ${
-                  isActive
-                    ? 'text-[#1c1c1c] font-semibold'
-                    : 'text-[#555555] hover:text-[#1c1c1c]'
-                }`}
-              >
-                {isActive && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#c0272d] inline-block" />
-                )}
-                <span className="inline-block transition-transform duration-200 group-hover:-translate-y-0.5">
-                  {item.label}
-                </span>
-              </a>
-            );
-          })}
-        </nav>
-
-        <div className="lg:hidden">
-          <button
-            type="button"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-[#1c1c1c] focus-visible:outline-none"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {mobileOpen && (
-        <div
-          data-ui="mobile-menu"
-          className="fixed inset-x-0 top-18 bg-[#ebebeb] p-6 z-50 flex flex-col gap-5"
+        {/* CENTER */}
+        <a
+          href="/"
+          onClick={handleHomeClick}
+          className="nav-center cursor-pointer"
         >
-          {navLinks.map((item) => (
+          ETHIXWEB.COM
+        </a>
+
+        {/* RIGHT */}
+        <div className="nav-right">
+          USA LLC<br />
+          VOL. 26
+        </div>
+
+        {/* MOBILE TOGGLE (Visible only on mobile viewports < 768px) */}
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? <X size={32} strokeWidth={1.8} /> : <Menu size={36} strokeWidth={1.7} />}
+        </button>
+      </header>
+
+      {/* MOBILE FLYOUT MENU */}
+      <div className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`}>
+        <div
+          className="mobile-menu-scrim"
+          onClick={() => setMobileOpen(false)}
+        />
+        <div className="mobile-menu-panel">
+          <div className="mobile-menu-header">
+            <span>NAVIGATION</span>
+            <button
+              className="mobile-menu-close"
+              type="button"
+              aria-label="Close navigation menu"
+              onClick={() => setMobileOpen(false)}
+            >
+              <X size={28} strokeWidth={1.8} />
+            </button>
+          </div>
+          {navLinks.map((item, idx) => (
             <a
               key={item.to}
               href={item.to}
-              onClick={(e) => handleNavClick(e, item.to, item.label.toUpperCase())}
-              className="text-lg font-medium text-[#1c1c1c] flex items-center justify-between py-2"
+              onClick={(e) => handleMobileNavClick(e, item.to)}
             >
-              <span>{item.label}</span>
-              <span className="text-sm text-[#888888]">→</span>
+              <span>{`0${idx + 1}`}</span>
+              {item.label}
             </a>
           ))}
+          <p>©2026 Ethixweb USA LLC</p>
         </div>
-      )}
-    </header>
+      </div>
+    </>
   );
 }
