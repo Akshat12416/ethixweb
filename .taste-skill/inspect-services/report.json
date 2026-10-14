@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/services",
- "at": "2026-10-13T23:56:46.911Z",
+ "at": "2026-10-14T00:00:21.341Z",
  "allow": [],
  "viewports": [
   {
@@ -9,16 +9,16 @@
    "load": "load",
    "screens": 6,
    "filled": [
-    0.32,
+    0.36,
     0.6,
+    0.77,
     0.78,
-    0.83,
-    0.53,
-    0.59
+    0.52,
+    0.66
    ],
    "motion": {
-    "elements": 14,
-    "css": 14,
+    "elements": 15,
+    "css": 15,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -30,9 +30,9 @@
      "h": 900
     },
     "page": {
-     "height": 5134,
-     "screens": 5.7,
-     "words": 810,
+     "height": 5203,
+     "screens": 5.8,
+     "words": 805,
      "img": 4,
      "video": 0,
      "canvas": 0,
@@ -40,11 +40,11 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
-     "uiPictures": 0,
+     "uiPictures": 1,
      "pictureSamples": [
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
@@ -122,8 +122,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.16,
-      "top": 491,
+      "widthRatio": 0.18,
+      "top": 499,
       "tag": "span",
       "kind": "heading"
      },
@@ -143,8 +143,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.16,
-      "top": 491,
+      "widthRatio": 0.18,
+      "top": 499,
       "tag": "span",
       "kind": "heading"
      },
@@ -164,8 +164,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.16,
-      "top": 491,
+      "widthRatio": 0.18,
+      "top": 499,
       "tag": "span",
       "kind": "heading"
      },
@@ -185,8 +185,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.16,
-      "top": 491,
+      "widthRatio": 0.18,
+      "top": 499,
       "tag": "span",
       "kind": "heading"
      },
@@ -207,92 +207,8 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 676,
+      "top": 692,
       "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 1",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 1.9,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.06,
-      "top": 882,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 2",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 1.9,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.06,
-      "top": 882,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 3",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 1.9,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.06,
-      "top": 882,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 4",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 1.9,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.06,
-      "top": 882,
-      "tag": "span",
       "kind": "heading"
      },
      {
@@ -312,7 +228,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 1381,
+      "top": 1358,
       "tag": "h2",
       "kind": "heading"
      },
@@ -333,7 +249,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 1603,
+      "top": 1580,
       "tag": "h3",
       "kind": "heading"
      },
@@ -354,7 +270,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 2169,
+      "top": 2146,
       "tag": "h3",
       "kind": "heading"
      },
@@ -375,7 +291,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 2735,
+      "top": 2712,
       "tag": "h3",
       "kind": "heading"
      },
@@ -396,7 +312,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 3301,
+      "top": 3279,
       "tag": "h3",
       "kind": "heading"
      },
@@ -417,14 +333,14 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 3875,
+      "top": 3853,
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "One team for your growth system. Direct senior engineer access.",
-      "words": 10,
-      "chars": 63,
+      "text": "One team. Zero disconnected vendors.",
+      "words": 5,
+      "chars": 36,
       "lines": 2,
       "size": 38,
       "vw": 2.6,
@@ -437,31 +353,31 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.45,
-      "top": 4764,
+      "widthRatio": 0.53,
+      "top": 4742,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 17,
+     "count": 13,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
      "centered": 0,
-     "medianWords": 4,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
        "family": "Roobert",
-       "share": 0.81,
+       "share": 0.82,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.19,
+       "share": 0.18,
        "mono": false
       }
      ],
@@ -526,18 +442,27 @@
       },
       {
        "color": "#ffffff",
-       "top": 842,
+       "top": 858,
        "hsl": {
         "h": 0,
         "s": 0,
         "l": 1
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 4678,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
        }
       }
      ],
      "textColors": [
       {
        "color": "#555555",
-       "share": 0.49
+       "share": 0.5
       },
       {
        "color": "#1c1c1c",
@@ -593,8 +518,8 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 15,
-     "boxRadius": 16,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 16,
@@ -604,13 +529,7 @@
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 467
-      },
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 1563
+       "top": 1540
       }
      ]
     },
@@ -633,20 +552,19 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 8,
+   "screens": 7,
    "filled": [
-    0.56,
+    0.51,
     0.71,
+    0.91,
     0.86,
-    0.86,
-    0.92,
+    0.91,
     0.75,
-    0.86,
-    0.87
+    0.86
    ],
    "motion": {
-    "elements": 9,
-    "css": 9,
+    "elements": 10,
+    "css": 10,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -658,9 +576,9 @@
      "h": 1024
     },
     "page": {
-     "height": 7308,
-     "screens": 7.1,
-     "words": 805,
+     "height": 7158,
+     "screens": 7,
+     "words": 800,
      "img": 4,
      "video": 0,
      "canvas": 0,
@@ -668,11 +586,11 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
-     "uiPictures": 0,
+     "uiPictures": 1,
      "pictureSamples": [
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
@@ -750,8 +668,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.14,
-      "top": 479,
+      "widthRatio": 0.18,
+      "top": 487,
       "tag": "span",
       "kind": "heading"
      },
@@ -771,8 +689,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.14,
-      "top": 479,
+      "widthRatio": 0.18,
+      "top": 487,
       "tag": "span",
       "kind": "heading"
      },
@@ -792,8 +710,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.14,
-      "top": 479,
+      "widthRatio": 0.18,
+      "top": 487,
       "tag": "span",
       "kind": "heading"
      },
@@ -813,8 +731,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.14,
-      "top": 479,
+      "widthRatio": 0.18,
+      "top": 487,
       "tag": "span",
       "kind": "heading"
      },
@@ -835,92 +753,8 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 684,
+      "top": 700,
       "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 1",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.11,
-      "top": 890,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 2",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.12,
-      "top": 890,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 3",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.12,
-      "top": 1259,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 4",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.12,
-      "top": 1259,
-      "tag": "span",
       "kind": "heading"
      },
      {
@@ -940,7 +774,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 1731,
+      "top": 1670,
       "tag": "h2",
       "kind": "heading"
      },
@@ -961,7 +795,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 1953,
+      "top": 1892,
       "tag": "h3",
       "kind": "heading"
      },
@@ -982,7 +816,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 2850,
+      "top": 2789,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1003,7 +837,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 3772,
+      "top": 3711,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1024,7 +858,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 4776,
+      "top": 4715,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1045,15 +879,15 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 5813,
+      "top": 5752,
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "One team for your growth system. Direct senior engineer access.",
-      "words": 10,
-      "chars": 63,
-      "lines": 4,
+      "text": "One team. Zero disconnected vendors.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
       "size": 38,
       "vw": 4.9,
       "font": "Harmond",
@@ -1064,32 +898,32 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "left",
-      "widthRatio": 0.47,
-      "top": 6686,
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6625,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 17,
-     "maxLines": 4,
-     "over2Lines": 1,
+     "count": 13,
+     "maxLines": 2,
+     "over2Lines": 0,
      "statements": 0,
      "centered": 0,
-     "medianWords": 4,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
        "family": "Roobert",
-       "share": 0.81,
+       "share": 0.82,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.19,
+       "share": 0.18,
        "mono": false
       }
      ],
@@ -1131,18 +965,7 @@
      "centerShare": 0,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Deliverable:",
-      "above": "Stage 3",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 1179
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -1164,7 +987,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 850,
+       "top": 866,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1173,7 +996,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 6638,
+       "top": 6577,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1240,8 +1063,8 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 15,
-     "boxRadius": 16,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 16,
@@ -1251,13 +1074,7 @@
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 455
-      },
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 1913
+       "top": 1852
       }
      ]
     },
@@ -1282,21 +1099,21 @@
    "load": "load",
    "screens": 11,
    "filled": [
-    0.54,
-    0.79,
-    0.85,
-    0.8,
+    0.53,
+    0.87,
+    0.84,
+    0.86,
     0.86,
     0.85,
-    0.86,
+    0.91,
     0.92,
-    0.71,
-    0.85,
+    0.81,
+    0.86,
     0.8
    ],
    "motion": {
-    "elements": 8,
-    "css": 8,
+    "elements": 9,
+    "css": 9,
     "transitions": 0,
     "scripted": 0,
     "videos": 0,
@@ -1308,9 +1125,9 @@
      "h": 844
     },
     "page": {
-     "height": 8894,
-     "screens": 10.5,
-     "words": 800,
+     "height": 8685,
+     "screens": 10.3,
+     "words": 795,
      "img": 4,
      "video": 0,
      "canvas": 0,
@@ -1318,11 +1135,11 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
@@ -1400,8 +1217,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.32,
-      "top": 494,
+      "widthRatio": 0.35,
+      "top": 498,
       "tag": "span",
       "kind": "heading"
      },
@@ -1421,8 +1238,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.32,
-      "top": 494,
+      "widthRatio": 0.35,
+      "top": 498,
       "tag": "span",
       "kind": "heading"
      },
@@ -1442,8 +1259,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.32,
-      "top": 635,
+      "widthRatio": 0.35,
+      "top": 587,
       "tag": "span",
       "kind": "heading"
      },
@@ -1463,8 +1280,8 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.32,
-      "top": 635,
+      "widthRatio": 0.35,
+      "top": 587,
       "tag": "span",
       "kind": "heading"
      },
@@ -1485,92 +1302,8 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 804,
+      "top": 760,
       "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 1",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 7.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.21,
-      "top": 1036,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 2",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 7.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.23,
-      "top": 1380,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 3",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 7.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.24,
-      "top": 1749,
-      "tag": "span",
-      "kind": "heading"
-     },
-     {
-      "text": "Stage 4",
-      "words": 2,
-      "chars": 7,
-      "lines": 1,
-      "size": 28,
-      "vw": 7.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.23,
-      "top": 2093,
-      "tag": "span",
       "kind": "heading"
      },
      {
@@ -1590,7 +1323,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 2518,
+      "top": 2368,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1611,7 +1344,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 2766,
+      "top": 2616,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1632,7 +1365,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 3780,
+      "top": 3631,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1653,7 +1386,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 4764,
+      "top": 4615,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1674,7 +1407,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.75,
-      "top": 5937,
+      "top": 5787,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1695,36 +1428,15 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.88,
-      "top": 7183,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "One team for your growth system. Direct senior engineer access.",
-      "words": 10,
-      "chars": 63,
-      "lines": 4,
-      "size": 24,
-      "vw": 6.2,
-      "font": "Harmond",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.05,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.71,
-      "top": 8176,
+      "top": 7033,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 17,
-     "maxLines": 4,
-     "over2Lines": 1,
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
      "statements": 0,
      "centered": 0,
      "medianWords": 4,
@@ -1734,12 +1446,12 @@
      "families": [
       {
        "family": "Roobert",
-       "share": 0.81,
+       "share": 0.82,
        "mono": false
       },
       {
        "family": "Harmond",
-       "share": 0.19,
+       "share": 0.18,
        "mono": false
       }
      ],
@@ -1780,28 +1492,7 @@
      "centerShare": 0,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Deliverable:",
-      "above": "Stage 2",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 1301
-     },
-     {
-      "text": "Deliverable:",
-      "above": "Stage 4",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13,
-      "top": 2014
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
      "bodyBg": "#ebebeb",
@@ -1823,7 +1514,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 1012,
+       "top": 968,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1832,7 +1523,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 8144,
+       "top": 7994,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1843,7 +1534,7 @@
      "textColors": [
       {
        "color": "#555555",
-       "share": 0.49
+       "share": 0.5
       },
       {
        "color": "#1c1c1c",
@@ -1851,7 +1542,7 @@
       },
       {
        "color": "#444444",
-       "share": 0.16
+       "share": 0.17
       },
       {
        "color": "#bbbbbb",
@@ -1899,8 +1590,8 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 15,
-     "boxRadius": 16,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
      "squareMedia": 0,
      "roundedMedia": 4,
      "mediaRadius": 16,
@@ -1910,13 +1601,7 @@
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 474
-      },
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 2742
+       "top": 2592
       }
      ]
     },
@@ -1939,17 +1624,6 @@
  "findings": [
   {
    "level": "WARN",
-   "id": "card-rows",
-   "width": 1440,
-   "message": "2 rows of identical boxed cards.",
-   "fix": "Vary the composition; not every section is a card grid.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "WARN",
    "id": "no-footage",
    "width": 1440,
    "message": "No video anywhere on the page.",
@@ -1959,32 +1633,8 @@
    "level": "WARN",
    "id": "still-page",
    "width": 1440,
-   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
+   "message": "Little motion: 15 element(s) moved while the page loaded and scrolled.",
    "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 768,
-   "message": "1 headline(s) wrap past two lines at 768px: \"One team for your growth system. Direct senior e\" → 4 lines (10 words, 38px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "eyebrow",
-   "width": 768,
-   "message": "1 eyebrow/kicker label(s) above headings: \"Deliverable:\" above \"Stage 3\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
-   "alsoAt": [
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 390,
-   "message": "1 headline(s) wrap past two lines at 390px: \"One team for your growth system. Direct senior e\" → 4 lines (10 words, 24px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
   }
  ],
  "images": [

@@ -232,13 +232,13 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Operational Metrics Banner with data-ui to mark interface fragment */}
+          {/* Operational Metrics Banner as a single cohesive editorial surface */}
           <div
             data-ui="metrics-strip"
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+            className="bg-[#ffffff] rounded-3xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6"
             data-rise="4"
           >
-            <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 22
               </span>
@@ -246,7 +246,7 @@ export default function ServicesPage() {
                 Full-stack capabilities
               </span>
             </div>
-            <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 4-Beat
               </span>
@@ -254,7 +254,7 @@ export default function ServicesPage() {
                 Proven delivery rhythm
               </span>
             </div>
-            <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 2–4 Wks
               </span>
@@ -262,7 +262,7 @@ export default function ServicesPage() {
                 Average launch speed
               </span>
             </div>
-            <div className="bg-[#ffffff] rounded-2xl p-5 md:p-6 flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
                 &lt; 1h
               </span>
@@ -290,12 +290,15 @@ export default function ServicesPage() {
           </div>
 
           {/* Continuous Architectural Stage Surface */}
-          <div className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            data-ui="engagement-strip"
+            className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {ENGAGEMENT_STEPS.map((step) => (
               <div key={step.phase} className="flex flex-col justify-between gap-6">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-baseline justify-between">
-                    <span className="font-display text-[28px] text-[#1c1c1c] font-normal">
+                    <span className="text-base font-semibold text-[#1c1c1c]">
                       {step.phase}
                     </span>
                     <span className="text-[13px] font-medium text-[#777777]">
@@ -304,7 +307,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-display text-[18px] font-normal text-[#1c1c1c]">
+                    <h3 className="font-display text-[20px] font-normal text-[#1c1c1c]">
                       {step.title}
                     </h3>
                     <p className="text-base font-semibold text-[#1c1c1c]">
@@ -317,11 +320,11 @@ export default function ServicesPage() {
                   </p>
                 </div>
 
-                <div className="pt-2 flex flex-col gap-1">
-                  <span className="text-[13px] text-[#777777]">Deliverable:</span>
-                  <span className="text-base font-medium text-[#1c1c1c]">
+                <div className="pt-2">
+                  <p className="text-base text-[#1c1c1c]">
+                    <span className="text-[#777777]">Deliverable: </span>
                     {step.deliverable}
-                  </span>
+                  </p>
                 </div>
               </div>
             ))}
@@ -462,12 +465,12 @@ export default function ServicesPage() {
         </section>
 
         {/* ── SECTION 4: CTA ── */}
-        <section id="cta" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 scroll-mt-24">
-          <div className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row md:items-center justify-between gap-10">
-            <div className="flex flex-col gap-4 max-w-2xl">
-              <h2 className="font-display text-[24px] sm:text-[32px] md:text-[38px] font-normal text-[#ffffff] leading-[1.05]">
-                <span>One team for your growth system.</span>
-                <span className="block text-[#ebebeb]">Direct senior engineer access.</span>
+        <section id="cta" className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 scroll-mt-24" data-rise="8">
+          <div className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col gap-8">
+            <div className="flex flex-col gap-4 max-w-3xl">
+              <h2 className="font-display text-[20px] sm:text-[30px] md:text-[38px] font-normal text-[#ffffff] leading-[1.05]">
+                <span className="block">One team.</span>
+                <span className="block text-[#ebebeb]">Zero disconnected vendors.</span>
               </h2>
 
               <p className="text-base md:text-lg text-[#bbbbbb] leading-relaxed max-w-[55ch] font-normal">
@@ -490,7 +493,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-4 pt-1">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#ffffff] text-[#1c1c1c] font-medium rounded-lg text-base hover:bg-[#ebebeb] transition-colors duration-150"
