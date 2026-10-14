@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionProvider } from './context/TransitionContext';
+import { LanguageProvider } from './context/LanguageContext';
 import HomePage from './pages/HomePage';
 import { getGsap } from './utils/gsapLoader';
 
@@ -258,9 +259,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <TransitionProvider>
-        <AnimatedRoutes />
-      </TransitionProvider>
+      <LanguageProvider>
+        <TransitionProvider>
+          <AnimatedRoutes />
+        </TransitionProvider>
+      </LanguageProvider>
       <Analytics />
       <SpeedInsights />
     </BrowserRouter>

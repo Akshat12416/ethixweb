@@ -4,6 +4,7 @@ import TopBar from '../components/TopBar';
 import MiddleNav from '../components/MiddleNav';
 import PageCurtain from '../components/PageCurtain';
 import { useTransition } from '../context/TransitionContext';
+import { useLanguage } from '../context/LanguageContext';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 const ENGAGEMENT_STEPS = [
@@ -191,6 +192,7 @@ export default function ServicesPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const containerRef = useRef(null);
   const { navigateWithTransition } = useTransition();
+  const { lang, t } = useLanguage();
 
   useScrollAnimations(containerRef);
 
@@ -428,6 +430,232 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── SECTION: TRANSPARENT RUPEE PRICING (India-Focused) ── */}
+        <section
+          id="pricing"
+          className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10 scroll-mt-24"
+          data-rise="6"
+        >
+          <div className="flex flex-col gap-3 max-w-3xl">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#dedede] border border-[#d0d0d0] text-[11px] font-mono tracking-wider text-[#1c1c1c] uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c0272d]" />
+              {t('pricingBadge', 'TRANSPARENT VALUE IN RUPEES')}
+            </div>
+            <h2 className="font-display text-[28px] sm:text-[36px] md:text-[44px] font-normal text-[#1c1c1c] leading-tight tracking-tight">
+              <span>{t('pricingTitle', 'Simple, Fixed-Scope Investment')}</span>
+            </h2>
+            <p className="text-base sm:text-lg text-[#555555] leading-relaxed max-w-[65ch]">
+              {t('pricingSubhead', 'Direct senior engineering. No hidden markups. Predictable monthly sprints.')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+            {/* CARD 1: Foundation */}
+            <div className="bg-[#ffffff] rounded-3xl p-7 sm:p-9 flex flex-col justify-between border border-[#e2e2e2] hover:border-[#cfcfcf] transition-all">
+              <div className="flex flex-col gap-6">
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#777777] block mb-2">
+                    {lang === 'hi' ? 'टियर ०१' : 'TIER 01'}
+                  </span>
+                  <h3 className="font-display text-2xl font-normal text-[#1c1c1c]">
+                    {t('plan1Name')}
+                  </h3>
+                  <p className="text-sm text-[#666666] mt-2 leading-relaxed">
+                    {t('plan1Desc')}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#f0f0f0]">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="font-display text-3xl sm:text-4xl font-normal text-[#1c1c1c] tracking-tight">
+                      {t('plan1Price')}
+                    </span>
+                    <span className="text-sm font-mono text-[#666666]">
+                      {t('plan1Period')}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-2">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#999999]">
+                    {lang === 'hi' ? 'शामिल विशेषताएं:' : 'WHAT’S INCLUDED:'}
+                  </span>
+                  <ul className="flex flex-col gap-2.5">
+                    {(lang === 'hi' ? [
+                      'कस्टम हेडलेस नेक्स्ट.जेएस / विटे आर्किटेक्चर',
+                      'पेजस्पीड 90+ कोर वेब वाइटल्स की गारंटी',
+                      'अपटाइम मॉनिटरिंग और प्रोएक्टिव सिक्योरिटी पैच',
+                      'सीनियर इंजीनियर के साथ सीधा स्लैक संपर्क'
+                    ] : [
+                      'Custom Headless Next.js / Vite build',
+                      'PageSpeed 90+ Core Web Vitals guarantee',
+                      'Ongoing uptime & security patching',
+                      'Dedicated senior engineer Slack access'
+                    ]).map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-sm text-[#444444] leading-normal">
+                        <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-8">
+                <button
+                  type="button"
+                  onClick={() => navigateWithTransition('/contact', 'CONTACT')}
+                  className="w-full py-3.5 px-5 rounded-full bg-[#f4f4f4] hover:bg-[#1c1c1c] text-[#1c1c1c] hover:text-[#ffffff] text-sm font-medium tracking-wide border border-[#dedede] transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
+                >
+                  <span>{t('pricingCtaPlan1')}</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </button>
+              </div>
+            </div>
+
+            {/* CARD 2: Growth & Autonomous AI Ops (Featured) */}
+            <div className="bg-[#1c1c1c] text-[#ffffff] rounded-3xl p-7 sm:p-9 flex flex-col justify-between border-2 border-[#1c1c1c] relative shadow-xl">
+              <div className="absolute -top-3.5 right-7 px-3 py-1 rounded-full bg-[#c0272d] text-white text-[11px] font-mono tracking-wider font-semibold uppercase">
+                {t('plan2Badge')}
+              </div>
+
+              <div className="flex flex-col gap-6">
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#999999] block mb-2">
+                    {lang === 'hi' ? 'टियर ०२ · सर्वाधिक अनुशंसित' : 'TIER 02 · HIGH GROWTH'}
+                  </span>
+                  <h3 className="font-display text-2xl font-normal text-[#ffffff]">
+                    {t('plan2Name')}
+                  </h3>
+                  <p className="text-sm text-[#aaaaaa] mt-2 leading-relaxed">
+                    {t('plan2Desc')}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#333333]">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="font-display text-3xl sm:text-4xl font-normal text-[#ffffff] tracking-tight">
+                      {t('plan2Price')}
+                    </span>
+                    <span className="text-sm font-mono text-[#888888]">
+                      {t('plan2Period')}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-2">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#777777]">
+                    {lang === 'hi' ? 'शामिल विशेषताएं:' : 'WHAT’S INCLUDED:'}
+                  </span>
+                  <ul className="flex flex-col gap-2.5">
+                    {(lang === 'hi' ? [
+                      'फाउंडेशन टियर की सभी सुविधाएं शामिल',
+                      '24/7 स्वायत्त एआई फोन व एसएमएस रिसेप्शनिस्ट',
+                      'पूर्ण सीआरएम वेबहुक ऑटोमेशन पाइपलाइन',
+                      'पाक्षिक कन्वर्जन रेट व तकनीकी एसईओ ऑडिट्स',
+                      'विज्ञापन बजट पर कोई अतिरिक्त एजेंसी कमीशन नहीं'
+                    ] : [
+                      'Everything in Foundation Retainer',
+                      '24/7 Autonomous AI voice & SMS receptionist',
+                      'Full CRM & webhook automation pipeline',
+                      'Bi-weekly conversion rate & SEO audits',
+                      'Zero percentage-of-ad-spend agency tax'
+                    ]).map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-sm text-[#e0e0e0] leading-normal">
+                        <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-8">
+                <button
+                  type="button"
+                  onClick={() => navigateWithTransition('/contact', 'CONTACT')}
+                  className="w-full py-3.5 px-5 rounded-full bg-[#c0272d] hover:bg-[#d6343a] text-[#ffffff] text-sm font-semibold tracking-wide transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer shadow-md"
+                >
+                  <span>{t('pricingCtaPlan2')}</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </button>
+              </div>
+            </div>
+
+            {/* CARD 3: Enterprise Custom */}
+            <div className="bg-[#ffffff] rounded-3xl p-7 sm:p-9 flex flex-col justify-between border border-[#e2e2e2] hover:border-[#cfcfcf] transition-all">
+              <div className="flex flex-col gap-6">
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#777777] block mb-2">
+                    {lang === 'hi' ? 'टियर ०३' : 'TIER 03'}
+                  </span>
+                  <h3 className="font-display text-2xl font-normal text-[#1c1c1c]">
+                    {t('plan3Name')}
+                  </h3>
+                  <p className="text-sm text-[#666666] mt-2 leading-relaxed">
+                    {t('plan3Desc')}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#f0f0f0]">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="font-display text-3xl sm:text-4xl font-normal text-[#1c1c1c] tracking-tight">
+                      {t('plan3Price')}
+                    </span>
+                    <span className="text-sm font-mono text-[#666666]">
+                      {t('plan3Period')}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-2">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#999999]">
+                    {lang === 'hi' ? 'शामिल विशेषताएं:' : 'WHAT’S INCLUDED:'}
+                  </span>
+                  <ul className="flex flex-col gap-2.5">
+                    {(lang === 'hi' ? [
+                      '३ सीनियर इंजीनियर्स का डेडिकेटेड बैंगलोर स्क्वाड',
+                      'कंपनी के आंतरिक डेटा पर कस्टम एलएलएम फाइन-ट्यूनिंग',
+                      'एंटरप्राइज डेटाबेस सुरक्षा एवं बैकअप आर्किटेक्चर',
+                      'एथिक्सवेब यूएसए एलएलसी के तहत अमेरिकी अनुबंध व एसएलए'
+                    ] : [
+                      'Dedicated 3-engineer Bangalore squad',
+                      'Custom LLM fine-tuning on company data',
+                      'Enterprise database & security architecture',
+                      'US Legal MSA + SLAs under Ethixweb USA LLC'
+                    ]).map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-sm text-[#444444] leading-normal">
+                        <CheckCircle2 className="w-4 h-4 text-[#c0272d] shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-8">
+                <button
+                  type="button"
+                  onClick={() => navigateWithTransition('/contact', 'CONTACT')}
+                  className="w-full py-3.5 px-5 rounded-full bg-[#f4f4f4] hover:bg-[#1c1c1c] text-[#1c1c1c] hover:text-[#ffffff] text-sm font-medium tracking-wide border border-[#dedede] transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
+                >
+                  <span>{t('pricingCtaPlan3')}</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Reassurance Footer */}
+          <div className="bg-[#f0f0f0] rounded-2xl p-5 border border-[#dedede] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#555555]">
+            <div className="flex items-center gap-2.5 text-center sm:text-left">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+              <span>{t('pricingTaxNote')}</span>
+            </div>
+            <span className="text-[#888888] shrink-0">GSTIN / US EIN VERIFIED</span>
           </div>
         </section>
 

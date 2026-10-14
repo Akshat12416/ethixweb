@@ -19,6 +19,8 @@ import {
 import InteractiveWeb from '../components/InteractiveWeb';
 import emblemImg from '../assets/emblem-64w.webp';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import '../styles/landing.css';
 
 const HOME_SERVICES = [
@@ -204,6 +206,7 @@ const HOME_REVIEWS = [
 ];
 
 function DualClocks() {
+  const { lang } = useLanguage();
   const [clocks, setClocks] = useState(() => {
     const now = new Date();
     return {
@@ -229,13 +232,15 @@ function DualClocks() {
         <div className="flex items-center gap-3">
           <span className="text-xl" role="img" aria-label="US Flag">🇺🇸</span>
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">SEATTLE HQ (PACIFIC)</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+              {lang === 'hi' ? 'सिएटल मुख्यालय (पैसिफिक)' : 'SEATTLE HQ (PACIFIC)'}
+            </span>
             <span className="font-serif text-2xl font-normal text-white">{clocks.seattle}</span>
           </div>
         </div>
         <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>ACTIVE</span>
+          <span>{lang === 'hi' ? 'सक्रिय' : 'ACTIVE'}</span>
         </div>
       </div>
 
@@ -243,13 +248,15 @@ function DualClocks() {
         <div className="flex items-center gap-3">
           <span className="text-xl" role="img" aria-label="India Flag">🇮🇳</span>
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">BANGALORE HUB (IST)</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+              {lang === 'hi' ? 'बैंगलोर हब (भारतीय मानक समय)' : 'BANGALORE HUB (IST)'}
+            </span>
             <span className="font-serif text-2xl font-normal text-white">{clocks.bangalore}</span>
           </div>
         </div>
         <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>CORE HUB</span>
+          <span>{lang === 'hi' ? 'मुख्य केंद्र' : 'CORE HUB'}</span>
         </div>
       </div>
     </div>
@@ -267,6 +274,7 @@ export default function HomePage() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [activeService, setActiveService] = useState(0);
   const navigate = useNavigate();
+  const { lang, t } = useLanguage();
 
   const hasAnimated = useRef(false);
   const webAnimTargetRef = useRef(null);
@@ -508,9 +516,19 @@ export default function HomePage() {
         <div className="nav-left flex items-center gap-2.5">
           <img src={emblemImg} alt="Ethixweb" className="w-6 h-6 object-contain shrink-0" />
           <span>
-            DIGITAL OPERATIONS<br />
-            FOR US TEAMS<br />
-            &amp; FOUNDERS
+            {lang === 'hi' ? (
+              <>
+                डिजिटल ऑपरेशंस<br />
+                फाउंडर्स एवं टीमों<br />
+                के लिए
+              </>
+            ) : (
+              <>
+                DIGITAL OPERATIONS<br />
+                FOR US TEAMS<br />
+                &amp; FOUNDERS
+              </>
+            )}
           </span>
         </div>
 
@@ -526,20 +544,26 @@ export default function HomePage() {
           <span>ETHIXWEB.COM</span>
         </a>
 
-        <div className="nav-right">
-          USA LLC<br />
-          VOL. 26
+        <div className="nav-right flex items-center gap-3.5">
+          <LanguageSwitcher className="hidden sm:inline-flex" />
+          <div className="text-right">
+            {lang === 'hi' ? 'यूएसए एलएलसी' : 'USA LLC'}<br />
+            {t('volTag', 'VOL. 26')}
+          </div>
         </div>
 
-        <button
-          className="mobile-menu-toggle"
-          type="button"
-          aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-expanded={isMobileMenuOpen}
-          onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
-        >
-          {isMobileMenuOpen ? <X size={32} strokeWidth={1.8} /> : <Menu size={36} strokeWidth={1.7} />}
-        </button>
+        <div className="flex items-center gap-2 sm:hidden">
+          <LanguageSwitcher />
+          <button
+            className="mobile-menu-toggle"
+            type="button"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+          >
+            {isMobileMenuOpen ? <X size={32} strokeWidth={1.8} /> : <Menu size={36} strokeWidth={1.7} />}
+          </button>
+        </div>
       </header>
 
       {/* ── MOBILE SLIDE-OUT MENU ── */}
@@ -553,7 +577,7 @@ export default function HomePage() {
         />
         <div className="mobile-menu-panel">
           <div className="mobile-menu-header">
-            <span>MENU</span>
+            <span>{lang === 'hi' ? 'मेन्यू' : 'MENU'}</span>
             <button
               className="mobile-menu-close"
               type="button"
@@ -563,25 +587,28 @@ export default function HomePage() {
               <X size={30} strokeWidth={1.8} />
             </button>
           </div>
+          <div className="py-2">
+            <LanguageSwitcher />
+          </div>
           <a href="/our-work" onClick={(e) => handleNavClick(e, '/our-work', 'Work')}>
             <span>01</span> {/* taste-skill-ignore */}
-            Work
+            {t('navWork', 'Work')}
           </a>
           <a href="/services" onClick={(e) => handleNavClick(e, '/services', 'Services')}>
             <span>02</span> {/* taste-skill-ignore */}
-            Services
+            {t('navServices', 'Services')}
           </a>
           <a href="/industries" onClick={(e) => handleNavClick(e, '/industries', 'Industries')}>
             <span>03</span> {/* taste-skill-ignore */}
-            Industries
+            {t('navIndustries', 'Industries')}
           </a>
           <a href="/about" onClick={(e) => handleNavClick(e, '/about', 'About')}>
             <span>04</span> {/* taste-skill-ignore */}
-            About
+            {t('navAbout', 'About')}
           </a>
           <a href="/contact" onClick={(e) => handleNavClick(e, '/contact', 'Contact')}>
             <span>05</span> {/* taste-skill-ignore */}
-            Contact
+            {t('navContact', 'Contact')}
           </a>
           <p>©2026 Ethixweb USA LLC</p>
         </div>
@@ -646,7 +673,7 @@ export default function HomePage() {
           }}
         >
           <span className="num">01</span> {/* taste-skill-ignore */}
-          <span className="label">Work</span>
+          <span className="label">{t('navWork', 'Work')}</span>
         </a>
 
         <a
@@ -658,7 +685,7 @@ export default function HomePage() {
           }}
         >
           <span className="num">02</span> {/* taste-skill-ignore */}
-          <span className="label">Services</span>
+          <span className="label">{t('navServices', 'Services')}</span>
         </a>
 
         <a
@@ -670,7 +697,7 @@ export default function HomePage() {
           }}
         >
           <span className="num">03</span> {/* taste-skill-ignore */}
-          <span className="label">Industries</span>
+          <span className="label">{t('navIndustries', 'Industries')}</span>
         </a>
 
         <a
@@ -682,7 +709,7 @@ export default function HomePage() {
           }}
         >
           <span className="num">04</span> {/* taste-skill-ignore */}
-          <span className="label">About</span>
+          <span className="label">{t('navAbout', 'About')}</span>
         </a>
 
         <a
@@ -694,7 +721,7 @@ export default function HomePage() {
           }}
         >
           <span className="num">05</span> {/* taste-skill-ignore */}
-          <span className="label">Contact</span>
+          <span className="label">{t('navContact', 'Contact')}</span>
         </a>
 
         <div className="nav-row-item copyright">
@@ -715,9 +742,19 @@ export default function HomePage() {
             <path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z" />
           </svg>
           <p className="person-copy">
-            ETHIXWEB IS A SENIOR-LED<br />
-            DIGITAL OPERATIONS AGENCY<br />
-            FROM KENT, WA.
+            {lang === 'hi' ? (
+              <>
+                एथिक्सवेब एक सीनियर-संचालित<br />
+                डिजिटल ऑपरेशंस एजेंसी है —<br />
+                सिएटल एवं बैंगलोर से।
+              </>
+            ) : (
+              <>
+                ETHIXWEB IS A SENIOR-LED<br />
+                DIGITAL OPERATIONS AGENCY<br />
+                FROM KENT, WA.
+              </>
+            )}
           </p>
         </div>
 
@@ -726,7 +763,9 @@ export default function HomePage() {
           <div ref={webAnimTargetRef} className="web-anim-target w-full flex justify-center">
             <InteractiveWeb isPreloading={isPreloading} />
           </div>
-          <p className="tagline">WE RUN THE TECH. YOU RUN THE BUSINESS.</p>
+          <p className="tagline">
+            {lang === 'hi' ? 'हम तकनीक संभालते हैं। आप व्यापार चलाएं।' : 'WE RUN THE TECH. YOU RUN THE BUSINESS.'}
+          </p>
         </div>
 
         {/* RIGHT COLUMN */}
@@ -740,9 +779,19 @@ export default function HomePage() {
             <path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z" />
           </svg>
           <p className="person-copy">
-            DELIVERING HEADLESS CLOUD<br />
-            PLATFORMS, AI BOOKINGS AND<br />
-            DIRECT REVENUE SYSTEMS.
+            {lang === 'hi' ? (
+              <>
+                हेडलेस क्लाउड प्लेटफॉर्म्स,<br />
+                स्वायत्त एआई बुकिंग एजेंट्स और<br />
+                डायरेक्ट-रेवेन्यू सिस्टम्स।
+              </>
+            ) : (
+              <>
+                DELIVERING HEADLESS CLOUD<br />
+                PLATFORMS, AI BOOKINGS AND<br />
+                DIRECT REVENUE SYSTEMS.
+              </>
+            )}
           </p>
         </div>
         </footer>

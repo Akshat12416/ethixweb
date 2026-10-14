@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '../context/LanguageContext';
 import '../styles/landing.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +18,15 @@ export default function MiddleNav({ className = '' }) {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { lang, t } = useLanguage();
+
+  const items = [
+    { num: '01', path: '/our-work', label: t('navWork', 'Work'), hover: 'WORK' },
+    { num: '02', path: '/services', label: t('navServices', 'Services'), hover: 'SERVICES' },
+    { num: '03', path: '/industries', label: t('navIndustries', 'Industries'), hover: 'INDUSTRIES' },
+    { num: '04', path: '/about', label: t('navAbout', 'About'), hover: 'ABOUT' },
+    { num: '05', path: '/contact', label: t('navContact', 'Contact'), hover: 'CONTACT' },
+  ];
 
   useEffect(() => {
     if (hoveredItem && !isTransitioning) {
@@ -24,7 +34,6 @@ export default function MiddleNav({ className = '' }) {
     }
   }, [hoveredItem, isTransitioning]);
 
-  // Smooth scroll listener via GSAP ScrollTrigger to hide MiddleNav on scroll down, show on scroll up
   useEffect(() => {
     if (window.matchMedia('(max-width: 768px)').matches) return;
 
@@ -45,11 +54,11 @@ export default function MiddleNav({ className = '' }) {
     return () => ctx.revert();
   }, []);
 
-  const handleNavClick = (e, path, label) => {
+  const handleNavClick = (e, path, hoverLabel) => {
     e.preventDefault();
     if (isTransitioning || location.pathname === path) return;
     setIsTransitioning(true);
-    if (label) setDisplayHover(label);
+    if (hoverLabel) setDisplayHover(hoverLabel);
 
     const containerSelector = className ? `.${className.split(' ')[0]}` : '.middle-nav-container';
     const banner = document.querySelector(`${containerSelector} .nav-hover-banner`) || document.querySelector('.nav-hover-banner');
@@ -88,7 +97,7 @@ export default function MiddleNav({ className = '' }) {
         }}
       >
         <div className={`nav-hover-banner ${hoveredItem || isTransitioning ? 'active' : ''} ${isTransitioning ? 'is-transitioning' : ''}`}>
-          <div className="nav-hover-text">
+          <div className="nav-hover-text font-display">
             {displayHover &&
               displayHover.split('').map((char, i) => (
                 <span
@@ -102,55 +111,18 @@ export default function MiddleNav({ className = '' }) {
           </div>
         </div>
 
-        <a
-          className="nav-row-item"
-          href="/our-work"
-          onClick={(e) => handleNavClick(e, '/our-work', 'Work')}
-          onMouseEnter={() => setHoveredItem('Work')}
-        >
-          <span className="num">01</span> {/* taste-skill-ignore */}
-          <span className="label">Work</span>
-        </a>
-
-        <a
-          className="nav-row-item"
-          href="/services"
-          onClick={(e) => handleNavClick(e, '/services', 'Services')}
-          onMouseEnter={() => setHoveredItem('Services')}
-        >
-          <span className="num">02</span> {/* taste-skill-ignore */}
-          <span className="label">Services</span>
-        </a>
-
-        <a
-          className="nav-row-item"
-          href="/industries"
-          onClick={(e) => handleNavClick(e, '/industries', 'Industries')}
-          onMouseEnter={() => setHoveredItem('Industries')}
-        >
-          <span className="num">03</span> {/* taste-skill-ignore */}
-          <span className="label">Industries</span>
-        </a>
-
-        <a
-          className="nav-row-item"
-          href="/about"
-          onClick={(e) => handleNavClick(e, '/about', 'About')}
-          onMouseEnter={() => setHoveredItem('About')}
-        >
-          <span className="num">04</span> {/* taste-skill-ignore */}
-          <span className="label">About</span>
-        </a>
-
-        <a
-          className="nav-row-item"
-          href="/contact"
-          onClick={(e) => handleNavClick(e, '/contact', 'Contact')}
-          onMouseEnter={() => setHoveredItem('Contact')}
-        >
-          <span className="num">05</span> {/* taste-skill-ignore */}
-          <span className="label">Contact</span>
-        </a>
+        {items.map((it) => (
+          <a
+            key={it.path}
+            className="nav-row-item"
+            href={it.path}
+            onClick={(e) => handleNavClick(e, it.path, it.hover)}
+            onMouseEnter={() => setHoveredItem(it.hover)}
+          >
+            <span className="num">{it.num}</span>
+            <span className="label">{it.label}</span>
+          </a>
+        ))}
 
         <div className="nav-row-item copyright">
           ©2026

@@ -14,42 +14,35 @@ import {
 import TopBar from '../components/TopBar';
 import MiddleNav from '../components/MiddleNav';
 import PageCurtain from '../components/PageCurtain';
+import { useLanguage, BUDGET_RUPEES_OPTIONS } from '../context/LanguageContext';
 import '../styles/landing.css';
 
 const SERVICES_OPTIONS = [
-  'AI Booking & Voice Agents',
-  'Headless Web & Cloud Platform',
-  'Performance SEO & Direct Revenue',
-  'High-Ticket CRM & Workflows',
-  'Full-Stack Digital Operations',
-];
-
-const BUDGET_OPTIONS = [
-  'Under $10k',
-  '$10k – $25k',
-  '$25k – $50k',
-  '$50k+',
-  'Flexible / Not Sure',
+  { en: 'AI Booking & Voice Agents', hi: 'एआई बुकिंग व वॉइस एजेंट्स' },
+  { en: 'Headless Web & Cloud Platform', hi: 'हेडलेस वेब व क्लाउड प्लेटफॉर्म' },
+  { en: 'Performance SEO & Direct Revenue', hi: 'परफॉरमेंस एसईओ व रेवेन्यू' },
+  { en: 'High-Ticket CRM & Workflows', hi: 'हाई-टिकट सीआरएम वर्कफ़्लो' },
+  { en: 'Full-Stack Digital Operations', hi: 'फुल-स्टैक डिजिटल ऑपरेशंस' },
 ];
 
 const TIMELINE_OPTIONS = [
-  'Immediate (2–4 weeks)',
-  'Within 6–8 weeks',
-  'Next Quarter',
-  'Exploratory',
+  { en: 'Immediate (2–4 weeks)', hi: 'तत्काल (२–४ सप्ताह)' },
+  { en: 'Within 6–8 weeks', hi: '६–८ सप्ताह में' },
+  { en: 'Next Quarter', hi: 'अगली तिमाही' },
+  { en: 'Exploratory', hi: 'प्रारंभिक चर्चा' },
 ];
 
 export default function ContactPage() {
+  const { lang, t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
     service: 'AI Booking & Voice Agents',
-    budget: '$10k – $25k',
+    budget: '₹5L – ₹15L',
     timeline: 'Immediate (2–4 weeks)',
     message: '',
-    // Honeypot trap
     company_website_url: '',
   });
 
@@ -326,11 +319,11 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Your Full Name <span className="text-red-500">*</span>
+                        {t('contactLabelName', 'Your Full Name')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
-                        placeholder="e.g. Alex Morgan"
+                        placeholder={t('contactPlaceholderName', 'e.g. Alex Morgan / राहुल शर्मा')}
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className={`w-full px-4 py-3 bg-white border rounded-xl text-sm focus:outline-none transition-colors ${
@@ -346,11 +339,11 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Work Email <span className="text-red-500">*</span>
+                        {t('contactLabelEmail', 'Work Email')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
-                        placeholder="alex@company.com"
+                        placeholder={t('contactPlaceholderEmail', 'alex@company.com')}
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className={`w-full px-4 py-3 bg-white border rounded-xl text-sm focus:outline-none transition-colors ${
@@ -369,11 +362,11 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Phone Number
+                        {t('contactLabelPhone', 'Phone Number')}
                       </label>
                       <input
                         type="tel"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder={t('contactPlaceholderPhone', '+91 98765 43210')}
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-white border border-[#1c1c1c]/20 rounded-xl text-sm focus:outline-none focus:border-[#1c1c1c] transition-colors"
@@ -382,11 +375,11 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Company or Current Website
+                        {t('contactLabelCompany', 'Company or Current Website')}
                       </label>
                       <input
                         type="text"
-                        placeholder="Acme Corp / acme.com"
+                        placeholder={t('contactPlaceholderCompany', 'Acme Corp / acme.com')}
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-4 py-3 bg-white border border-[#1c1c1c]/20 rounded-xl text-sm focus:outline-none focus:border-[#1c1c1c] transition-colors"
@@ -397,40 +390,40 @@ export default function ContactPage() {
                   {/* SERVICE CATEGORY SELECTOR */}
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-2">
-                      Primary Service Focus
+                      {t('contactLabelService', 'Primary Service Focus')}
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {SERVICES_OPTIONS.map((srv) => (
                         <button
-                          key={srv}
+                          key={srv.en}
                           type="button"
-                          onClick={() => setFormData({ ...formData, service: srv })}
+                          onClick={() => setFormData({ ...formData, service: srv.en })}
                           className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
-                            formData.service === srv
+                            formData.service === srv.en
                               ? 'bg-[#1c1c1c] text-white shadow-xs'
                               : 'bg-white border border-[#1c1c1c]/15 text-[#444444] hover:border-[#1c1c1c]'
                           }`}
                         >
-                          {srv}
+                          {lang === 'hi' ? srv.hi : srv.en}
                         </button>
                       ))}
                     </div>
                   </div>
 
-                  {/* BUDGET & TIMELINE SELECTORS */}
+                  {/* BUDGET & TIMELINE SELECTORS (RUPEE PRICING) */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Estimated Budget
+                        {t('contactLabelBudget', 'Estimated Budget (INR ₹)')}
                       </label>
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 bg-white border border-[#1c1c1c]/20 rounded-xl text-xs focus:outline-none focus:border-[#1c1c1c] transition-colors"
+                        className="w-full px-4 py-3 bg-white border border-[#1c1c1c]/20 rounded-xl text-xs focus:outline-none focus:border-[#1c1c1c] transition-colors font-medium text-[#1c1c1c]"
                       >
-                        {BUDGET_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
+                        {BUDGET_RUPEES_OPTIONS.map((opt) => (
+                          <option key={opt.value} value={opt.value}>
+                            {lang === 'hi' ? opt.labelHi : opt.labelEn}
                           </option>
                         ))}
                       </select>
@@ -438,7 +431,7 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                        Target Timeline
+                        {t('contactLabelTimeline', 'Target Timeline')}
                       </label>
                       <select
                         value={formData.timeline}
@@ -446,8 +439,8 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-white border border-[#1c1c1c]/20 rounded-xl text-xs focus:outline-none focus:border-[#1c1c1c] transition-colors"
                       >
                         {TIMELINE_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
+                          <option key={opt.en} value={opt.en}>
+                            {lang === 'hi' ? opt.hi : opt.en}
                           </option>
                         ))}
                       </select>
@@ -457,11 +450,11 @@ export default function ContactPage() {
                   {/* PROJECT MESSAGE */}
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#333333] mb-1.5">
-                      Project Goals &amp; Current Bottlenecks <span className="text-red-500">*</span>
+                      {t('contactLabelMessage', 'Project Goals & Current Bottlenecks')} <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       rows={4}
-                      placeholder="Tell us what you are trying to build, automate, or fix. Existing tech stack, conversion hurdles, or business targets..."
+                      placeholder={t('contactPlaceholderMessage', 'Tell us what you are trying to build, automate, or fix...')}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className={`w-full px-4 py-3 bg-white border rounded-xl text-sm focus:outline-none transition-colors font-sans ${
@@ -476,27 +469,29 @@ export default function ContactPage() {
                   </div>
 
                   {/* SUBMIT BUTTON */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-4 bg-[#1c1c1c] hover:bg-black text-white text-xs font-semibold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm disabled:opacity-50"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Logging to PostgreSQL Database...</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>Submit Project Inquiry</span>
-                        <Send size={15} />
-                      </>
-                    )}
-                  </button>
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full py-4 bg-[#c0272d] hover:bg-[#a01f25] text-white text-xs font-semibold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm disabled:opacity-50"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          <span>{t('contactSubmittingBtn', 'Logging to Neon PostgreSQL Database...')}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>{t('contactSubmitBtn', 'Submit Project Inquiry')}</span>
+                          <Send size={15} />
+                        </>
+                      )}
+                    </button>
 
-                  <p className="text-[11px] text-[#777777] text-center">
-                    Protected by Honeypot &amp; Serverless Rate-Limiting. We respect your inbox.
-                  </p>
+                    <p className="text-[11px] text-[#777777] text-center mt-3">
+                      🔒 {t('spamShieldNotice', 'Protected by 3-tier spam shield & Neon PostgreSQL. Zero spam guarantee.')}
+                    </p>
+                  </div>
                 </form>
               )}
             </div>
