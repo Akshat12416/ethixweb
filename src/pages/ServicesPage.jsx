@@ -347,8 +347,8 @@ export default function ServicesPage() {
           data-rise="6"
         >
           <div className="flex flex-col gap-3 max-w-3xl">
-            <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-              <span>The complete capability catalog.</span>
+            <h2 className="font-display text-[20px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
+              <span>The capability catalog.</span>
               <span className="block text-[#1c1c1c]">22 services run as one engine.</span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">

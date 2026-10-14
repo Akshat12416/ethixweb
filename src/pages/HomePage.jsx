@@ -21,7 +21,7 @@ export default function HomePage() {
         {/* Typographic statement block — 2 lines strictly */}
         <section className="flex flex-col gap-5 max-w-4xl">
           <h1
-            className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5.5vw,5.2rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
+            className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5.5vw,5.2rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-medium"
             data-rise="8"
           >
             <span className="block">We run the tech.</span>
