@@ -5,6 +5,58 @@
 
 ---
 
+## 🌐 Live Submission Links
+
+| Deliverable | URL | Credentials / Notes |
+|---|---|---|
+| **Live Production Site** | [https://ethixweb-eight.vercel.app/](https://ethixweb-eight.vercel.app/) | Deployed globally on Vercel Edge CDN |
+| **Public GitHub Repository** | [https://github.com/Akshat12416/ethixweb](https://github.com/Akshat12416/ethixweb) | Clean commit history, zero secrets |
+| **Protected Admin Portal** | [https://ethixweb-eight.vercel.app/admin](https://ethixweb-eight.vercel.app/admin) | **Passcode:** `ethix2026` |
+| **Live Database** | Neon Serverless PostgreSQL | Connected to `ethix_leads` production table |
+
+---
+
+## ⚡ PageSpeed Insights Verified Audits (90+ Mobile & 96 Desktop)
+
+Both Mobile and Desktop audits achieved **90+ green-tier scores** on the live production deployment ([https://ethixweb-eight.vercel.app/](https://ethixweb-eight.vercel.app/)) across all audit categories:
+
+| Category / Metric | Mobile (Emulated Moto G Power · Slow 4G) | Desktop |
+|---|:---:|:---:|
+| **Performance** | **90 / 100** 🟢 | **96 / 100** 🟢 |
+| **Accessibility** | **94 / 100** 🟢 | **94 / 100** 🟢 |
+| **Best Practices** | **100 / 100** 🟢 | **100 / 100** 🟢 |
+| **SEO** | **92 / 100** 🟢 | **92 / 100** 🟢 |
+| **Total Blocking Time (TBT)** | **0 ms** ⚡ | **30 ms** ⚡ |
+| **Cumulative Layout Shift (CLS)** | **0** ⚡ | **0** ⚡ |
+
+### Mobile Audit Report (Performance: 90 / 100)
+![PageSpeed Insights Mobile Score](screenshots/pagespeed-mobile.png)
+
+### Desktop Audit Report (Performance: 96 / 100)
+![PageSpeed Insights Desktop Score](screenshots/pagespeed-desktop.png)
+
+---
+
+## 🚀 Performance Engineering Strategies
+
+To achieve a 90+ score on throttled mobile emulation (Moto G Power, 4x CPU slowdown, 1.6 Mbps network) while keeping Desktop at 96 with rich interactive animations, we engineered the following architectural optimizations:
+
+1. **Instant Static Hero Shell & Inline Critical CSS**:
+   - Inlined critical above-the-fold layout and typographic CSS inside `<head>`.
+   - Embedded a lightweight zero-shift hero shell in `index.html`. The browser renders the brand header and marquee headline (`EthixWeb (OPS)`) immediately upon HTML parsing (~0.6s) without waiting for external stylesheets.
+2. **On-Demand GSAP & Lenis Code-Splitting**:
+   - Extracted GSAP, ScrollTrigger, and Lenis into an on-demand singleton loader (`src/utils/gsapLoader.js`).
+   - Slashed **~130 KiB uncompressed JS (50 KiB gzip)** from the initial mobile payload. GSAP and smooth scrolling only initialize when requested on desktop viewports or upon interaction.
+3. **Micro-Optimized WebP Thumbnails**:
+   - Replaced full-resolution screenshots in the 3D spiderweb micro-pills with native 64×64 WebP assets (`thumb-64w.webp`).
+   - Dropped image payload from **82.1 KiB down to 2.6 KiB** (a 97% reduction) while preserving full visual clarity in their 14–32px containers.
+4. **Isolated `<DualClocks />` Re-renders**:
+   - Isolated the 1,000ms PST/IST clock ticker into a dedicated micro-component so the 1,500-line `HomePage` DOM tree does not re-render every second during page load.
+5. **Native GPU Momentum Scrolling on Mobile**:
+   - Mobile devices use hardware-accelerated touch momentum scrolling, freeing the JavaScript main thread and bringing **Total Blocking Time to 0 ms**.
+
+---
+
 ## 📖 Design Rationale
 
 ### 1. What Makes It India-Specific
@@ -63,12 +115,13 @@ Traditional offshore outsourcing has a reputation for endless email relays, juni
 | **Frontend Framework** | React 19 + Vite 8 |
 | **Routing** | React Router v7 |
 | **Styling** | Vanilla CSS + Tailwind CSS v4 |
-| **Motion & Physics** | GSAP 3 (ScrollTrigger, Timelines) + Motion |
-| **Smooth Scrolling** | Lenis |
+| **Motion & Physics** | GSAP 3 (ScrollTrigger, Timelines — loaded on demand) |
+| **Smooth Scrolling** | Lenis (desktop viewports) |
 | **Typography** | Roobert (Geometric Sans), Roxborough CF (Editorial Serif), Harmond (Display) |
 | **Icons** | Lucide React |
 | **Database** | Neon Serverless PostgreSQL |
-| **Backend API** | Node.js Vite Server Middleware |
+| **Backend API** | Vercel Serverless Functions (`/api/*`) + Vite Dev Middleware |
+| **Observability** | Vercel Analytics + Vercel Speed Insights |
 
 ---
 
@@ -101,7 +154,8 @@ CREATE INDEX IF NOT EXISTS idx_ethix_leads_status ON ethix_leads(status);
 
 ## 🔐 Admin Portal Credentials
 
-- **URL**: `http://localhost:5173/admin`
+- **Live URL**: `https://ethixweb-eight.vercel.app/admin`
+- **Local URL**: `http://localhost:5173/admin`
 - **Passcode**: `ethix2026`
 - **Features**: Real-time lead management, KPI cards, status transitions, notes editor, CSV export.
 
@@ -114,18 +168,25 @@ CREATE INDEX IF NOT EXISTS idx_ethix_leads_status ON ethix_leads(status);
 npm install
 ```
 
-### 2. Start Development Server
+### 2. Environment Variables
+Create a `.env` file in the root directory:
+```env
+DATABASE_URL=postgresql://neondb_owner:<YOUR_NEON_PASSWORD>@ep-sample-pooler.region.aws.neon.tech/neondb?sslmode=require
+ADMIN_SECRET=ethix2026
+```
+
+### 3. Start Development Server
 ```bash
 npm run dev
 ```
 The application will launch on `http://localhost:5173`.
 
-### 3. Build for Production
+### 4. Build for Production
 ```bash
 npm run build
 ```
 
-### 4. Run Linter
+### 5. Run Linter
 ```bash
 npm run lint
 ```
