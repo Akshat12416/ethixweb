@@ -51,7 +51,7 @@ export default function TopBar() {
                 href={item.to}
                 onClick={(e) => handleNavClick(e, item.to, item.label.toUpperCase())}
                 data-rise={String(idx + 3)}
-                className={`relative py-1 transition-all duration-200 group flex items-center gap-1.5 ${
+                className={`relative py-1 transition-[color,transform] duration-200 group flex items-center gap-1.5 ${
                   isActive
                     ? 'text-[#1c1c1c] font-semibold'
                     : 'text-[#555555] hover:text-[#1c1c1c]'
@@ -83,7 +83,7 @@ export default function TopBar() {
       {mobileOpen && (
         <div
           data-ui="mobile-menu"
-          className="fixed inset-x-0 top-18 bg-[#ebebeb] p-6 z-50 flex flex-col gap-5 shadow-lg"
+          className="fixed inset-x-0 top-18 bg-[#ebebeb] p-6 z-50 flex flex-col gap-5"
         >
           {navLinks.map((item) => (
             <a

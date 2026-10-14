@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/services",
- "at": "2026-10-14T00:00:21.341Z",
+ "at": "2026-10-14T00:11:46.871Z",
  "allow": [],
  "viewports": [
   {
@@ -11,16 +11,16 @@
    "filled": [
     0.36,
     0.6,
-    0.77,
-    0.78,
-    0.52,
-    0.66
+    0.6,
+    0.62,
+    0.62,
+    0.67
    ],
    "motion": {
-    "elements": 15,
-    "css": 15,
+    "elements": 16,
+    "css": 12,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 4,
     "videos": 0,
     "playingVideos": 0
    },
@@ -40,13 +40,12 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 2,
+     "uiFragments": 3,
      "uiAbuse": false,
-     "realPictures": 4,
+     "realPictures": 3,
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
-      "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp"
@@ -556,17 +555,17 @@
    "filled": [
     0.51,
     0.71,
-    0.91,
-    0.86,
-    0.91,
-    0.75,
-    0.86
+    0.71,
+    0.71,
+    0.71,
+    0.71,
+    0.76
    ],
    "motion": {
-    "elements": 10,
-    "css": 10,
+    "elements": 11,
+    "css": 7,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 4,
     "videos": 0,
     "playingVideos": 0
    },
@@ -586,14 +585,12 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 2,
+     "uiFragments": 3,
      "uiAbuse": false,
-     "realPictures": 4,
+     "realPictures": 2,
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
-      "after-screenshot-1024w.webp",
-      "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp"
      ],
@@ -1101,21 +1098,21 @@
    "filled": [
     0.53,
     0.87,
-    0.84,
-    0.86,
-    0.86,
+    0.87,
+    0.87,
     0.85,
-    0.91,
-    0.92,
-    0.81,
-    0.86,
-    0.8
+    0.85,
+    0.79,
+    0.85,
+    0.85,
+    0.85,
+    0.85
    ],
    "motion": {
-    "elements": 9,
-    "css": 9,
+    "elements": 10,
+    "css": 5,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 5,
     "videos": 0,
     "playingVideos": 0
    },
@@ -1135,15 +1132,12 @@
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 2,
+     "uiFragments": 3,
      "uiAbuse": false,
-     "realPictures": 4,
+     "realPictures": 1,
      "videoCount": 0,
      "uiPictures": 2,
      "pictureSamples": [
-      "after-screenshot-1024w.webp",
-      "after-screenshot-1024w.webp",
-      "after-screenshot-1024w.webp",
       "after-screenshot-1024w.webp"
      ],
      "blendText": 0,
@@ -1628,13 +1622,6 @@
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "WARN",
-   "id": "still-page",
-   "width": 1440,
-   "message": "Little motion: 15 element(s) moved while the page loaded and scrolled.",
-   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
   }
  ],
  "images": [

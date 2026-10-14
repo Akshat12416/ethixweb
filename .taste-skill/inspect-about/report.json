@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/about",
- "at": "2026-10-13T23:38:10.592Z",
+ "at": "2026-10-14T00:12:39.922Z",
  "allow": [],
  "viewports": [
   {
@@ -9,16 +9,16 @@
    "load": "load",
    "screens": 4,
    "filled": [
-    0.51,
+    0.52,
     0.56,
-    0.53,
-    0.65
+    0.5,
+    0.5
    ],
    "motion": {
-    "elements": 29,
-    "css": 29,
+    "elements": 30,
+    "css": 14,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 16,
     "videos": 0,
     "playingVideos": 0
    },
@@ -38,7 +38,7 @@
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
@@ -492,15 +492,15 @@
    "filled": [
     0.65,
     0.9,
-    0.31,
-    0.62,
-    0.74
+    0.9,
+    0.9,
+    0.89
    ],
    "motion": {
-    "elements": 24,
-    "css": 24,
+    "elements": 25,
+    "css": 6,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 19,
     "videos": 0,
     "playingVideos": 0
    },
@@ -520,7 +520,7 @@
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
@@ -950,7 +950,16 @@
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.08
+     },
+     {
+      "type": "img",
+      "ratio": 0.08
+     }
+    ],
     "nav": {
      "links": 1,
      "fixed": false,
@@ -973,16 +982,16 @@
    "filled": [
     0.68,
     0.86,
-    0.63,
-    0.51,
-    0.79,
-    0.74
+    0.86,
+    0.86,
+    0.86,
+    0.86
    ],
    "motion": {
-    "elements": 23,
-    "css": 23,
+    "elements": 24,
+    "css": 5,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 19,
     "videos": 0,
     "playingVideos": 0
    },
@@ -1002,7 +1011,7 @@
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 0,
      "videoCount": 0,

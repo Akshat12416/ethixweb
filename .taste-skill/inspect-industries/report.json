@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/industries",
- "at": "2026-10-13T23:44:24.255Z",
+ "at": "2026-10-14T00:13:05.591Z",
  "allow": [],
  "viewports": [
   {
@@ -11,15 +11,15 @@
    "filled": [
     0.41,
     0.58,
-    0.56,
-    0.5,
-    0.54
+    0.58,
+    0.58,
+    0.58
    ],
    "motion": {
-    "elements": 18,
-    "css": 18,
+    "elements": 19,
+    "css": 11,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -39,7 +39,7 @@
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
@@ -369,7 +369,16 @@
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.13
+     },
+     {
+      "type": "img",
+      "ratio": 0.13
+     }
+    ],
     "nav": {
      "links": 6,
      "fixed": false,
@@ -392,16 +401,16 @@
    "filled": [
     0.54,
     0.91,
-    0.72,
-    0.86,
-    0.73,
-    0.74
+    0.92,
+    0.92,
+    0.92,
+    0.92
    ],
    "motion": {
-    "elements": 13,
-    "css": 13,
+    "elements": 14,
+    "css": 6,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -421,7 +430,7 @@
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,
@@ -768,7 +777,12 @@
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.33
+     }
+    ],
     "nav": {
      "links": 1,
      "fixed": false,
@@ -791,17 +805,17 @@
    "filled": [
     0.65,
     0.76,
-    0.85,
-    0.79,
-    0.79,
-    0.74,
-    0.73
+    0.76,
+    0.76,
+    0.76,
+    0.76,
+    0.71
    ],
    "motion": {
-    "elements": 12,
-    "css": 12,
+    "elements": 13,
+    "css": 5,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -821,7 +835,7 @@
      "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
      "realPictures": 4,
      "videoCount": 0,

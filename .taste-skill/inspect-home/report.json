@@ -1,0 +1,921 @@
+{
+ "url": "http://localhost:4173/",
+ "at": "2026-10-14T00:12:20.895Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.52,
+    0.63
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 17,
+    "transitions": 0,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1268,
+     "screens": 1.4,
+     "words": 168,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "chars": 38,
+     "lines": 2,
+     "size": 79.2,
+     "vw": 5.5,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.62,
+     "top": 104,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "lines": 2,
+     "size": 79.2,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "We run the tech. You run the business.",
+      "words": 8,
+      "chars": 38,
+      "lines": 2,
+      "size": 79.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 104,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      24,
+      79
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 75,
+     "max": {
+      "size": 79.2,
+      "vw": 5.5,
+      "font": "Harmond",
+      "text": "We run the tech."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 778,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#444444",
+       "share": 0.32
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.32
+      },
+      {
+       "color": "#555555",
+       "share": 0.15
+      },
+      {
+       "color": "#333333",
+       "share": 0.12
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 8,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 485
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.74,
+    0.93
+   ],
+   "motion": {
+    "elements": 15,
+    "css": 12,
+    "transitions": 0,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1964,
+     "screens": 1.9,
+     "words": 163,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "chars": 38,
+     "lines": 2,
+     "size": 51.2,
+     "vw": 6.7,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "lines": 2,
+     "size": 51.2,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "We run the tech. You run the business.",
+      "words": 8,
+      "chars": 38,
+      "lines": 2,
+      "size": 51.2,
+      "vw": 6.7,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      24,
+      51
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 75,
+     "max": {
+      "size": 51.2,
+      "vw": 6.7,
+      "font": "Harmond",
+      "text": "We run the tech."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1085,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e5e5e5",
+       "top": 1407,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.9
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#444444",
+       "share": 0.33
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.33
+      },
+      {
+       "color": "#555555",
+       "share": 0.12
+      },
+      {
+       "color": "#333333",
+       "share": 0.12
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 8,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 440
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.31
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.69,
+    0.85,
+    0.85,
+    0.91
+   ],
+   "motion": {
+    "elements": 14,
+    "css": 8,
+    "transitions": 0,
+    "scripted": 6,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2562,
+     "screens": 3,
+     "words": 158,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp",
+      "after-screenshot.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "chars": 38,
+     "lines": 2,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Harmond",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.96,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.88,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We run the tech. You run the business.",
+     "words": 8,
+     "lines": 2,
+     "size": 32,
+     "font": "Harmond"
+    },
+    "headings": [
+     {
+      "text": "We run the tech. You run the business.",
+      "words": 8,
+      "chars": 38,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Harmond",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.96,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Harmond",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      16,
+      20,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Harmond",
+      "text": "We run the tech."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 421,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f4f4f4",
+       "top": 742,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.96
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1c1c1c",
+       "share": 0.34
+      },
+      {
+       "color": "#444444",
+       "share": 0.31
+      },
+      {
+       "color": "#555555",
+       "share": 0.12
+      },
+      {
+       "color": "#333333",
+       "share": 0.12
+      },
+      {
+       "color": "#c0272d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 8,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 421
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.18
+     },
+     {
+      "type": "img",
+      "ratio": 0.18
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "harmond"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/desktop-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/tablet-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/mobile-fold.jpg",
+   "pages": [
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect-home/mobile-page-01.jpg"
+   ]
+  }
+ ]
+}

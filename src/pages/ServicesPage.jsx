@@ -187,13 +187,17 @@ const FAQS = [
 
 export default function ServicesPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
+  const containerRef = useRef(null);
+  const { navigateWithTransition } = useTransition();
+
+  useScrollAnimations(containerRef);
 
   const toggleFaq = (index) => {
     setOpenFaqIndex((current) => (current === index ? -1 : index));
   };
 
   return (
-    <div className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
+    <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
       {/* Perimeter top navigation */}
       <TopBar />
 
@@ -218,12 +222,16 @@ export default function ServicesPage() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/contact', 'CONTACT');
+                }}
                 className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#333333] transition-colors duration-150"
               >
                 Start a project
-              </Link>
+              </a>
               <a
                 href="#how-it-works"
                 className="inline-flex items-center gap-1.5 px-5 py-3.5 text-base font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
@@ -495,19 +503,27 @@ export default function ServicesPage() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4 pt-1">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/contact', 'CONTACT');
+                }}
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#ffffff] text-[#1c1c1c] font-medium rounded-lg text-base hover:bg-[#ebebeb] transition-colors duration-150"
               >
                 Start a project
-              </Link>
-              <Link
-                to="/our-work"
+              </a>
+              <a
+                href="/our-work"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/our-work', 'WORK');
+                }}
                 className="inline-flex items-center justify-center gap-1.5 px-8 py-4 bg-[#ffffff]/15 text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#ffffff]/25 transition-colors duration-150"
               >
                 See the results
                 <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
