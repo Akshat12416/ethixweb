@@ -12,6 +12,7 @@ import IndustriesPage from './pages/IndustriesPage';
 import ServicesPage from './pages/ServicesPage';
 import OurWorkPage from './pages/OurWorkPage';
 import ContactPage from './pages/ContactPage';
+import AdminPage from './pages/AdminPage';
 import './styles/landing.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -173,6 +174,7 @@ function AnimatedRoutes() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/our-work" element={<OurWorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
 
       <div className="home-transition-overlay" ref={overlayRef} aria-hidden="true">

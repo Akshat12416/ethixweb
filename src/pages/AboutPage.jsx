@@ -1,10 +1,59 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { ArrowUpRight, CheckCircle2, X } from 'lucide-react';
 import TopBar from '../components/TopBar';
 import MiddleNav from '../components/MiddleNav';
 import PageCurtain from '../components/PageCurtain';
 import { useTransition } from '../context/TransitionContext';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+
+const DUAL_SHORE_STAGES = [
+  {
+    step: '01',
+    time: '09:00 – 17:00 PST',
+    hub: 'Seattle, WA (HQ)',
+    title: 'High-Touch US Leadership',
+    desc: 'You work directly with executive leadership in Washington. We clarify architecture, finalize requirements, and maintain tight roadmap alignment without telephone games.',
+  },
+  {
+    step: '02',
+    time: '17:00 – 18:00 PST',
+    hub: 'Trans-Pacific Handover',
+    title: 'Seamless Context Transfer',
+    desc: 'Daily asynchronous debriefs, recorded Loom walkthroughs, and automated GitHub sprint handovers. Bangalore engineers take over with full technical clarity.',
+  },
+  {
+    step: '03',
+    time: '18:00 – 04:00 PST',
+    hub: 'Bangalore Core Hub',
+    title: 'Deep Engineering Night Shift',
+    desc: 'While your team sleeps, Bangalore’s senior engineers write clean React and TypeScript, train AI booking models, run security audits, and deploy to staging environments.',
+  },
+  {
+    step: '04',
+    time: '08:30 PST',
+    hub: 'Production Delivery',
+    title: 'Wake Up to Shipped Code',
+    desc: 'You wake up to tested pull requests, live preview links, and documented progress ready for immediate customer deployment.',
+  },
+];
+
+const INDIA_ADVANTAGES = [
+  {
+    title: 'Silicon Valley of Asia',
+    tag: 'Bangalore Density',
+    desc: 'Bangalore is the global capital of software engineering. Our hub taps into senior engineers who architected high-throughput infrastructure at top tech companies.',
+  },
+  {
+    title: 'Zero Junior Subcontracting',
+    tag: 'Strict Senior Bar',
+    desc: 'We never outsource to anonymous low-cost commodity shops. Every engineer in our Bangalore office is a full-time, senior core team member with 6+ years in production.',
+  },
+  {
+    title: 'US Legal Protection',
+    tag: 'Wyoming LLC',
+    desc: 'All contracts, NDAs, intellectual property assignments, and invoicing are governed under US corporate law through Ethixweb USA LLC.',
+  },
+];
 
 const COMPARISON = [
   {
@@ -107,6 +156,25 @@ const TEAM_PHOTOS = [
 export default function AboutPage() {
   const containerRef = useRef(null);
   const { navigateWithTransition } = useTransition();
+
+  const [clocks, setClocks] = useState(() => {
+    const now = new Date();
+    return {
+      seattle: now.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }),
+      bangalore: now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }),
+    };
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date();
+      setClocks({
+        seattle: now.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }),
+        bangalore: now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }),
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   useScrollAnimations(containerRef);
 
@@ -259,9 +327,119 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── SECTION 2: STATS (TYPOGRAPHIC SET PIECE, NOT IDENTICAL BOXED CARDS) ── */}
+        {/* ── SECTION 2: THE INDIA STORY & DUAL-SHORE SUPERPOWER ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
-          <div className="flex flex-col gap-3 max-w-3xl" data-rise="11">
+          <div className="flex flex-col gap-4 max-w-4xl" data-rise="10">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#c0272d] font-semibold">
+              02 / DUAL-SHORE VELOCITY ENGINE
+            </span>
+            <h2 className="font-display text-[26px] sm:text-[36px] md:text-[44px] font-normal text-[#1c1c1c] leading-tight">
+              The India story: <span className="font-serif italic font-normal">Our 24-hour engineering engine.</span>
+            </h2>
+            <p className="text-base md:text-lg text-[#444444] leading-relaxed">
+              Why the most agile US businesses pair high-touch local executive accountability with Bangalore’s elite engineering density.
+              We turned timezones from a coordination hurdle into an around-the-clock delivery advantage.
+            </p>
+          </div>
+
+          {/* Real-time Dual-Timezone Clocks */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-rise="11">
+            {/* Seattle HQ Clock */}
+            <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between border border-[#1c1c1c]/5 shadow-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-[#f0f0f0]">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl" role="img" aria-label="United States">🇺🇸</span>
+                  <div>
+                    <h3 className="font-display text-lg font-medium text-[#1c1c1c]">Seattle, WA (Operations HQ)</h3>
+                    <p className="text-xs text-[#666666]">Pacific Time (PST/PDT) · Client Leadership</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-xs font-mono text-[#555555]">ACTIVE</span>
+                </div>
+              </div>
+              <div className="py-6 flex flex-col gap-1">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#888888]">Current Local Time</span>
+                <span className="font-serif text-3xl sm:text-4xl text-[#1c1c1c] font-normal tracking-tight">
+                  {clocks.seattle}
+                </span>
+              </div>
+              <p className="text-xs text-[#555555] leading-relaxed pt-2">
+                Strategic kickoffs, architecture planning, US contracts via <strong>Ethixweb USA LLC</strong>, and direct phone/video line with executive partners.
+              </p>
+            </div>
+
+            {/* Bangalore Core Hub Clock */}
+            <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between border border-[#1c1c1c]/5 shadow-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-[#f0f0f0]">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl" role="img" aria-label="India">🇮🇳</span>
+                  <div>
+                    <h3 className="font-display text-lg font-medium text-[#1c1c1c]">Bangalore Hub (Engineering Capital)</h3>
+                    <p className="text-xs text-[#666666]">India Standard Time (IST) · Deep Architecture</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-xs font-mono text-[#555555]">CORE HUB</span>
+                </div>
+              </div>
+              <div className="py-6 flex flex-col gap-1">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#888888]">Current Local Time</span>
+                <span className="font-serif text-3xl sm:text-4xl text-[#1c1c1c] font-normal tracking-tight">
+                  {clocks.bangalore}
+                </span>
+              </div>
+              <p className="text-xs text-[#555555] leading-relaxed pt-2">
+                Distributed cloud infrastructure, full-stack React systems, autonomous AI agents, automated CI/CD pipelines, and 24/7 uptime monitoring.
+              </p>
+            </div>
+          </div>
+
+          {/* Follow-the-Sun 24/7 Timeline */}
+          <div className="bg-[#ffffff] rounded-2xl p-6 md:p-10 flex flex-col gap-8" data-rise="12">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-display text-xl sm:text-2xl font-normal text-[#1c1c1c]">
+                How follow-the-sun development <span className="font-serif italic font-normal">accelerates your launch.</span>
+              </h3>
+              <p className="text-sm md:text-base text-[#444444]">
+                While typical agencies halt all progress when the clock hits 5:00 PM, our dual-shore workflow keeps your codebase advancing 24 hours a day.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+              {DUAL_SHORE_STAGES.map((stage) => (
+                <div key={stage.step} className="flex flex-col gap-3 p-5 rounded-xl bg-[#f9f9f9] border border-[#f0f0f0]">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-semibold text-[#c0272d]">{stage.step}</span>
+                    <span className="text-[11px] font-mono px-2 py-0.5 bg-[#ebebeb] text-[#333333] rounded">{stage.time}</span>
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#666666] block">{stage.hub}</span>
+                    <h4 className="font-display text-base font-semibold text-[#1c1c1c] mt-0.5">{stage.title}</h4>
+                  </div>
+                  <p className="text-xs text-[#555555] leading-relaxed">{stage.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Three Non-Negotiable Tenets */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-rise="13">
+            {INDIA_ADVANTAGES.map((adv) => (
+              <div key={adv.title} className="bg-[#ffffff] rounded-2xl p-6 flex flex-col gap-3">
+                <span className="text-xs font-mono text-[#c0272d] uppercase tracking-wider font-semibold">{adv.tag}</span>
+                <h4 className="font-display text-lg font-semibold text-[#1c1c1c]">{adv.title}</h4>
+                <p className="text-xs md:text-sm text-[#444444] leading-relaxed">{adv.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── SECTION 3: STATS (TYPOGRAPHIC SET PIECE, NOT IDENTICAL BOXED CARDS) ── */}
+        <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
+          <div className="flex flex-col gap-3 max-w-3xl" data-rise="14">
             <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               The metrics that <span className="font-serif italic font-normal">govern how we ship.</span>
             </h2>
