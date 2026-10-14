@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:4173/",
- "at": "2026-10-14T01:11:53.572Z",
+ "at": "2026-10-14T01:26:00.243Z",
  "allow": [
   "few-pictures",
   "numbering"
@@ -12,7 +12,7 @@
    "load": "load",
    "screens": 1,
    "filled": [
-    0.21
+    0.2
    ],
    "motion": {
     "elements": 65,
@@ -78,27 +78,6 @@
      "font": "Roobert"
     },
     "headings": [
-     {
-      "text": "ETHIXWEB.COM",
-      "words": 1,
-      "chars": 12,
-      "lines": 1,
-      "size": 33.6,
-      "vw": 2.3,
-      "font": "Roobert",
-      "weight": 900,
-      "tracking": 0.06,
-      "leading": 1.5,
-      "upper": true,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.19,
-      "top": 30,
-      "tag": "a",
-      "kind": "heading"
-     },
      {
       "text": "E",
       "words": 1,
@@ -269,12 +248,12 @@
      }
     ],
     "headingSummary": {
-     "count": 9,
+     "count": 8,
      "maxLines": 1,
      "over2Lines": 0,
      "statements": 0,
      "centered": 8,
-     "medianWords": 1,
+     "medianWords": null,
      "mixedFontHeadings": 0
     },
     "type": {
@@ -292,24 +271,24 @@
      ],
      "familyCount": 2,
      "sizes": [
-      17,
-      18,
-      19,
+      13,
+      14,
+      16,
+      22,
       30,
-      34,
       170
      ],
      "sizeCount": 6,
      "notLoaded": [],
      "body": {
       "font": "Roobert",
-      "size": 18.4,
-      "leading": 1.32,
+      "size": 16,
+      "leading": 1.35,
       "weight": 500,
-      "tracking": 0.03,
+      "tracking": 0.035,
       "contrast": null
      },
-     "measureChars": 29,
+     "measureChars": 31,
      "max": {
       "size": 169.9,
       "vw": 11.8,
@@ -390,17 +369,13 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.16
-     },
-     {
-      "type": "svg",
-      "ratio": 0.14
+      "ratio": 0.08
      }
     ],
     "nav": {
      "links": 1,
      "fixed": false,
-     "height": 120,
+     "height": 109,
      "floatingPill": false,
      "blur": false
     },
@@ -415,10 +390,9 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 2,
+   "screens": 1,
    "filled": [
-    0.25,
-    0.23
+    0.22
    ],
    "motion": {
     "elements": 65,
@@ -434,9 +408,9 @@
      "h": 1024
     },
     "page": {
-     "height": 1030,
+     "height": 1024,
      "screens": 1,
-     "words": 52,
+     "words": 45,
      "img": 6,
      "video": 0,
      "canvas": 0,
@@ -484,27 +458,6 @@
      "font": "Roobert"
     },
     "headings": [
-     {
-      "text": "ETHIXWEB.COM",
-      "words": 1,
-      "chars": 12,
-      "lines": 1,
-      "size": 28.8,
-      "vw": 3.8,
-      "font": "Roobert",
-      "weight": 900,
-      "tracking": 0,
-      "leading": 1.5,
-      "upper": true,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.28,
-      "top": 24,
-      "tag": "a",
-      "kind": "heading"
-     },
      {
       "text": "E",
       "words": 1,
@@ -675,12 +628,12 @@
      }
     ],
     "headingSummary": {
-     "count": 9,
+     "count": 8,
      "maxLines": 1,
      "over2Lines": 0,
      "statements": 0,
      "centered": 8,
-     "medianWords": 1,
+     "medianWords": null,
      "mixedFontHeadings": 0
     },
     "type": {
@@ -698,21 +651,20 @@
      ],
      "familyCount": 2,
      "sizes": [
-      14,
       17,
       18,
-      29,
+      25,
       45,
       99
      ],
-     "sizeCount": 6,
+     "sizeCount": 5,
      "notLoaded": [],
      "body": {
       "font": "Roobert",
       "size": 17.6,
       "leading": 1.25,
       "weight": 500,
-      "tracking": 0.03,
+      "tracking": 0.035,
       "contrast": 14.3
      },
      "measureChars": 31,
@@ -729,8 +681,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.82,
-     "centerShare": 0.82,
+     "upperShare": 0.79,
+     "centerShare": 0.95,
      "smallText": 0
     },
     "eyebrows": [],
@@ -796,17 +748,17 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.16
+      "ratio": 0.14
      },
      {
       "type": "svg",
-      "ratio": 0.14
+      "ratio": 0.12
      }
     ],
     "nav": {
      "links": 1,
      "fixed": false,
-     "height": 99,
+     "height": 86,
      "floatingPill": false,
      "blur": false
     },
@@ -823,8 +775,8 @@
    "load": "load",
    "screens": 2,
    "filled": [
-    0.29,
-    0.24
+    0.27,
+    0.19
    ],
    "motion": {
     "elements": 65,
@@ -840,9 +792,9 @@
      "h": 844
     },
     "page": {
-     "height": 945,
+     "height": 906,
      "screens": 1.1,
-     "words": 45,
+     "words": 38,
      "img": 6,
      "video": 0,
      "canvas": 0,
@@ -854,7 +806,7 @@
      "uiAbuse": false,
      "realPictures": 0,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 0,
      "pictureSamples": [],
      "blendText": 0,
      "sideScrollers": 0,
@@ -895,19 +847,19 @@
       "words": 1,
       "chars": 12,
       "lines": 1,
-      "size": 28.8,
-      "vw": 7.4,
+      "size": 24.8,
+      "vw": 6.4,
       "font": "Roobert",
       "weight": 900,
-      "tracking": 0,
+      "tracking": 0.04,
       "leading": 1.5,
       "upper": true,
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "center",
-      "widthRatio": 0.55,
-      "top": 24,
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 25,
       "tag": "a",
       "kind": "heading"
      },
@@ -1093,32 +1045,31 @@
      "families": [
       {
        "family": "Roobert",
-       "share": 0.97,
+       "share": 0.96,
        "mono": false
       },
       {
        "family": "Roxborough CF",
-       "share": 0.03,
+       "share": 0.04,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      14,
       17,
       18,
-      29,
+      25,
       32,
       70
      ],
-     "sizeCount": 6,
+     "sizeCount": 5,
      "notLoaded": [],
      "body": {
       "font": "Roobert",
       "size": 17.6,
       "leading": 1.25,
       "weight": 500,
-      "tracking": 0.03,
+      "tracking": 0.035,
       "contrast": 14.3
      },
      "measureChars": 31,
@@ -1135,8 +1086,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.97,
-     "centerShare": 0.78,
+     "upperShare": 0.96,
+     "centerShare": 0.94,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1202,17 +1153,17 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.24
+      "ratio": 0.21
      },
      {
       "type": "svg",
-      "ratio": 0.22
+      "ratio": 0.18
      }
     ],
     "nav": {
      "links": 1,
      "fixed": false,
-     "height": 99,
+     "height": 86,
      "floatingPill": false,
      "blur": false
     },
@@ -1247,7 +1198,7 @@
    "level": "WARN",
    "id": "all-centred",
    "width": 768,
-   "message": "82% of the text is centre-aligned.",
+   "message": "95% of the text is centre-aligned.",
    "fix": "Centre one moment at most; anchor the rest to a shared left edge.",
    "alsoAt": [
     390

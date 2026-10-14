@@ -156,7 +156,7 @@ export default function InteractiveWeb() {
       ref={containerRef}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
-      className="relative w-full max-w-[420px] sm:max-w-[480px] md:max-w-[530px] aspect-[1234/772] select-none cursor-pointer"
+      className="relative w-full max-w-[310px] sm:max-w-[350px] md:max-w-[390px] aspect-[1234/772] select-none cursor-pointer"
       style={{
         transform: `perspective(900px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
         transition: 'transform 200ms cubic-bezier(0.2, 0.9, 0.3, 1)',
@@ -258,17 +258,18 @@ export default function InteractiveWeb() {
       >
         {/* Soft Ambient Crimson Glow */}
         <div
-          className="absolute rounded-full w-20 h-20 pointer-events-none bg-[#c0272d]/15 blur-md"
+          className="absolute rounded-full w-16 h-16 pointer-events-none bg-[#c0272d]/15 blur-md"
         />
 
         {/* Crimson Glass EthixWeb Logo (Auto-spinning 3D emblem) */}
         <div
-          className="relative w-12 h-12 md:w-14 md:h-14 animate-emblem-spin"
+          className="relative w-11 h-11 md:w-13 md:h-13 animate-emblem-spin"
           style={{ transformOrigin: '50% 50%' }}
         >
           <img
             src={emblemImg}
             alt="EthixWeb Emblem"
+            fetchPriority="high"
             className="w-full h-full object-contain select-none"
             style={{
               filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 0 8px rgba(192,39,45,0.45))', /* taste-skill-ignore */
@@ -285,7 +286,7 @@ export default function InteractiveWeb() {
             key={`anchor-node-${i}`}
             onMouseEnter={() => setHoveredAnchor(i)}
             onMouseLeave={() => setHoveredAnchor(-1)}
-            className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#f4f4f4]/95 text-[#1c1c1c] text-[11px] font-medium transition-[transform,background-color] duration-200 pointer-events-auto border border-[#1c1c1c]/10"
+            className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f4f4f4]/95 text-[#1c1c1c] text-[10.5px] font-medium transition-[transform,background-color] duration-200 pointer-events-auto border border-[#1c1c1c]/10"
             style={{
               left: `${(anchor.x / VB_W) * 100}%`,
               top: `${(anchor.y / VB_H) * 100}%`,
@@ -300,7 +301,7 @@ export default function InteractiveWeb() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="hidden min-[420px]:inline tracking-tight text-[11px] font-medium whitespace-nowrap">
+            <span className="hidden min-[420px]:inline tracking-tight text-[10.5px] font-medium whitespace-nowrap">
               {anchor.badge}
             </span>
           </div>
