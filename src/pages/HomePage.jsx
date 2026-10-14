@@ -21,19 +21,25 @@ export default function HomePage() {
         {/* Typographic statement block — 2 lines strictly */}
         <section className="flex flex-col gap-5 max-w-4xl">
           <h1
-            className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5.5vw,5.2rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-medium"
+            className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5.5vw,5.2rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
             data-rise="8"
           >
-            <span className="block">We run the tech.</span>
-            <span className="block text-[#1c1c1c]">You run the business.</span>
+            <span className="block">
+              We run the <span className="font-serif italic font-normal text-[#1c1c1c]">tech.</span>
+            </span>
+            <span className="block text-[#1c1c1c]">
+              You run the <span className="font-serif italic font-normal text-[#1c1c1c]">business.</span>
+            </span>
           </h1>
 
           <p
             className="text-base md:text-lg text-[#444444] leading-relaxed max-w-2xl font-normal"
             data-rise="9"
           >
-            We manage your complete digital operation — from AI booking agents and CRM syncs
-            to custom websites, SEO, and paid growth. 100% senior-led, launched in 2 to 4 weeks.
+            We manage your complete digital operation — from{' '}
+            <span className="font-serif italic text-[#1c1c1c]">AI booking agents</span> and CRM syncs
+            to custom websites, SEO, and paid growth.{' '}
+            <span className="font-serif italic text-[#1c1c1c]">100% senior-led</span>, launched in 2 to 4 weeks.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">

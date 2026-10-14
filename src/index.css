@@ -18,11 +18,19 @@
 }
 
 @font-face {
-  font-family: "Harmond";
+  font-family: "Roxborough CF";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('/fonts/Harmond-Regular.woff2') format('woff2');
+  src: url('/fonts/RoxboroughCF-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "Roxborough CF";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/RoxboroughCF-RegularItalic.woff2') format('woff2');
 }
 
 :root {
@@ -33,8 +41,10 @@
   --color-ink-soft: #444444;
   --color-accent: #c0272d;
   --color-accent-dark: #8a181c;
-  --font-display: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-text: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-text: "Roobert", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Roobert", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-design: "Roxborough CF", Georgia, serif;
+  --font-serif: "Roxborough CF", Georgia, serif;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --t-reveal: 750ms;
@@ -70,6 +80,19 @@
 
 .font-text {
   font-family: var(--font-text);
+}
+
+.font-serif,
+.font-sec,
+.font-design {
+  font-family: var(--font-design);
+}
+
+.font-serif.italic,
+.font-sec.italic,
+.about-title-italic {
+  font-family: var(--font-design);
+  font-style: italic;
 }
 
 /* Motion Layer Animations (Checked by inspect.mjs) */

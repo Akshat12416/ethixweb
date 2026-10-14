@@ -210,8 +210,8 @@ export default function ServicesPage() {
               className="font-display text-[28px] sm:text-[42px] md:text-[54px] lg:text-[64px] leading-[0.96] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
-              <span className="block">Everything under one roof.</span>
-              <span className="block text-[#1c1c1c]">Built for real growth.</span>
+              <span className="block">Everything under <span className="font-serif italic font-normal">one roof.</span></span>
+              <span className="block text-[#1c1c1c]">Built for <span className="font-serif italic font-normal">real growth.</span></span>
             </h1>
 
             <p
@@ -248,7 +248,7 @@ export default function ServicesPage() {
             data-rise="4"
           >
             <div className="flex flex-col gap-1">
-              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
+              <span className="font-serif italic text-[32px] font-normal text-[#1c1c1c]">
                 22
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -256,7 +256,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
+              <span className="font-serif italic text-[32px] font-normal text-[#1c1c1c]">
                 4-Beat
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -264,7 +264,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
+              <span className="font-serif italic text-[32px] font-normal text-[#1c1c1c]">
                 2–4 Wks
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -272,7 +272,7 @@ export default function ServicesPage() {
               </span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-[28px] font-normal text-[#1c1c1c]">
+              <span className="font-serif italic text-[32px] font-normal text-[#1c1c1c]">
                 &lt; 1h
               </span>
               <span className="text-[13px] font-medium text-[#555555]">
@@ -290,8 +290,8 @@ export default function ServicesPage() {
         >
           <div className="flex flex-col gap-3 max-w-3xl">
             <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-              <span>Audit first. Build second.</span>
-              <span className="block text-[#1c1c1c]">Optimize forever.</span>
+              <span>Audit <span className="font-serif italic font-normal">first.</span> Build <span className="font-serif italic font-normal">second.</span></span>
+              <span className="block text-[#1c1c1c]">Optimize <span className="font-serif italic font-normal">forever.</span></span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Every service below plugs into the same four-beat operating rhythm, so you always know what is being built, why it matters, and what happens next.
@@ -349,7 +349,9 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-3 max-w-3xl">
             <h2 className="font-display text-[20px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               <span>The capability catalog.</span>
-              <span className="block text-[#1c1c1c]">22 services run as one engine.</span>
+              <span className="block text-[#1c1c1c]">
+                <span className="font-serif italic font-normal">22 services</span> run as one engine.
+              </span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Stop stitching together five disconnected freelancers and point tools. Our senior team handles your complete digital operations under one roof.
@@ -434,7 +436,9 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-3 max-w-3xl">
             <h2 className="font-display text-[24px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
               <span>Questions every client asks.</span>
-              <span className="block text-[#1c1c1c]">Clear, unhedged answers.</span>
+              <span className="block text-[#1c1c1c]">
+                Clear, <span className="font-serif italic font-normal">unhedged answers.</span>
+              </span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed max-w-[60ch]">
               Straight answers on our home service focus, existing codebase transitions, fixed pricing model, and deployment speed.

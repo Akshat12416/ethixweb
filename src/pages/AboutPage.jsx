@@ -122,8 +122,8 @@ export default function AboutPage() {
               className="font-display text-[32px] sm:text-[48px] md:text-[clamp(4.2rem,5.6vw,5.5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
-              <span className="block">Direct senior craft.</span>
-              <span className="block text-[#1c1c1c]">No account managers.</span>
+              <span className="block">Direct <span className="font-serif italic font-normal">senior craft.</span></span>
+              <span className="block text-[#1c1c1c]">No <span className="font-serif italic font-normal">account managers.</span></span>
             </h1>
 
             <p
@@ -167,7 +167,7 @@ export default function AboutPage() {
           >
             <div className="w-full lg:w-1/2 flex flex-col gap-4">
               <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-                Built for businesses tired of agency theater.
+                Built for businesses tired of <span className="font-serif italic font-normal">agency theater.</span>
               </h2>
               <p className="text-base text-[#444444] leading-relaxed">
                 We started Ethixweb in 2020 because we watched business owners get handed off to junior coordinators
@@ -203,7 +203,7 @@ export default function AboutPage() {
           {/* Signature Comparison Block */}
           <div className="bg-[#ffffff] rounded-2xl p-6 md:p-10 flex flex-col gap-6" data-rise="10">
             <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-              Ethixweb compared to traditional agencies.
+              Ethixweb compared to <span className="font-serif italic font-normal">traditional agencies.</span>
             </h2>
 
             {/* Desktop / Tablet Semantic Table */}
@@ -259,7 +259,7 @@ export default function AboutPage() {
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-3xl" data-rise="11">
             <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-              The metrics that govern how we ship.
+              The metrics that <span className="font-serif italic font-normal">govern how we ship.</span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed">
               Every client engagement is measured by concrete turnaround times, senior execution, and direct business results.
@@ -273,7 +273,7 @@ export default function AboutPage() {
                 className="flex flex-col gap-2"
                 data-rise={String(idx + 13)}
               >
-                <p className="font-display text-[56px] font-normal text-[#1c1c1c] tracking-tight leading-none">
+                <p className="font-serif italic text-[56px] font-normal text-[#1c1c1c] tracking-tight leading-none">
                   {item.value}
                 </p>
                 <p className="text-base font-semibold text-[#c0272d]">
@@ -291,7 +291,7 @@ export default function AboutPage() {
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-3xl" data-rise="17">
             <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-              What clients say when the tech works.
+              What clients say when the <span className="font-serif italic font-normal">tech works.</span>
             </h2>
             <p className="text-base text-[#444444] leading-relaxed">
               Direct statements from real client reviews published independently on Trustpilot.
@@ -302,7 +302,7 @@ export default function AboutPage() {
             {/* Featured quote panel (size <= 24px so it is treated as a quotation, not a headline) */}
             <div className="lg:col-span-6 bg-[#ffffff] rounded-2xl p-6 md:p-10 flex flex-col justify-between gap-6">
               <blockquote className="text-lg md:text-2xl text-[#1c1c1c] leading-relaxed font-normal">
-                &ldquo;{FEATURED_TESTIMONIAL.quote}&rdquo;
+                &ldquo;The team was easy to work with, <span className="font-serif italic font-normal">great communication</span> and done in <span className="font-serif italic font-normal">efficient time.</span>&rdquo;
               </blockquote>
 
               <div className="flex items-center justify-between pt-4 text-[13px]">

@@ -62,8 +62,8 @@ export default function IndustriesPage() {
               className="font-display text-[32px] sm:text-[48px] md:text-[clamp(4.2rem,5.6vw,5.5rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
               data-rise="1"
             >
-              <span className="block">Built for the trades.</span>
-              <span className="block text-[#1c1c1c]">Ready for the water.</span>
+              <span className="block">Built for the <span className="font-serif italic font-normal">trades.</span></span>
+              <span className="block text-[#1c1c1c]">Ready for the <span className="font-serif italic font-normal">water.</span></span>
             </h1>
 
             <p
@@ -104,7 +104,7 @@ export default function IndustriesPage() {
             <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="flex flex-col gap-3">
                 <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-                  HVAC, Plumbing &amp; Field Services
+                  <span className="font-serif italic font-normal">HVAC, Plumbing</span> &amp; Field Services
                 </h2>
                 <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                   Field service management integration, 24/7 AI call protection, and local search dominance built for high-ticket emergency dispatch.
@@ -125,7 +125,7 @@ export default function IndustriesPage() {
             <div className="bg-[#ffffff] rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="flex flex-col gap-3">
                 <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-                  Fishing Charters &amp; Marine Outfitters
+                  <span className="font-serif italic font-normal">Fishing Charters</span> &amp; Marine Outfitters
                 </h2>
                 <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                   Real-time booking engine integration, Shopify merchandise stores, and weekly catch-log SEO that captures bookings while you are at sea.
@@ -151,7 +151,7 @@ export default function IndustriesPage() {
           <div id="trades" className="flex flex-col gap-8 scroll-mt-24" data-rise="5">
             <div className="flex flex-col gap-3 max-w-2xl">
               <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-                You handle the pipes. We handle the tech.
+                You handle the pipes. We handle the <span className="font-serif italic font-normal">tech.</span>
               </h2>
               <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                 You spend $200+ per lead on advertising, but miss up to 30% of your incoming calls while working on a job.
@@ -213,7 +213,7 @@ export default function IndustriesPage() {
           <div id="charters" className="flex flex-col gap-8 scroll-mt-24" data-rise="8">
             <div className="flex flex-col gap-3 max-w-2xl">
               <h2 className="font-display text-[22px] sm:text-[28px] font-normal text-[#1c1c1c] leading-tight">
-                Your business shouldn't stop at the shoreline.
+                Your business shouldn't stop at the <span className="font-serif italic font-normal">shoreline.</span>
               </h2>
               <p className="text-base text-[#444444] leading-relaxed max-w-xl">
                 You are at sea 10 hours a day with your hands on the wheel and fishing rods.

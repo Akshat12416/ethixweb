@@ -141,7 +141,7 @@ export function TransitionProvider({ children }) {
           ref={textCharsRef}
           className="page-transition-text"
           style={{
-            fontFamily: '"Harmond", serif',
+            fontFamily: '"Roxborough CF", serif',
             fontStyle: 'normal',
             fontSize: 'clamp(2.8rem, 8.5vw, 8rem)',
             fontWeight: 400,

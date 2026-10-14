@@ -28,10 +28,11 @@ export default function TopBar() {
       <a
         href="/"
         onClick={(e) => handleNavClick(e, '/', 'ETHIXWEB')}
-        className="font-display text-xl md:text-2xl font-bold tracking-tight text-[#1c1c1c] hover:opacity-80 transition-opacity flex items-center gap-2"
+        className="text-xl md:text-2xl tracking-tight text-[#1c1c1c] hover:opacity-80 transition-opacity flex items-center"
         data-rise="1"
       >
-        <span>ETHIXWEB</span>
+        <span className="font-display font-medium">ETHIX</span>
+        <span className="font-serif italic font-normal text-[#1c1c1c] ml-0.5">WEB</span>
       </a>
 
       <div className="flex items-center gap-6 md:gap-8">
