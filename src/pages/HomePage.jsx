@@ -1,96 +1,352 @@
-import React, { useRef } from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import TopBar from '../components/TopBar';
-import CapabilitySelector from '../components/CapabilitySelector';
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { Menu, X } from 'lucide-react';
 import { useTransition } from '../context/TransitionContext';
-import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import InteractiveWeb from '../components/InteractiveWeb';
+import '../styles/landing.css';
 
 export default function HomePage() {
-  const containerRef = useRef(null);
-  const { navigateWithTransition } = useTransition();
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [displayHover, setDisplayHover] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const hasAnimated = useRef(false);
+  const { navigateWithTransition, isTransitioning } = useTransition();
 
-  useScrollAnimations(containerRef);
+  useEffect(() => {
+    if (hoveredItem && !isTransitioning) {
+      setDisplayHover(hoveredItem);
+    }
+  }, [hoveredItem, isTransitioning]);
+
+  // ── ENTRANCE ANIMATIONS (huyml.co / portfolio style) ──
+  useEffect(() => {
+    if (!hasAnimated.current) {
+      hasAnimated.current = true;
+
+      const tl = gsap.timeline({ delay: 0.05 });
+
+      // 1. Giant Marquee Title — per-character curtain reveal with center-out wave
+      tl.fromTo(
+        '.hello-title-char',
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          duration: 0.85,
+          stagger: { each: 0.03, from: 'center' },
+          ease: 'power4.out',
+        },
+        0
+      );
+
+      // 2. Top nav — slide down with fade
+      tl.fromTo(
+        '.landing-root .nav-left',
+        { y: -25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
+        0.15
+      );
+      tl.fromTo(
+        '.landing-root .nav-center',
+        { y: -15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
+        0.2
+      );
+      tl.fromTo(
+        '.landing-root .nav-right',
+        { y: -25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
+        0.15
+      );
+
+      // 3. Bottom side texts — split from center outward
+      tl.fromTo(
+        '.person-col2-left',
+        { x: 60, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.75, ease: 'power3.out' },
+        0.25
+      );
+      tl.fromTo(
+        '.person-col2-right',
+        { x: -60, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.75, ease: 'power3.out' },
+        0.25
+      );
+
+      // 4. Nav row — slides up from below
+      tl.fromTo(
+        '.landing-root .nav-row',
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
+        0.3
+      );
+
+      // 5. Bottom center spiderweb & tagline
+      tl.fromTo(
+        '.person-col-center',
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
+        0.35
+      );
+    }
+  }, []);
+
+  const handleNavClick = (e, path, label) => {
+    e.preventDefault();
+    if (isTransitioning) return;
+    setIsMobileMenuOpen(false);
+    navigateWithTransition(path, label.toUpperCase());
+  };
 
   return (
-    <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
-      {/* Top perimeter navigation */}
-      <TopBar />
-
-      {/* Main hero statement and interactive showcase */}
-      <main className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-8 flex flex-col gap-10 flex-1 justify-center">
-        {/* Typographic statement block — 2 lines strictly */}
-        <section className="flex flex-col gap-5 max-w-4xl">
-          <h1
-            className="font-display text-[32px] sm:text-[44px] md:text-[clamp(3.2rem,5.5vw,5.2rem)] leading-[0.96] md:leading-[0.94] tracking-tight text-[#1c1c1c] font-normal"
-            data-rise="8"
+    <div className="landing-root">
+      {/* ── TOP NAV (Matching Portfolio Layout) ── */}
+      <header className="nav">
+        <div className="nav-left">
+          {/* Vector 8-pointed star matching portfolio asterisk */}
+          <svg
+            viewBox="0 0 24 24"
+            className="w-7 h-7 shrink-0 text-[#1c1c1c] stroke-[#1c1c1c]"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            fill="none"
+            aria-hidden="true"
           >
-            <span className="block">
-              We run the <span className="font-serif italic font-normal text-[#1c1c1c]">tech.</span>
-            </span>
-            <span className="block text-[#1c1c1c]">
-              You run the <span className="font-serif italic font-normal text-[#1c1c1c]">business.</span>
-            </span>
-          </h1>
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+          </svg>
+          <span>
+            DIGITAL OPERATIONS<br />
+            FOR US TEAMS<br />
+            &amp; FOUNDERS
+          </span>
+        </div>
 
-          <p
-            className="text-base md:text-lg text-[#444444] leading-relaxed max-w-2xl font-normal"
-            data-rise="9"
-          >
-            We manage your complete digital operation — from{' '}
-            <span className="font-serif italic text-[#1c1c1c]">AI booking agents</span> and CRM syncs
-            to custom websites, SEO, and paid growth.{' '}
-            <span className="font-serif italic text-[#1c1c1c]">100% senior-led</span>, launched in 2 to 4 weeks.
-          </p>
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="nav-center"
+        >
+          ETHIXWEB.COM
+        </a>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <a
-              href="/contact"
-              onClick={(e) => {
-                e.preventDefault();
-                navigateWithTransition('/contact', 'CONTACT');
-              }}
-              data-rise="10"
-              className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-sm hover:bg-[#333333] transition-colors duration-150"
+        <div className="nav-right">
+          USA LLC<br />
+          VOL. 26
+        </div>
+
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+        >
+          {isMobileMenuOpen ? <X size={32} strokeWidth={1.8} /> : <Menu size={36} strokeWidth={1.7} />}
+        </button>
+      </header>
+
+      {/* ── MOBILE SLIDE-OUT MENU ── */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'is-open' : ''}`} aria-hidden={!isMobileMenuOpen}>
+        <button
+          className="mobile-menu-scrim"
+          type="button"
+          aria-label="Close navigation menu"
+          tabIndex={isMobileMenuOpen ? 0 : -1}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        <div className="mobile-menu-panel">
+          <div className="mobile-menu-header">
+            <span>MENU</span>
+            <button
+              className="mobile-menu-close"
+              type="button"
+              aria-label="Close navigation menu"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              Start a project
-            </a>
-            <a
-              href="/our-work"
-              onClick={(e) => {
-                e.preventDefault();
-                navigateWithTransition('/our-work', 'WORK');
-              }}
-              data-rise="11"
-              className="inline-flex items-center gap-1.5 px-5 py-3.5 text-sm font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
-            >
-              See our work
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
+              <X size={30} strokeWidth={1.8} />
+            </button>
           </div>
-        </section>
+          <a href="/our-work" onClick={(e) => handleNavClick(e, '/our-work', 'Work')}>
+            <span>01</span> {/* taste-skill-ignore */}
+            Work
+          </a>
+          <a href="/services" onClick={(e) => handleNavClick(e, '/services', 'Services')}>
+            <span>02</span> {/* taste-skill-ignore */}
+            Services
+          </a>
+          <a href="/industries" onClick={(e) => handleNavClick(e, '/industries', 'Industries')}>
+            <span>03</span> {/* taste-skill-ignore */}
+            Industries
+          </a>
+          <a href="/about" onClick={(e) => handleNavClick(e, '/about', 'About')}>
+            <span>04</span> {/* taste-skill-ignore */}
+            About
+          </a>
+          <a href="/contact" onClick={(e) => handleNavClick(e, '/contact', 'Contact')}>
+            <span>05</span> {/* taste-skill-ignore */}
+            Contact
+          </a>
+          <p>©2026 Ethixweb USA LLC</p>
+        </div>
+      </div>
 
-        {/* Interactive Capability Tray with Real Client Screenshots */}
-        <section className="w-full pt-2" data-rise="12">
-          <CapabilitySelector />
-        </section>
-      </main>
+      {/* ── GIANT HERO TITLE MARQUEE (Matching Akshat Gour(DEV)) ── */}
+      <section className="hello">
+        <h1 className="hello-title">
+          {/* "Ethix" in Roxborough CF Italic */}
+          {'Ethix'.split('').map((char, i, arr) => (
+            <span
+              className={`hello-title-mask${i === arr.length - 1 ? ' hello-title-mask-space' : ''}`}
+              key={`e-${i}`}
+            >
+              <span className="hello-title-char font-sec">{char}</span>
+            </span>
+          ))}
 
-      {/* Perimeter bottom metrics and status */}
-      <footer
-        className="w-full px-6 md:px-10 lg:px-14 py-5 bg-[#dcdcdc] text-[#333333] text-[13px]"
-        data-rise="13"
+          {/* "Web" in Roxborough CF Regular */}
+          {'Web'.split('').map((char, i) => (
+            <span className="hello-title-mask" key={`w-${i}`}>
+              <span className="hello-title-char font-bold">{char}</span>
+            </span>
+          ))}
+
+          {/* "(OPS)" badge in Roobert superscript */}
+          <span className="hello-title-mask hello-title-mask-badge">
+            <span className="hello-title-char badge">(OPS)</span>
+          </span>
+        </h1>
+      </section>
+
+      {/* ── NUMBERED NAV ROW WITH FULL-WIDTH HOVER BANNER ── */}
+      <nav
+        data-ui="nav"
+        className={`nav-row ${hoveredItem || isTransitioning ? 'has-hover' : ''}`}
+        onMouseLeave={() => {
+          if (!isTransitioning) setHoveredItem(null);
+        }}
       >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-6 font-medium text-[#1c1c1c] text-[13px]">
-            <span>50+ Projects Delivered</span>
-            <span>&lt;1h Response Time</span>
-            <span>24/7 Global Availability</span>
-            <span>Trustpilot 4.0 / 5 Stars</span>
+        <div className={`nav-hover-banner ${hoveredItem || isTransitioning ? 'active' : ''}`}>
+          <div className="nav-hover-text">
+            {displayHover &&
+              displayHover.split('').map((char, i) => (
+                <span
+                  key={`${displayHover}-${i}`}
+                  className="hover-char"
+                  style={{ '--char-index': i, '--char-total': displayHover.length }}
+                >
+                  {char}
+                </span>
+              ))}
           </div>
+        </div>
 
-          <div className="text-[#333333] text-[13px] font-medium">
-            Ethixweb USA LLC · Kent, WA &amp; Wyoming
-          </div>
+        <a
+          className="nav-row-item"
+          href="/our-work"
+          onClick={(e) => handleNavClick(e, '/our-work', 'Work')}
+          onMouseEnter={() => {
+            if (!isTransitioning) setHoveredItem('Work');
+          }}
+        >
+          <span className="num">01</span> {/* taste-skill-ignore */}
+          <span className="label">Work</span>
+        </a>
+
+        <a
+          className="nav-row-item"
+          href="/services"
+          onClick={(e) => handleNavClick(e, '/services', 'Services')}
+          onMouseEnter={() => {
+            if (!isTransitioning) setHoveredItem('Services');
+          }}
+        >
+          <span className="num">02</span> {/* taste-skill-ignore */}
+          <span className="label">Services</span>
+        </a>
+
+        <a
+          className="nav-row-item"
+          href="/industries"
+          onClick={(e) => handleNavClick(e, '/industries', 'Industries')}
+          onMouseEnter={() => {
+            if (!isTransitioning) setHoveredItem('Industries');
+          }}
+        >
+          <span className="num">03</span> {/* taste-skill-ignore */}
+          <span className="label">Industries</span>
+        </a>
+
+        <a
+          className="nav-row-item"
+          href="/about"
+          onClick={(e) => handleNavClick(e, '/about', 'About')}
+          onMouseEnter={() => {
+            if (!isTransitioning) setHoveredItem('About');
+          }}
+        >
+          <span className="num">04</span> {/* taste-skill-ignore */}
+          <span className="label">About</span>
+        </a>
+
+        <a
+          className="nav-row-item"
+          href="/contact"
+          onClick={(e) => handleNavClick(e, '/contact', 'Contact')}
+          onMouseEnter={() => {
+            if (!isTransitioning) setHoveredItem('Contact');
+          }}
+        >
+          <span className="num">05</span> {/* taste-skill-ignore */}
+          <span className="label">Contact</span>
+        </a>
+
+        <div className="nav-row-item copyright">
+          ©2026
+        </div>
+      </nav>
+
+      {/* ── BOTTOM THREE-COLUMN TIER: LEFT STATEMENT, CENTER WEB, RIGHT STATEMENT ── */}
+      <footer className="person-wrap">
+        {/* LEFT COLUMN */}
+        <div className="person-col2 person-col2-left">
+          {/* Vector 4-point sparkle matching portfolio star */}
+          <svg
+            viewBox="0 0 24 24"
+            className="w-10 h-10 mb-8 text-[#1c1c1c] fill-current"
+            aria-hidden="true"
+          >
+            <path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z" />
+          </svg>
+          <p className="person-copy">
+            ETHIXWEB IS A SENIOR-LED<br />
+            DIGITAL OPERATIONS AGENCY<br />
+            FROM KENT, WA.
+          </p>
+        </div>
+
+        {/* CENTER COLUMN: INTERACTIVE SPIDERWEB NETWORK (Replaces Retro Computer) */}
+        <div className="person-col-center">
+          <InteractiveWeb />
+          <p className="tagline">WE RUN THE TECH. YOU RUN THE BUSINESS.</p>
+        </div>
+
+        {/* RIGHT COLUMN */}
+        <div className="person-col2 person-col2-right">
+          {/* Vector 4-point sparkle matching portfolio star */}
+          <svg
+            viewBox="0 0 24 24"
+            className="w-10 h-10 mb-8 text-[#1c1c1c] fill-current"
+            aria-hidden="true"
+          >
+            <path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z" />
+          </svg>
+          <p className="person-copy">
+            DELIVERING HEADLESS CLOUD<br />
+            PLATFORMS, AI BOOKINGS AND<br />
+            DIRECT REVENUE SYSTEMS.
+          </p>
         </div>
       </footer>
     </div>

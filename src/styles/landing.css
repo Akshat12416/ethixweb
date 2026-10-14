@@ -1,0 +1,613 @@
+/* ── HARMOND FONT FACE (For Hover Banner) ── */
+@font-face {
+  font-family: "Harmond";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Harmond-Regular.woff2') format('woff2');
+}
+
+.landing-root {
+  width: 100%;
+  min-height: 100svh;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ebebeb;
+}
+
+/* ── TOP NAV ── */
+.landing-root .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.083vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 100;
+}
+
+.landing-root .nav-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: "Roobert", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: rgb(28, 28, 28);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.landing-root .nav-left .star {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.landing-root .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Roobert", sans-serif;
+  font-weight: 900;
+  font-size: 2.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgb(28, 28, 28);
+  white-space: nowrap;
+}
+
+.landing-root .nav-right {
+  font-family: "Roobert", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: rgb(28, 28, 28);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+
+.landing-root .mobile-menu-toggle,
+.landing-root .mobile-menu {
+  display: none;
+}
+
+/* ── HERO SECTION ── */
+.landing-root .hello {
+  position: absolute;
+  top: 17%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── HERO TITLE ── */
+.landing-root .hello-title {
+  font-size: 11.8vw;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: rgb(28, 28, 28);
+  white-space: nowrap;
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  margin: 0;
+}
+
+/* Inverted curtain reveal clip mask (huyml.co style) */
+.landing-root .hello-title-mask {
+  display: inline-block;
+  vertical-align: baseline;
+  clip-path: inset(-100% -50% 0% -50%);
+}
+
+.landing-root .hello-title-mask-badge {
+  vertical-align: super;
+}
+
+.landing-root .hello-title-mask-space {
+  margin-right: 0.18em;
+}
+
+.landing-root .hello-title-char {
+  display: inline-block;
+}
+
+/* "Ethix" — italic serif */
+.landing-root .hello-title .font-sec {
+  font-family: "Roxborough CF", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* "Web" — upright serif */
+.landing-root .hello-title .font-bold {
+  font-family: "Roxborough CF", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* "(OPS)" badge — superscript top-right of name */
+.landing-root .hello-title .badge {
+  font-family: "Roobert", sans-serif;
+  font-size: 2.1vw;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  vertical-align: super;
+  margin-left: 0.22em;
+  color: rgb(28, 28, 28);
+}
+
+/* ── NAV ROW WITH HOVER BANNER ── */
+.landing-root .nav-row {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 2.083vw;
+  z-index: 10;
+  color: rgb(28, 28, 28);
+}
+
+.landing-root .nav-row-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.landing-root .nav-row-item .num {
+  font-family: "Roobert", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.5;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.landing-root .nav-row-item .label {
+  font-family: "Roobert", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.landing-root .copyright {
+  font-family: "Roobert", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.5;
+  line-height: 1;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  transition: color 0.4s ease;
+  color: inherit;
+}
+
+/* HOVER BANNER */
+.landing-root .nav-hover-banner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100vw;
+  height: 16vh;
+  background-color: #0a0a0a;
+  transform: translateY(-50%) scaleY(0);
+  transform-origin: center;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.landing-root .nav-hover-banner.active {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.landing-root .nav-hover-text {
+  font-family: "Harmond", serif;
+  font-style: normal;
+  font-size: 8.5vw;
+  font-weight: 400;
+  color: rgb(75, 75, 75);
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 1;
+  margin-top: 3.5vh;
+}
+
+.landing-root .hover-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  transition-delay: calc((var(--char-total) - var(--char-index)) * 0.02s);
+}
+
+.landing-root .nav-hover-banner.active .hover-char {
+  opacity: 1;
+  transform: translateY(0);
+  animation: charEnter 1.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--char-index) * 0.04s + 0.1s);
+  transition: none;
+}
+
+@keyframes charEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover State overrides when banner is active */
+.landing-root .nav-row.has-hover .nav-row-item,
+.landing-root .nav-row.has-hover .copyright {
+  color: rgb(235, 235, 235);
+}
+
+.landing-root .nav-row.has-hover .nav-row-item .num,
+.landing-root .nav-row.has-hover .copyright {
+  opacity: 1;
+}
+
+.landing-root .nav-row.has-hover .nav-row-item .label {
+  color: rgb(235, 235, 235);
+}
+
+/* ── BOTTOM THREE-COLUMN ── */
+.landing-root .person-wrap {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  padding: 0 7vw;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  gap: 2vw;
+  align-items: end;
+}
+
+.landing-root .person-col2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 11vh;
+  margin-top: 0;
+}
+
+.landing-root .person-col-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.landing-root .sparkle {
+  display: block;
+  color: rgb(28, 28, 28);
+  line-height: 1;
+  font-size: 3rem;
+  margin-bottom: 2.8rem;
+}
+
+.landing-root .person-copy {
+  font-family: "Roobert", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(28, 28, 28);
+  font-size: 1.15rem;
+  line-height: 1.32;
+  letter-spacing: 0.03em;
+}
+
+.landing-root .tagline {
+  font-family: "Roobert", sans-serif;
+  font-weight: 500;
+  color: rgb(28, 28, 28);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  margin-top: 0.2rem;
+}
+
+/* ── 3D EMBLEM & WEB ANIMATIONS ── */
+@keyframes emblem-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-emblem-spin {
+  animation: emblem-spin 12s linear infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@keyframes web-node-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.4);
+  }
+}
+
+/* ── RESPONSIVE STYLES ── */
+@media (max-width: 1024px) {
+  .landing-root .hello-title {
+    font-size: 11vw;
+  }
+
+  .landing-root .hello-title .badge {
+    font-size: 2.2rem;
+  }
+
+  .landing-root .person-wrap {
+    bottom: 2%;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-root {
+    min-height: 100svh;
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 3rem;
+  }
+
+  .landing-root .nav {
+    padding: 1.5rem 1.4rem;
+    align-items: flex-start;
+  }
+
+  .landing-root .nav-left {
+    max-width: 12rem;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  .landing-root .nav-left .star {
+    font-size: 1.9rem;
+  }
+
+  .landing-root .nav-center {
+    top: 1.5rem;
+    left: auto;
+    right: 5.5rem;
+    transform: none;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+  }
+
+  .landing-root .nav-right {
+    display: none;
+  }
+
+  .landing-root .mobile-menu-toggle {
+    position: relative;
+    z-index: 120;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-top: -0.6rem;
+    margin-right: -0.4rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: rgb(28, 28, 28);
+    cursor: pointer;
+  }
+
+  .landing-root .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: none;
+    pointer-events: none;
+  }
+
+  .landing-root .mobile-menu-scrim {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    background: rgba(10, 10, 10, 0.4);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .landing-root .mobile-menu-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(80vw, 28rem);
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #0a0a0a;
+    color: rgb(235, 235, 235);
+    transform: translateX(105%);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .landing-root .mobile-menu.is-open {
+    pointer-events: auto;
+  }
+
+  .landing-root .mobile-menu.is-open .mobile-menu-scrim {
+    opacity: 1;
+  }
+
+  .landing-root .mobile-menu.is-open .mobile-menu-panel {
+    transform: translateX(0);
+  }
+
+  .landing-root .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: "Roobert", sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+  }
+
+  .landing-root .mobile-menu-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .landing-root .mobile-menu-panel a {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+    font-family: "Roobert", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .landing-root .mobile-menu-panel a span {
+    min-width: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.55;
+  }
+
+  .landing-root .mobile-menu-panel p {
+    margin-top: auto;
+    font-family: "Roobert", sans-serif;
+    font-size: 1.15rem;
+    opacity: 0.55;
+  }
+
+  .landing-root .hello {
+    position: relative;
+    top: auto;
+    margin-top: 6.5rem;
+    padding: 0 1rem;
+  }
+
+  .landing-root .hello-title {
+    max-width: calc(100vw - 2rem);
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.4rem;
+    font-size: clamp(4.4rem, 15vw, 6.2rem);
+    letter-spacing: 0;
+    white-space: normal;
+  }
+
+  .landing-root .hello-title-mask-badge {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .landing-root .hello-title .badge {
+    margin-left: 0;
+    font-size: clamp(2rem, 6.5vw, 2.8rem);
+    line-height: 1;
+  }
+
+  .landing-root .nav-row {
+    display: none;
+  }
+
+  .landing-root .person-wrap {
+    position: relative;
+    bottom: auto;
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .landing-root .person-col2 {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .landing-root .person-col2-left {
+    order: 1;
+  }
+
+  .landing-root .person-col2-right {
+    order: 2;
+  }
+
+  .landing-root .person-col-center {
+    order: 3;
+    width: 100%;
+    max-width: 26rem;
+    margin-top: 1rem;
+  }
+
+  .landing-root .person-col2-right .sparkle {
+    display: none;
+  }
+
+  .landing-root .sparkle {
+    font-size: 2.6rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .landing-root .person-copy {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .landing-root .tagline {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+}

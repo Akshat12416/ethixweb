@@ -19,7 +19,7 @@
   "direction": "type-only-statement"
  },
  "imagery": "atmosphere",
- "allow": [],
+ "allow": ["few-pictures", "numbering"],
  "direction": {
   "id": "type-only-statement",
   "name": "Type and nothing else",
