@@ -205,7 +205,7 @@ export default function ServicesPage() {
       <TopBar />
       <MiddleNav />
 
-      <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
+      <main className="w-full flex flex-col gap-16 md:gap-24 pt-24 md:pt-32 pb-16 flex-1">
         {/* ── SECTION: HERO OVERVIEW ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-10">
           {/* Main Statement — strictly 2 lines across viewports */}
@@ -225,7 +225,7 @@ export default function ServicesPage() {
               22 full-stack services across web engineering, AI automation, search acquisition, and real-time attribution, managed by one senior team that actually answers the phone.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
+            <div className="flex flex-wrap items-center gap-4 pt-14" data-rise="3">
               <a
                 href="/contact"
                 onClick={(e) => {

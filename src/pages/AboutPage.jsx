@@ -139,7 +139,7 @@ export default function AboutPage() {
               exact senior engineers and strategists building your systems.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
+            <div className="flex flex-wrap items-center gap-4 pt-14" data-rise="3">
               <a
                 href="/contact"
                 onClick={(e) => {

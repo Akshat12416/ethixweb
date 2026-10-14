@@ -57,7 +57,7 @@ export default function IndustriesPage() {
       <TopBar />
       <MiddleNav />
 
-      <main className="w-full flex flex-col gap-16 md:gap-24 py-8 md:py-12 flex-1">
+      <main className="w-full flex flex-col gap-16 md:gap-24 pt-24 md:pt-32 pb-16 flex-1">
         {/* ── SECTION 1: LIST / HERO OVERVIEW ── */}
         <section className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col gap-12">
           {/* Main Statement — 2 lines strictly across all viewports */}
@@ -78,7 +78,7 @@ export default function IndustriesPage() {
               Different field conditions, identical commercial priority: phone calls and customer bookings cannot wait while you work.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
+            <div className="flex flex-wrap items-center gap-4 pt-14" data-rise="3">
               <a
                 href="/contact"
                 onClick={(e) => {
