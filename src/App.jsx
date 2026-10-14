@@ -15,6 +15,9 @@ const OurWorkPage = lazy(() => import('./pages/OurWorkPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const AdminPage = lazy(() => import('./pages/AdminPage'));
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import './styles/landing.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -232,6 +235,8 @@ export default function App() {
       <TransitionProvider>
         <AnimatedRoutes />
       </TransitionProvider>
+      <Analytics />
+      <SpeedInsights />
     </BrowserRouter>
   );
 }
