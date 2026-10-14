@@ -203,13 +203,20 @@ function AnimatedRoutes() {
 
 export default function App() {
   useEffect(() => {
-    // Initialize Lenis smooth momentum scrolling (matching akshatg-portfolio)
+    // Only initialize Lenis on desktop viewports; let mobile use native hardware momentum scrolling
+    const isMobile =
+      typeof window !== 'undefined' &&
+      (window.innerWidth <= 768 || 'ontouchstart' in window);
+    if (isMobile) {
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1.0,
-      touchMultiplier: 1.5,
+      touchMultiplier: 0,
     });
     window.lenis = lenis;
 

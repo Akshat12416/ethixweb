@@ -203,15 +203,7 @@ const HOME_REVIEWS = [
   },
 ];
 
-export default function HomePage() {
-  const [hoveredItem, setHoveredItem] = useState(null);
-  const [displayHover, setDisplayHover] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isPreloading, setIsPreloading] = useState(true);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [activeService, setActiveService] = useState(0);
-  const navigate = useNavigate();
-
+function DualClocks() {
   const [clocks, setClocks] = useState(() => {
     const now = new Date();
     return {
@@ -219,14 +211,6 @@ export default function HomePage() {
       bangalore: now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }),
     };
   });
-
-  const hasAnimated = useRef(false);
-  const webAnimTargetRef = useRef(null);
-  const leftColRef = useRef(null);
-  const rightColRef = useRef(null);
-  const landingRef = useRef(null);
-
-  useScrollAnimations(landingRef);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -238,6 +222,59 @@ export default function HomePage() {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10 border-b border-white/10">
+      <div className="flex items-center justify-between p-5 bg-white/[0.03] rounded-xl border border-white/10">
+        <div className="flex items-center gap-3">
+          <span className="text-xl" role="img" aria-label="US Flag">🇺🇸</span>
+          <div>
+            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">SEATTLE HQ (PACIFIC)</span>
+            <span className="font-serif text-2xl font-normal text-white">{clocks.seattle}</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>ACTIVE</span>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between p-5 bg-white/[0.03] rounded-xl border border-white/10">
+        <div className="flex items-center gap-3">
+          <span className="text-xl" role="img" aria-label="India Flag">🇮🇳</span>
+          <div>
+            <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">BANGALORE HUB (IST)</span>
+            <span className="font-serif text-2xl font-normal text-white">{clocks.bangalore}</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>CORE HUB</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function HomePage() {
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [displayHover, setDisplayHover] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth > 768;
+  });
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [activeService, setActiveService] = useState(0);
+  const navigate = useNavigate();
+
+  const hasAnimated = useRef(false);
+  const webAnimTargetRef = useRef(null);
+  const leftColRef = useRef(null);
+  const rightColRef = useRef(null);
+  const landingRef = useRef(null);
+
+  useScrollAnimations(landingRef);
 
   useEffect(() => {
     if (hoveredItem && !isTransitioning) {
@@ -282,13 +319,28 @@ export default function HomePage() {
 
       if (!webEl || !leftColEl || !rightColEl) return;
 
+      const isDesktop = typeof window !== 'undefined' && window.innerWidth > 768;
+
+      if (!isDesktop) {
+        // Fast-path mobile rendering: Skip preloader animation delay and stagger
+        // to achieve instant paint (<0.8s FCP & LCP) and near-zero Total Blocking Time
+        setIsPreloading(false);
+        if (webEl) gsap.set(webEl, { y: 0 });
+        if (leftColEl) gsap.set(leftColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+        if (rightColEl) gsap.set(rightColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+        gsap.set('.hello-title-char', { yPercent: 0 });
+        gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
+        gsap.set('.landing-root .nav-row', { opacity: 1, y: 0, yPercent: -50 });
+        gsap.set('.tagline', { opacity: 1 });
+        return;
+      }
+
       // Compute geometric offsets for preloader centering and emergence
       const webRect = webEl.getBoundingClientRect();
       const viewportCenterY = window.innerHeight / 2;
       const webCenterY = webRect.top + webRect.height / 2;
       const deltaY = viewportCenterY - webCenterY;
 
-      const isDesktop = window.innerWidth > 768;
       const webCenterX = webRect.left + webRect.width / 2;
       const leftRect = leftColEl.getBoundingClientRect();
       const rightRect = rightColEl.getBoundingClientRect();
@@ -1435,35 +1487,7 @@ export default function HomePage() {
         <footer className="w-full text-[#ffffff] pt-16 pb-12 px-6 md:px-10 lg:px-14 border-t border-white/10">
           <div className="max-w-7xl mx-auto flex flex-col gap-12">
             {/* Dual Clocks & Telemetry Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10 border-b border-white/10">
-              <div className="flex items-center justify-between p-5 bg-white/[0.03] rounded-xl border border-white/10">
-                <div className="flex items-center gap-3">
-                  <span className="text-xl" role="img" aria-label="US Flag">🇺🇸</span>
-                  <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">SEATTLE HQ (PACIFIC)</span>
-                    <span className="font-serif text-2xl font-normal text-white">{clocks.seattle}</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>ACTIVE</span>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between p-5 bg-white/[0.03] rounded-xl border border-white/10">
-                <div className="flex items-center gap-3">
-                  <span className="text-xl" role="img" aria-label="India Flag">🇮🇳</span>
-                  <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">BANGALORE HUB (IST)</span>
-                    <span className="font-serif text-2xl font-normal text-white">{clocks.bangalore}</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>CORE HUB</span>
-                </div>
-              </div>
-            </div>
+            <DualClocks />
 
             {/* Directory Links & Legal */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-xs font-mono">

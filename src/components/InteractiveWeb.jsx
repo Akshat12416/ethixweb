@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
 import spiderwebLight from '../assets/spiderweb-light.svg';
 import emblemImg from '../assets/emblem-transparent-sm.webp';
 
@@ -82,7 +81,7 @@ const WORK_ANCHORS = [
   {
     title: "Gary's Pipelining",
     badge: 'High-Ticket',
-    img: '/images/case-studies/garys-pipeline/hero-1600w.webp',
+    img: '/images/case-studies/garys-pipeline/hero-640w.webp',
     x: 380,
     y: 530,
     spokeIndex: 11,
@@ -105,7 +104,7 @@ export default function InteractiveWeb({ isPreloading = false }) {
   const animFrameRef = useRef(0);
 
   const handlePointerMove = (e) => {
-    if (isPreloading || !containerRef.current) return;
+    if (isPreloading || !containerRef.current || window.innerWidth <= 768) return;
     const rect = containerRef.current.getBoundingClientRect();
     const nx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
     const ny = ((e.clientY - rect.top) / rect.height) * 2 - 1;
@@ -165,29 +164,8 @@ export default function InteractiveWeb({ isPreloading = false }) {
       }}
     >
       {/* ── MOTION BREATHING WRAPPER (Tasteful alive pulse during preloader) ── */}
-      <motion.div
-        animate={
-          isPreloading
-            ? {
-                scale: [0.95, 1.04, 0.98, 1.03, 1],
-              }
-            : {
-                scale: 1,
-              }
-        }
-        transition={
-          isPreloading
-            ? {
-                duration: 2.8,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }
-            : {
-                duration: 0.6,
-                ease: 'easeOut',
-              }
-        }
-        className="relative w-full h-full"
+      <div
+        className={`relative w-full h-full ${isPreloading ? 'web-breathe-pulse' : ''}`}
       >
         {/* ── BASE SVG ARTWORK (Rich crimson redraw for light mode) ── */}
         <div className="absolute inset-0 overflow-hidden" style={{ aspectRatio: `${VB_W}/${VB_H}` }}>
@@ -197,6 +175,9 @@ export default function InteractiveWeb({ isPreloading = false }) {
             aria-hidden="true"
             width={VB_W}
             height={884}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="pointer-events-none absolute left-0 w-full select-none"
             draggable={false}
             style={{
@@ -320,33 +301,13 @@ export default function InteractiveWeb({ isPreloading = false }) {
           {/* Dynamic Preloader Radiant Beacon (motion aura while preloading) */}
           {isPreloading && (
             <>
-              <motion.div
+              <div
                 key="hub-glow-wave"
-                initial={{ scale: 0.7, opacity: 0.2 }}
-                animate={{
-                  scale: [0.75, 1.6, 0.9, 1.45, 0.75],
-                  opacity: [0.35, 0.85, 0.45, 0.75, 0.35],
-                }}
-                transition={{
-                  duration: 2.2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                className="absolute rounded-full w-24 h-24 pointer-events-none bg-[#c0272d]/25 blur-lg"
+                className="absolute rounded-full w-24 h-24 pointer-events-none bg-[#c0272d]/25 blur-lg preloader-hub-glow"
               />
-              <motion.div
+              <div
                 key="hub-ripple-wave"
-                initial={{ scale: 0.6, opacity: 0.8 }}
-                animate={{
-                  scale: [0.65, 2.4],
-                  opacity: [0.7, 0],
-                }}
-                transition={{
-                  duration: 1.9,
-                  repeat: Infinity,
-                  ease: 'easeOut',
-                }}
-                className="absolute rounded-full w-12 h-12 pointer-events-none border border-[#c0272d]/45"
+                className="absolute rounded-full w-12 h-12 pointer-events-none border border-[#c0272d]/45 preloader-hub-ripple"
               />
             </>
           )}
@@ -392,6 +353,10 @@ export default function InteractiveWeb({ isPreloading = false }) {
                 <img
                   src={anchor.img}
                   alt={anchor.title}
+                  loading="lazy"
+                  decoding="async"
+                  width="14"
+                  height="14"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -401,7 +366,7 @@ export default function InteractiveWeb({ isPreloading = false }) {
             </div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 }
