@@ -1,25 +1,26 @@
 {
- "url": "http://localhost:4173/industries",
- "at": "2026-10-14T00:27:11.280Z",
+ "url": "http://localhost:4173/services",
+ "at": "2026-10-14T00:44:48.094Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 5,
+   "screens": 6,
    "filled": [
-    0.44,
-    0.58,
-    0.58,
-    0.58,
-    0.58
+    0.25,
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    0.6
    ],
    "motion": {
-    "elements": 19,
-    "css": 11,
+    "elements": 16,
+    "css": 12,
     "transitions": 0,
-    "scripted": 8,
+    "scripted": 4,
     "videos": 0,
     "playingVideos": 0
    },
@@ -29,26 +30,25 @@
      "h": 900
     },
     "page": {
-     "height": 3673,
-     "screens": 4.1,
-     "words": 496,
+     "height": 5221,
+     "screens": 5.8,
+     "words": 805,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 3,
-     "sections": 3,
+     "svg": 11,
+     "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 3,
      "uiAbuse": false,
-     "realPictures": 4,
+     "realPictures": 3,
      "videoCount": 0,
-     "uiPictures": 0,
+     "uiPictures": 1,
      "pictureSamples": [
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp"
+      "after-screenshot-1024w.webp",
+      "after-screenshot-1024w.webp",
+      "after-screenshot-1024w.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -56,63 +56,155 @@
      "emoji": []
     },
     "hero": {
-     "text": "Built for the trades. Ready for the water.",
+     "text": "Everything under one roof. Built for real growth.",
      "words": 8,
-     "chars": 42,
+     "chars": 49,
      "lines": 2,
-     "size": 80.6,
-     "vw": 5.6,
-     "font": "General Sans",
+     "size": 64,
+     "vw": 4.4,
+     "font": "Roobert",
      "weight": 400,
      "tracking": -0.025,
-     "leading": 0.94,
+     "leading": 0.96,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
-     "position": "left",
-     "widthRatio": 0.62,
+     "position": "center",
+     "widthRatio": 0.71,
      "top": 120,
+     "mixedFonts": [
+      "Roobert",
+      "Roxborough CF italic"
+     ],
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Built for the trades. Ready for the water.",
+     "text": "Everything under one roof. Built for real growth.",
      "words": 8,
      "lines": 2,
-     "size": 80.6,
-     "font": "General Sans"
+     "size": 64,
+     "font": "Roobert"
     },
     "headings": [
      {
-      "text": "Built for the trades. Ready for the water.",
+      "text": "Everything under one roof. Built for real growth.",
       "words": 8,
-      "chars": 42,
+      "chars": 49,
       "lines": 2,
-      "size": 80.6,
-      "vw": 5.6,
-      "font": "General Sans",
+      "size": 64,
+      "vw": 4.4,
+      "font": "Roobert",
       "weight": 400,
       "tracking": -0.025,
-      "leading": 0.94,
+      "leading": 0.96,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "left",
-      "widthRatio": 0.62,
+      "position": "center",
+      "widthRatio": 0.71,
       "top": 120,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
       "tag": "h1",
       "kind": "heading"
      },
      {
-      "text": "HVAC, Plumbing & Field Services",
-      "words": 5,
-      "chars": 31,
+      "text": "22",
+      "words": 1,
+      "chars": 2,
       "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 507,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4-Beat",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 507,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2–4 Wks",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 507,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "< 1h",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 507,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Audit first. Build second. Optimize forever.",
+      "words": 6,
+      "chars": 44,
+      "lines": 2,
       "size": 28,
       "vw": 1.9,
-      "font": "General Sans",
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
       "leading": 1.25,
@@ -121,40 +213,111 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.35,
-      "top": 535,
+      "widthRatio": 0.53,
+      "top": 706,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "Fishing Charters & Marine Outfitters",
+      "text": "The capability catalog. 22 services run as one engine.",
+      "words": 9,
+      "chars": 54,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 1374,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Website Design & Headless Architecture",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1597,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "AI & Lead Automation",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 2163,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Search & Paid Acquisition",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 2729,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Data, Accessibility & Senior Support",
       "words": 5,
       "chars": 36,
       "lines": 1,
       "size": 28,
       "vw": 1.9,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.35,
-      "top": 535,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "You handle the pipes. We handle the tech.",
-      "words": 8,
-      "chars": 41,
-      "lines": 1,
-      "size": 28,
-      "vw": 1.9,
-      "font": "General Sans",
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
       "leading": 1.25,
@@ -163,19 +326,19 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.47,
-      "top": 814,
-      "tag": "h2",
+      "widthRatio": 0.41,
+      "top": 3296,
+      "tag": "h3",
       "kind": "heading"
      },
      {
-      "text": "Your business shouldn't stop at the shoreline.",
+      "text": "Questions every client asks. Clear, unhedged answers.",
       "words": 7,
-      "chars": 46,
-      "lines": 1,
+      "chars": 53,
+      "lines": 2,
       "size": 28,
       "vw": 1.9,
-      "font": "General Sans",
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
       "leading": 1.25,
@@ -184,51 +347,60 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.47,
-      "top": 1970,
+      "widthRatio": 0.53,
+      "top": 3870,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "Which industry are you in?",
+      "text": "One team. Zero disconnected vendors.",
       "words": 5,
-      "chars": 26,
-      "lines": 1,
-      "size": 44,
-      "vw": 3.1,
-      "font": "General Sans",
+      "chars": 36,
+      "lines": 2,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
-      "leading": 1.25,
+      "leading": 1.05,
       "upper": false,
       "italic": false,
       "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.35,
-      "top": 3256,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 4760,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 6,
+     "count": 13,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
-     "centered": 1,
+     "centered": 0,
      "medianWords": 5,
-     "mixedFontHeadings": 0
+     "mixedFontHeadings": 4
     },
     "type": {
      "families": [
       {
-       "family": "General Sans",
-       "share": 1,
+       "family": "Roobert",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Roxborough CF",
+       "share": 0.02,
        "mono": false
       }
      ],
-     "familyCount": 1,
+     "familyCount": 2,
      "sizes": [
       13,
       14,
@@ -236,25 +408,25 @@
       18,
       24,
       28,
-      44,
-      81
+      38,
+      64
      ],
      "sizeCount": 8,
      "notLoaded": [],
      "body": {
-      "font": "General Sans",
+      "font": "Roobert",
       "size": 16,
       "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": 9.7
+      "contrast": 8.2
      },
-     "measureChars": 75,
+     "measureChars": 79,
      "max": {
-      "size": 80.6,
-      "vw": 5.6,
-      "font": "General Sans",
-      "text": "Built for the trades."
+      "size": 64,
+      "vw": 4.4,
+      "font": "Roobert",
+      "text": "Everything under"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -264,7 +436,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0,
-     "centerShare": 0.07,
+     "centerShare": 0,
      "smallText": 0
     },
     "eyebrows": [],
@@ -288,8 +460,17 @@
        }
       },
       {
+       "color": "#ffffff",
+       "top": 874,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
        "color": "#1c1c1c",
-       "top": 3200,
+       "top": 4696,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -299,24 +480,24 @@
      ],
      "textColors": [
       {
-       "color": "#444444",
-       "share": 0.52
+       "color": "#555555",
+       "share": 0.5
       },
       {
        "color": "#1c1c1c",
-       "share": 0.22
+       "share": 0.25
       },
       {
-       "color": "#555555",
-       "share": 0.12
-      },
-      {
-       "color": "#c0272d",
-       "share": 0.06
+       "color": "#444444",
+       "share": 0.17
       },
       {
        "color": "#bbbbbb",
-       "share": 0.05
+       "share": 0.04
+      },
+      {
+       "color": "#777777",
+       "share": 0.03
       }
      ],
      "button": {
@@ -356,24 +537,22 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 13,
-     "boxRadius": 16,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
      "squareMedia": 0,
      "roundedMedia": 4,
-     "mediaRadius": 12,
+     "mediaRadius": 16,
      "textShadow": 0,
-     "cardRows": []
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1557
+      }
+     ]
     },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.13
-     },
-     {
-      "type": "img",
-      "ratio": 0.13
-     }
-    ],
+    "heroMedia": [],
     "nav": {
      "links": 6,
      "fixed": false,
@@ -382,7 +561,8 @@
      "blur": false
     },
     "fontsLoaded": [
-     "general sans"
+     "roobert",
+     "roxborough cf"
     ]
    },
    "consoleErrors": []
@@ -391,20 +571,22 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 6,
+   "screens": 8,
    "filled": [
-    0.54,
-    0.91,
-    0.92,
-    0.92,
-    0.92,
-    0.92
+    0.48,
+    0.74,
+    0.74,
+    0.74,
+    0.74,
+    0.73,
+    0.73,
+    0.73
    ],
    "motion": {
-    "elements": 14,
-    "css": 6,
+    "elements": 11,
+    "css": 7,
     "transitions": 0,
-    "scripted": 8,
+    "scripted": 4,
     "videos": 0,
     "playingVideos": 0
    },
@@ -414,26 +596,24 @@
      "h": 1024
     },
     "page": {
-     "height": 5249,
-     "screens": 5.1,
-     "words": 491,
+     "height": 7174,
+     "screens": 7,
+     "words": 800,
      "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 3,
-     "sections": 3,
+     "svg": 11,
+     "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 3,
      "uiAbuse": false,
-     "realPictures": 4,
+     "realPictures": 2,
      "videoCount": 0,
-     "uiPictures": 0,
+     "uiPictures": 1,
      "pictureSamples": [
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp"
+      "after-screenshot-1024w.webp",
+      "after-screenshot-1024w.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -441,412 +621,13 @@
      "emoji": []
     },
     "hero": {
-     "text": "Built for the trades. Ready for the water.",
+     "text": "Everything under one roof. Built for real growth.",
      "words": 8,
-     "chars": 42,
+     "chars": 49,
      "lines": 2,
-     "size": 67.2,
-     "vw": 8.8,
-     "font": "General Sans",
-     "weight": 400,
-     "tracking": -0.025,
-     "leading": 0.94,
-     "upper": false,
-     "italic": false,
-     "mono": false,
-     "align": "left",
-     "position": "center",
-     "widthRatio": 0.9,
-     "top": 128,
-     "tag": "h1",
-     "kind": "heading"
-    },
-    "h1": {
-     "text": "Built for the trades. Ready for the water.",
-     "words": 8,
-     "lines": 2,
-     "size": 67.2,
-     "font": "General Sans"
-    },
-    "headings": [
-     {
-      "text": "Built for the trades. Ready for the water.",
-      "words": 8,
-      "chars": 42,
-      "lines": 2,
-      "size": 67.2,
-      "vw": 8.8,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": -0.025,
-      "leading": 0.94,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.9,
-      "top": 128,
-      "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "HVAC, Plumbing & Field Services",
-      "words": 5,
-      "chars": 31,
-      "lines": 2,
-      "size": 28,
-      "vw": 3.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.35,
-      "top": 518,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Fishing Charters & Marine Outfitters",
-      "words": 5,
-      "chars": 36,
-      "lines": 2,
-      "size": 28,
-      "vw": 3.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "right",
-      "widthRatio": 0.35,
-      "top": 518,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "You handle the pipes. We handle the tech.",
-      "words": 8,
-      "chars": 41,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 929,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Your business shouldn't stop at the shoreline.",
-      "words": 7,
-      "chars": 46,
-      "lines": 1,
-      "size": 28,
-      "vw": 3.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 2779,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Which industry are you in?",
-      "words": 5,
-      "chars": 26,
-      "lines": 1,
-      "size": 44,
-      "vw": 5.7,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.67,
-      "top": 4759,
-      "tag": "h2",
-      "kind": "heading"
-     }
-    ],
-    "headingSummary": {
-     "count": 6,
-     "maxLines": 2,
-     "over2Lines": 0,
-     "statements": 0,
-     "centered": 1,
-     "medianWords": 5,
-     "mixedFontHeadings": 0
-    },
-    "type": {
-     "families": [
-      {
-       "family": "General Sans",
-       "share": 1,
-       "mono": false
-      }
-     ],
-     "familyCount": 1,
-     "sizes": [
-      13,
-      16,
-      18,
-      24,
-      28,
-      44,
-      67
-     ],
-     "sizeCount": 7,
-     "notLoaded": [],
-     "body": {
-      "font": "General Sans",
-      "size": 16,
-      "leading": 1.63,
-      "weight": 400,
-      "tracking": 0,
-      "contrast": 9.7
-     },
-     "measureChars": 75,
-     "max": {
-      "size": 67.2,
-      "vw": 8.8,
-      "font": "General Sans",
-      "text": "Built for the trades."
-     },
-     "monoShare": 0,
-     "monoProseShare": 0,
-     "monoFamilies": [],
-     "monoSamples": [],
-     "microLabels": 0,
-     "microLabelShare": 0,
-     "microSamples": [],
-     "upperShare": 0,
-     "centerShare": 0.07,
-     "smallText": 0
-    },
-    "eyebrows": [],
-    "numbered": [],
-    "color": {
-     "bodyBg": "#ebebeb",
-     "bodyBgHsl": {
-      "h": 0,
-      "s": 0,
-      "l": 0.92
-     },
-     "dark": false,
-     "sectionBgs": [
-      {
-       "color": "#ebebeb",
-       "top": 0,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.92
-       }
-      },
-      {
-       "color": "#ffffff",
-       "top": 1060,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 1
-       }
-      },
-      {
-       "color": "#e5e5e5",
-       "top": 1628,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.9
-       }
-      },
-      {
-       "color": "#1c1c1c",
-       "top": 4703,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.11
-       }
-      }
-     ],
-     "textColors": [
-      {
-       "color": "#444444",
-       "share": 0.52
-      },
-      {
-       "color": "#1c1c1c",
-       "share": 0.22
-      },
-      {
-       "color": "#555555",
-       "share": 0.11
-      },
-      {
-       "color": "#c0272d",
-       "share": 0.06
-      },
-      {
-       "color": "#bbbbbb",
-       "share": 0.05
-      }
-     ],
-     "button": {
-      "bg": "#1c1c1c",
-      "hsl": {
-       "h": 0,
-       "s": 0,
-       "l": 0.11
-      },
-      "fg": "#ffffff"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 2,
-     "inHero": 1,
-     "radius": 8,
-     "height": 52,
-     "withShadow": 0,
-     "withGradient": 0,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": [
-      "Start a project"
-     ]
-    },
-    "surfaces": {
-     "shadowStatic": 0,
-     "shadowOverlay": 0,
-     "shadowSamples": [],
-     "gradients": 0,
-     "scrims": 0,
-     "gradientSamples": [],
-     "gradientText": 0,
-     "hairlines": 0,
-     "hairlineSamples": [],
-     "outlinedBoxes": 0,
-     "dashed": 0,
-     "blurred": 0,
-     "roundedBoxes": 13,
-     "boxRadius": 16,
-     "squareMedia": 0,
-     "roundedMedia": 4,
-     "mediaRadius": 12,
-     "textShadow": 0,
-     "cardRows": []
-    },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.33
-     }
-    ],
-    "nav": {
-     "links": 1,
-     "fixed": false,
-     "height": 80,
-     "floatingPill": false,
-     "blur": false
-    },
-    "fontsLoaded": [
-     "general sans"
-    ]
-   },
-   "consoleErrors": []
-  },
-  {
-   "width": 390,
-   "height": 844,
-   "load": "load",
-   "screens": 7,
-   "filled": [
-    0.66,
-    0.76,
-    0.76,
-    0.76,
-    0.76,
-    0.76,
-    0.71
-   ],
-   "motion": {
-    "elements": 13,
-    "css": 5,
-    "transitions": 0,
-    "scripted": 8,
-    "videos": 0,
-    "playingVideos": 0
-   },
-   "metrics": {
-    "viewport": {
-     "w": 390,
-     "h": 844
-    },
-    "page": {
-     "height": 5109,
-     "screens": 6.1,
-     "words": 486,
-     "img": 4,
-     "video": 0,
-     "canvas": 0,
-     "svg": 3,
-     "sections": 3,
-     "horizontalOverflow": 0,
-     "overflowCulprits": [],
-     "uiFragments": 1,
-     "uiAbuse": false,
-     "realPictures": 4,
-     "videoCount": 0,
-     "uiPictures": 0,
-     "pictureSamples": [
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp",
-      "after-screenshot.webp"
-     ],
-     "blendText": 0,
-     "sideScrollers": 0,
-     "brokenImages": [],
-     "emoji": []
-    },
-    "hero": {
-     "text": "Built for the trades. Ready for the water.",
-     "words": 8,
-     "chars": 42,
-     "lines": 2,
-     "size": 32,
-     "vw": 8.2,
-     "font": "General Sans",
+     "size": 54,
+     "vw": 7,
+     "font": "Roobert",
      "weight": 400,
      "tracking": -0.025,
      "leading": 0.96,
@@ -855,27 +636,31 @@
      "mono": false,
      "align": "left",
      "position": "center",
-     "widthRatio": 0.88,
-     "top": 112,
+     "widthRatio": 0.9,
+     "top": 128,
+     "mixedFonts": [
+      "Roobert",
+      "Roxborough CF italic"
+     ],
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Built for the trades. Ready for the water.",
+     "text": "Everything under one roof. Built for real growth.",
      "words": 8,
      "lines": 2,
-     "size": 32,
-     "font": "General Sans"
+     "size": 54,
+     "font": "Roobert"
     },
     "headings": [
      {
-      "text": "Built for the trades. Ready for the water.",
+      "text": "Everything under one roof. Built for real growth.",
       "words": 8,
-      "chars": 42,
+      "chars": 49,
       "lines": 2,
-      "size": 32,
-      "vw": 8.2,
-      "font": "General Sans",
+      "size": 54,
+      "vw": 7,
+      "font": "Roobert",
       "weight": 400,
       "tracking": -0.025,
       "leading": 0.96,
@@ -884,19 +669,107 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.88,
-      "top": 112,
+      "widthRatio": 0.9,
+      "top": 128,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
       "tag": "h1",
       "kind": "heading"
      },
      {
-      "text": "HVAC, Plumbing & Field Services",
-      "words": 5,
-      "chars": 31,
+      "text": "22",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 493,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4-Beat",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 493,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2–4 Wks",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 493,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "< 1h",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 493,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Audit first. Build second. Optimize forever.",
+      "words": 6,
+      "chars": 44,
       "lines": 2,
-      "size": 22,
-      "vw": 5.6,
-      "font": "General Sans",
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
       "leading": 1.25,
@@ -905,138 +778,219 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.75,
-      "top": 471,
+      "widthRatio": 0.9,
+      "top": 712,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "Fishing Charters & Marine Outfitters",
+      "text": "The capability catalog. 22 services run as one engine.",
+      "words": 9,
+      "chars": 54,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1684,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Website Design & Headless Architecture",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 1907,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "AI & Lead Automation",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 2804,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Search & Paid Acquisition",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 3726,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Data, Accessibility & Senior Support",
+      "words": 5,
+      "chars": 36,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 4730,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions every client asks. Clear, unhedged answers.",
+      "words": 7,
+      "chars": 53,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5767,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "One team. Zero disconnected vendors.",
       "words": 5,
       "chars": 36,
       "lines": 2,
-      "size": 22,
-      "vw": 5.6,
-      "font": "General Sans",
+      "size": 38,
+      "vw": 4.9,
+      "font": "Roobert",
       "weight": 400,
       "tracking": 0,
-      "leading": 1.25,
+      "leading": 1.05,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.75,
-      "top": 785,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "You handle the pipes. We handle the tech.",
-      "words": 8,
-      "chars": 41,
-      "lines": 2,
-      "size": 22,
-      "vw": 5.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 1115,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Your business shouldn't stop at the shoreline.",
-      "words": 7,
-      "chars": 46,
-      "lines": 2,
-      "size": 22,
-      "vw": 5.6,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.88,
-      "top": 2826,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Which industry are you in?",
-      "words": 5,
-      "chars": 26,
-      "lines": 2,
-      "size": 24,
-      "vw": 6.2,
-      "font": "General Sans",
-      "weight": 400,
-      "tracking": 0,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.71,
-      "top": 4508,
+      "widthRatio": 0.77,
+      "top": 6641,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 6,
+     "count": 13,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
-     "centered": 1,
+     "centered": 0,
      "medianWords": 5,
-     "mixedFontHeadings": 0
+     "mixedFontHeadings": 4
     },
     "type": {
      "families": [
       {
-       "family": "General Sans",
-       "share": 1,
+       "family": "Roobert",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Roxborough CF",
+       "share": 0.02,
        "mono": false
       }
      ],
-     "familyCount": 1,
+     "familyCount": 2,
      "sizes": [
       13,
       16,
-      20,
-      22,
+      18,
       24,
-      32
+      28,
+      38,
+      54
      ],
-     "sizeCount": 6,
+     "sizeCount": 7,
      "notLoaded": [],
      "body": {
-      "font": "General Sans",
+      "font": "Roobert",
       "size": 16,
       "leading": 1.63,
       "weight": 400,
       "tracking": 0,
       "contrast": 8.2
      },
-     "measureChars": 43,
+     "measureChars": 76,
      "max": {
-      "size": 32,
-      "vw": 8.2,
-      "font": "General Sans",
-      "text": "Built for the trades."
+      "size": 54,
+      "vw": 7,
+      "font": "Roobert",
+      "text": "Everything under"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -1046,7 +1000,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0,
-     "centerShare": 0.07,
+     "centerShare": 0,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1071,7 +1025,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 447,
+       "top": 880,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1080,7 +1034,7 @@
       },
       {
        "color": "#1c1c1c",
-       "top": 4476,
+       "top": 6593,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1090,24 +1044,24 @@
      ],
      "textColors": [
       {
-       "color": "#444444",
-       "share": 0.52
+       "color": "#555555",
+       "share": 0.5
       },
       {
        "color": "#1c1c1c",
-       "share": 0.22
+       "share": 0.25
       },
       {
-       "color": "#555555",
-       "share": 0.11
-      },
-      {
-       "color": "#c0272d",
-       "share": 0.06
+       "color": "#444444",
+       "share": 0.17
       },
       {
        "color": "#bbbbbb",
-       "share": 0.05
+       "share": 0.04
+      },
+      {
+       "color": "#777777",
+       "share": 0.03
       }
      ],
      "button": {
@@ -1147,13 +1101,20 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 13,
-     "boxRadius": 16,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
      "squareMedia": 0,
      "roundedMedia": 4,
-     "mediaRadius": 12,
+     "mediaRadius": 16,
      "textShadow": 0,
-     "cardRows": []
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1867
+      }
+     ]
     },
     "heroMedia": [],
     "nav": {
@@ -1164,13 +1125,540 @@
      "blur": false
     },
     "fontsLoaded": [
-     "general sans"
+     "roobert",
+     "roxborough cf"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.57,
+    0.87,
+    0.81,
+    0.86,
+    0.86,
+    0.86,
+    0.86,
+    0.86,
+    0.86,
+    0.87,
+    0.87
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 5,
+    "transitions": 0,
+    "scripted": 5,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8695,
+     "screens": 10.3,
+     "words": 795,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 3,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "after-screenshot-1024w.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "2–4 Wks",
+     "words": 2,
+     "chars": 7,
+     "lines": 1,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Roxborough CF",
+     "weight": 400,
+     "tracking": 0,
+     "leading": 1.5,
+     "upper": false,
+     "italic": true,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.35,
+     "top": 597,
+     "tag": "span",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Everything under one roof. Built for real growth.",
+     "words": 8,
+     "lines": 2,
+     "size": 28,
+     "font": "Roobert"
+    },
+    "headings": [
+     {
+      "text": "Everything under one roof. Built for real growth.",
+      "words": 8,
+      "chars": 49,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.96,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 112,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "22",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 502,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4-Beat",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 502,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2–4 Wks",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 597,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "< 1h",
+      "words": 2,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Roxborough CF",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 597,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Audit first. Build second. Optimize forever.",
+      "words": 6,
+      "chars": 44,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 776,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Website Design & Headless Architecture",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 2625,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "AI & Lead Automation",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3640,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Search & Paid Acquisition",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 4624,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Data, Accessibility & Senior Support",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 5796,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions every client asks. Clear, unhedged answers.",
+      "words": 7,
+      "chars": 53,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Roobert",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 7042,
+      "mixedFonts": [
+       "Roobert",
+       "Roxborough CF italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 3
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Roobert",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Roxborough CF",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      18,
+      20,
+      24,
+      28
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Roobert",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 37,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Roxborough CF",
+      "text": "22"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebebeb",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.92
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebebeb",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 986,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 8004,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#555555",
+       "share": 0.5
+      },
+      {
+       "color": "#1c1c1c",
+       "share": 0.25
+      },
+      {
+       "color": "#444444",
+       "share": 0.17
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.04
+      },
+      {
+       "color": "#777777",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#1c1c1c",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.11
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Start a project"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 24,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 2601
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "roobert",
+     "roxborough cf"
     ]
    },
    "consoleErrors": []
   }
  ],
  "findings": [
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 1440,
+   "message": "4 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
   {
    "level": "WARN",
    "id": "no-footage",
@@ -1194,7 +1682,8 @@
    "width": 768,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-01.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-01.jpg",
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/tablet-page-02.jpg"
    ]
   },
   {
@@ -1202,7 +1691,8 @@
    "width": 390,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-01.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-01.jpg",
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/mobile-page-02.jpg"
    ]
   }
  ]
