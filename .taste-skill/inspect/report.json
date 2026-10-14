@@ -1,22 +1,25 @@
 {
- "url": "http://localhost:4173/",
- "at": "2026-10-13T23:19:38.318Z",
+ "url": "http://localhost:4173/industries",
+ "at": "2026-10-14T00:27:11.280Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 2,
+   "screens": 5,
    "filled": [
-    0.52,
-    0.63
+    0.44,
+    0.58,
+    0.58,
+    0.58,
+    0.58
    ],
    "motion": {
     "elements": 19,
-    "css": 19,
+    "css": 11,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -26,23 +29,22 @@
      "h": 900
     },
     "page": {
-     "height": 1268,
-     "screens": 1.4,
-     "words": 168,
-     "img": 5,
+     "height": 3673,
+     "screens": 4.1,
+     "words": 496,
+     "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
-     "sections": 2,
+     "svg": 3,
+     "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 5,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
@@ -54,13 +56,13 @@
      "emoji": []
     },
     "hero": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
-     "chars": 38,
+     "chars": 42,
      "lines": 2,
-     "size": 79.2,
-     "vw": 5.5,
-     "font": "Harmond",
+     "size": 80.6,
+     "vw": 5.6,
+     "font": "General Sans",
      "weight": 400,
      "tracking": -0.025,
      "leading": 0.94,
@@ -70,26 +72,26 @@
      "align": "left",
      "position": "left",
      "widthRatio": 0.62,
-     "top": 104,
+     "top": 120,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
      "lines": 2,
-     "size": 79.2,
-     "font": "Harmond"
+     "size": 80.6,
+     "font": "General Sans"
     },
     "headings": [
      {
-      "text": "We run the tech. You run the business.",
+      "text": "Built for the trades. Ready for the water.",
       "words": 8,
-      "chars": 38,
+      "chars": 42,
       "lines": 2,
-      "size": 79.2,
-      "vw": 5.5,
-      "font": "Harmond",
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "General Sans",
       "weight": 400,
       "tracking": -0.025,
       "leading": 0.94,
@@ -99,58 +101,160 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.62,
-      "top": 104,
+      "top": 120,
       "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 535,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 535,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 814,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1970,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.35,
+      "top": 3256,
+      "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 1,
+     "count": 6,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
-     "centered": 0,
-     "medianWords": null,
+     "centered": 1,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Roobert",
-       "share": 0.96,
-       "mono": false
-      },
-      {
-       "family": "Harmond",
-       "share": 0.04,
+       "family": "General Sans",
+       "share": 1,
        "mono": false
       }
      ],
-     "familyCount": 2,
+     "familyCount": 1,
      "sizes": [
       13,
       14,
       16,
       18,
       24,
-      79
+      28,
+      44,
+      81
      ],
-     "sizeCount": 6,
+     "sizeCount": 8,
      "notLoaded": [],
      "body": {
-      "font": "Roobert",
-      "size": 18,
+      "font": "General Sans",
+      "size": 16,
       "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": 8.2
+      "contrast": 9.7
      },
      "measureChars": 75,
      "max": {
-      "size": 79.2,
-      "vw": 5.5,
-      "font": "Harmond",
-      "text": "We run the tech."
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "General Sans",
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -159,8 +263,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.01,
-     "centerShare": 0,
+     "upperShare": 0,
+     "centerShare": 0.07,
      "smallText": 0
     },
     "eyebrows": [],
@@ -184,35 +288,35 @@
        }
       },
       {
-       "color": "#ffffff",
-       "top": 778,
+       "color": "#1c1c1c",
+       "top": 3200,
        "hsl": {
         "h": 0,
         "s": 0,
-        "l": 1
+        "l": 0.11
        }
       }
      ],
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.32
+       "share": 0.52
       },
       {
        "color": "#1c1c1c",
-       "share": 0.32
+       "share": 0.22
       },
       {
        "color": "#555555",
-       "share": 0.15
-      },
-      {
-       "color": "#333333",
        "share": 0.12
       },
       {
        "color": "#c0272d",
        "share": 0.06
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
       }
      ],
      "button": {
@@ -227,10 +331,10 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
+     "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -252,22 +356,24 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
-     "boxRadius": 12,
+     "roundedBoxes": 13,
+     "boxRadius": 16,
      "squareMedia": 0,
-     "roundedMedia": 5,
-     "mediaRadius": 8,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 485
-      }
-     ]
+     "cardRows": []
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.13
+     },
+     {
+      "type": "img",
+      "ratio": 0.13
+     }
+    ],
     "nav": {
      "links": 6,
      "fixed": false,
@@ -276,8 +382,7 @@
      "blur": false
     },
     "fontsLoaded": [
-     "roobert",
-     "harmond"
+     "general sans"
     ]
    },
    "consoleErrors": []
@@ -286,16 +391,20 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 2,
+   "screens": 6,
    "filled": [
-    0.74,
-    0.93
+    0.54,
+    0.91,
+    0.92,
+    0.92,
+    0.92,
+    0.92
    ],
    "motion": {
     "elements": 14,
-    "css": 14,
+    "css": 6,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -305,23 +414,22 @@
      "h": 1024
     },
     "page": {
-     "height": 1964,
-     "screens": 1.9,
-     "words": 163,
-     "img": 5,
+     "height": 5249,
+     "screens": 5.1,
+     "words": 491,
+     "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
-     "sections": 2,
+     "svg": 3,
+     "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 5,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
@@ -333,13 +441,13 @@
      "emoji": []
     },
     "hero": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
-     "chars": 38,
+     "chars": 42,
      "lines": 2,
-     "size": 51.2,
-     "vw": 6.7,
-     "font": "Harmond",
+     "size": 67.2,
+     "vw": 8.8,
+     "font": "General Sans",
      "weight": 400,
      "tracking": -0.025,
      "leading": 0.94,
@@ -349,26 +457,26 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.9,
-     "top": 112,
+     "top": 128,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
      "lines": 2,
-     "size": 51.2,
-     "font": "Harmond"
+     "size": 67.2,
+     "font": "General Sans"
     },
     "headings": [
      {
-      "text": "We run the tech. You run the business.",
+      "text": "Built for the trades. Ready for the water.",
       "words": 8,
-      "chars": 38,
+      "chars": 42,
       "lines": 2,
-      "size": 51.2,
-      "vw": 6.7,
-      "font": "Harmond",
+      "size": 67.2,
+      "vw": 8.8,
+      "font": "General Sans",
       "weight": 400,
       "tracking": -0.025,
       "leading": 0.94,
@@ -378,58 +486,159 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 112,
+      "top": 128,
       "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 518,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 518,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 929,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2779,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 44,
+      "vw": 5.7,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 4759,
+      "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 1,
+     "count": 6,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
-     "centered": 0,
-     "medianWords": null,
+     "centered": 1,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Roobert",
-       "share": 0.96,
-       "mono": false
-      },
-      {
-       "family": "Harmond",
-       "share": 0.04,
+       "family": "General Sans",
+       "share": 1,
        "mono": false
       }
      ],
-     "familyCount": 2,
+     "familyCount": 1,
      "sizes": [
       13,
-      14,
       16,
       18,
       24,
-      51
+      28,
+      44,
+      67
      ],
-     "sizeCount": 6,
+     "sizeCount": 7,
      "notLoaded": [],
      "body": {
-      "font": "Roobert",
-      "size": 18,
+      "font": "General Sans",
+      "size": 16,
       "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": 8.2
+      "contrast": 9.7
      },
      "measureChars": 75,
      "max": {
-      "size": 51.2,
-      "vw": 6.7,
-      "font": "Harmond",
-      "text": "We run the tech."
+      "size": 67.2,
+      "vw": 8.8,
+      "font": "General Sans",
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -438,8 +647,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.01,
-     "centerShare": 0,
+     "upperShare": 0,
+     "centerShare": 0.07,
      "smallText": 0
     },
     "eyebrows": [],
@@ -464,7 +673,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 1085,
+       "top": 1060,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -473,34 +682,43 @@
       },
       {
        "color": "#e5e5e5",
-       "top": 1407,
+       "top": 1628,
        "hsl": {
         "h": 0,
         "s": 0,
         "l": 0.9
+       }
+      },
+      {
+       "color": "#1c1c1c",
+       "top": 4703,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.11
        }
       }
      ],
      "textColors": [
       {
        "color": "#444444",
-       "share": 0.33
+       "share": 0.52
       },
       {
        "color": "#1c1c1c",
-       "share": 0.33
+       "share": 0.22
       },
       {
        "color": "#555555",
-       "share": 0.12
-      },
-      {
-       "color": "#333333",
-       "share": 0.12
+       "share": 0.11
       },
       {
        "color": "#c0272d",
        "share": 0.06
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
       }
      ],
      "button": {
@@ -515,10 +733,10 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
+     "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -540,25 +758,18 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
-     "boxRadius": 12,
+     "roundedBoxes": 13,
+     "boxRadius": 16,
      "squareMedia": 0,
-     "roundedMedia": 5,
-     "mediaRadius": 8,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 440
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.08
+      "ratio": 0.33
      }
     ],
     "nav": {
@@ -569,8 +780,7 @@
      "blur": false
     },
     "fontsLoaded": [
-     "roobert",
-     "harmond"
+     "general sans"
     ]
    },
    "consoleErrors": []
@@ -579,18 +789,21 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 4,
+   "screens": 7,
    "filled": [
-    0.69,
-    0.85,
-    0.83,
-    0.86
+    0.66,
+    0.76,
+    0.76,
+    0.76,
+    0.76,
+    0.76,
+    0.71
    ],
    "motion": {
     "elements": 13,
-    "css": 13,
+    "css": 5,
     "transitions": 0,
-    "scripted": 0,
+    "scripted": 8,
     "videos": 0,
     "playingVideos": 0
    },
@@ -600,23 +813,22 @@
      "h": 844
     },
     "page": {
-     "height": 2562,
-     "screens": 3,
-     "words": 158,
-     "img": 5,
+     "height": 5109,
+     "screens": 6.1,
+     "words": 486,
+     "img": 4,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
-     "sections": 2,
+     "svg": 3,
+     "sections": 3,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 0,
+     "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 5,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
       "after-screenshot.webp",
@@ -628,13 +840,13 @@
      "emoji": []
     },
     "hero": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
-     "chars": 38,
+     "chars": 42,
      "lines": 2,
      "size": 32,
      "vw": 8.2,
-     "font": "Harmond",
+     "font": "General Sans",
      "weight": 400,
      "tracking": -0.025,
      "leading": 0.96,
@@ -649,21 +861,21 @@
      "kind": "heading"
     },
     "h1": {
-     "text": "We run the tech. You run the business.",
+     "text": "Built for the trades. Ready for the water.",
      "words": 8,
      "lines": 2,
      "size": 32,
-     "font": "Harmond"
+     "font": "General Sans"
     },
     "headings": [
      {
-      "text": "We run the tech. You run the business.",
+      "text": "Built for the trades. Ready for the water.",
       "words": 8,
-      "chars": 38,
+      "chars": 42,
       "lines": 2,
       "size": 32,
       "vw": 8.2,
-      "font": "Harmond",
+      "font": "General Sans",
       "weight": 400,
       "tracking": -0.025,
       "leading": 0.96,
@@ -676,42 +888,143 @@
       "top": 112,
       "tag": "h1",
       "kind": "heading"
+     },
+     {
+      "text": "HVAC, Plumbing & Field Services",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 471,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Fishing Charters & Marine Outfitters",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 785,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "You handle the pipes. We handle the tech.",
+      "words": 8,
+      "chars": 41,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1115,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your business shouldn't stop at the shoreline.",
+      "words": 7,
+      "chars": 46,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2826,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Which industry are you in?",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "General Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 4508,
+      "tag": "h2",
+      "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 1,
+     "count": 6,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
-     "centered": 0,
-     "medianWords": null,
+     "centered": 1,
+     "medianWords": 5,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Roobert",
-       "share": 0.95,
-       "mono": false
-      },
-      {
-       "family": "Harmond",
-       "share": 0.05,
+       "family": "General Sans",
+       "share": 1,
        "mono": false
       }
      ],
-     "familyCount": 2,
+     "familyCount": 1,
      "sizes": [
       13,
-      14,
       16,
       20,
+      22,
+      24,
       32
      ],
-     "sizeCount": 5,
+     "sizeCount": 6,
      "notLoaded": [],
      "body": {
-      "font": "Roobert",
+      "font": "General Sans",
       "size": 16,
       "leading": 1.63,
       "weight": 400,
@@ -722,8 +1035,8 @@
      "max": {
       "size": 32,
       "vw": 8.2,
-      "font": "Harmond",
-      "text": "We run the tech."
+      "font": "General Sans",
+      "text": "Built for the trades."
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -732,8 +1045,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.01,
-     "centerShare": 0,
+     "upperShare": 0,
+     "centerShare": 0.07,
      "smallText": 0
     },
     "eyebrows": [],
@@ -758,7 +1071,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 421,
+       "top": 447,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -766,35 +1079,35 @@
        }
       },
       {
-       "color": "#f4f4f4",
-       "top": 742,
+       "color": "#1c1c1c",
+       "top": 4476,
        "hsl": {
         "h": 0,
         "s": 0,
-        "l": 0.96
+        "l": 0.11
        }
       }
      ],
      "textColors": [
       {
-       "color": "#1c1c1c",
-       "share": 0.34
+       "color": "#444444",
+       "share": 0.52
       },
       {
-       "color": "#444444",
-       "share": 0.31
+       "color": "#1c1c1c",
+       "share": 0.22
       },
       {
        "color": "#555555",
-       "share": 0.12
-      },
-      {
-       "color": "#333333",
-       "share": 0.12
+       "share": 0.11
       },
       {
        "color": "#c0272d",
        "share": 0.06
+      },
+      {
+       "color": "#bbbbbb",
+       "share": 0.05
       }
      ],
      "button": {
@@ -809,10 +1122,10 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
+     "count": 2,
      "inHero": 1,
      "radius": 8,
-     "height": 48,
+     "height": 52,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
@@ -834,31 +1147,15 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
-     "boxRadius": 12,
+     "roundedBoxes": 13,
+     "boxRadius": 16,
      "squareMedia": 0,
-     "roundedMedia": 5,
-     "mediaRadius": 8,
+     "roundedMedia": 4,
+     "mediaRadius": 12,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 4,
-       "iconTopped": false,
-       "rounded": true,
-       "top": 421
-      }
-     ]
+     "cardRows": []
     },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.2
-     },
-     {
-      "type": "img",
-      "ratio": 0.08
-     }
-    ],
+    "heroMedia": [],
     "nav": {
      "links": 1,
      "fixed": false,
@@ -867,8 +1164,7 @@
      "blur": false
     },
     "fontsLoaded": [
-     "roobert",
-     "harmond"
+     "general sans"
     ]
    },
    "consoleErrors": []
@@ -889,7 +1185,8 @@
    "width": 1440,
    "fold": "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-fold.jpg",
    "pages": [
-    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-01.jpg"
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-01.jpg",
+    "/Users/akshat12/Documents/collegejobTasks/EthixWeb/.taste-skill/inspect/desktop-page-02.jpg"
    ]
   },
   {
