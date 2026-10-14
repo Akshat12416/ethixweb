@@ -13,6 +13,16 @@
 | **Public GitHub Repository** | [https://github.com/Akshat12416/ethixweb](https://github.com/Akshat12416/ethixweb) | Clean commit history, zero secrets |
 | **Protected Admin Portal** | [https://ethixweb-eight.vercel.app/admin](https://ethixweb-eight.vercel.app/admin) | **Passcode:** `ethix2026` |
 | **Live Database** | Neon Serverless PostgreSQL | Connected to `ethix_leads` production table |
+| **Launch Walkthrough Video (Bonus)** | [brag-output/brag.mp4](brag-output/brag.mp4) | 22s cinematic 1080p launch video with sound & motion |
+
+---
+
+## 🎬 Launch & Walkthrough Video
+
+[![Ethixweb Launch Video](brag-output/brag.jpg)](brag-output/brag.mp4)
+
+> 📹 **Watch Video**: [brag-output/brag.mp4](brag-output/brag.mp4)  
+> *Generated with bespoke mathematical soundtrack synthesis, 1920×1080 30fps canvas motion graphics, and verified live audits.*
 
 ---
 

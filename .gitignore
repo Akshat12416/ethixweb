@@ -28,3 +28,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Brag video intermediate frame buffers
+brag-output/work/frames/
+brag-output/work/*.wav

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethixweb Launch Video Generator</title>
+<style>
+  @font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'RoxboroughCF';
+    src: url('/fonts/RoxboroughCF-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'RoxboroughCF';
+    src: url('/fonts/RoxboroughCF-RegularItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Harmond';
+    src: url('/fonts/Harmond-Regular.woff2') format('woff2');
+    font-weight: 700;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+  }
+
+  #canvas {
+    width: 1920px;
+    height: 1080px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="1920" height="1080"></canvas>
+
+<script>
+const TOTAL_FRAMES = 660; // 22.0 seconds @ 30fps
+const FPS = 30;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Image preloading
+const images = {
+  emblem: new Image(),
+  spiderweb: new Image(),
+  mobileShot: new Image(),
+  desktopShot: new Image()
+};
+
+images.emblem.src = '/assets/emblem-transparent.webp';
+images.spiderweb.src = '/assets/spiderweb.svg';
+images.mobileShot.src = '/screenshots/pagespeed-mobile.png';
+images.desktopShot.src = '/screenshots/pagespeed-desktop.png';
+
+async function preloadAssets() {
+  await document.fonts.ready;
+  const imgPromises = Object.values(images).map(img => {
+    return new Promise(resolve => {
+      if (img.complete) return resolve();
+      img.onload = () => resolve();
+      img.onerror = () => resolve(); // continue even if fallback
+    });
+  });
+  await Promise.all(imgPromises);
+  console.log('All fonts and images preloaded.');
+}
+
+// Easing functions
+function clamp(val, min = 0, max = 1) {
+  return Math.max(min, Math.min(max, val));
+}
+function easeOutCubic(x) {
+  return 1 - Math.pow(1 - x, 3);
+}
+function easeInOutQuad(x) {
+  return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+}
+function easeOutBack(x) {
+  const c1 = 1.70158;
+  const c3 = c1 + 1;
+  return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
+}
+function easeOutExpo(x) {
+  return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+}
+
+// Helper drawing utilities
+function drawRoundedRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+// Draw Background with tech grid & crimson ambient glow
+function drawGlobalBackground(t, theme = 'dark') {
+  if (theme === 'dark') {
+    ctx.fillStyle = '#0b0c0f';
+    ctx.fillRect(0, 0, 1920, 1080);
+
+    // Subtle grid lines
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+    ctx.lineWidth = 1;
+    const gridSize = 80;
+    const offset = (t * 15) % gridSize;
+    for (let x = offset; x < 1920; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, 1080);
+      ctx.stroke();
+    }
+    for (let y = offset; y < 1080; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(1920, y);
+      ctx.stroke();
+    }
+
+    // Crimson ambient corner flares
+    const grad = ctx.createRadialGradient(960, 540, 50, 960, 540, 900);
+    grad.addColorStop(0, 'rgba(192, 39, 45, 0.12)');
+    grad.addColorStop(0.6, 'rgba(192, 39, 45, 0.02)');
+    grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 1920, 1080);
+  } else {
+    // Warm editorial stone `#ebebeb`
+    ctx.fillStyle = '#ebebeb';
+    ctx.fillRect(0, 0, 1920, 1080);
+
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.04)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < 1920; x += 80) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, 1080);
+      ctx.stroke();
+    }
+  }
+}
+
+// Global persistent perimeter header & footer
+function drawPerimeterBar(t, activeTab = 'HOME') {
+  ctx.save();
+  // Header bar
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+  ctx.fillRect(0, 0, 1920, 64);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.beginPath(); ctx.moveTo(0, 64); ctx.lineTo(1920, 64); ctx.stroke();
+
+  // Top Left Brand
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 20px "Roobert", sans-serif';
+  ctx.fillText('ETHIXWEB', 80, 40);
+  ctx.fillStyle = '#c0272d';
+  ctx.font = 'italic 16px "RoxboroughCF", serif';
+  ctx.fillText('(OPS)', 185, 38);
+
+  // Top Right Telemetry
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '500 13px "Roobert", sans-serif';
+  ctx.fillText('SEATTLE HQ: 09:18 PST', 1520, 40);
+  ctx.fillStyle = '#4ade80';
+  ctx.beginPath(); ctx.arc(1710, 36, 4, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#9ca3af';
+  ctx.fillText('BLR HUB: 21:48 IST', 1725, 40);
+
+  // Footer bar
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+  ctx.fillRect(0, 1024, 1920, 56);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.beginPath(); ctx.moveTo(0, 1024); ctx.lineTo(1920, 1024); ctx.stroke();
+
+  ctx.fillStyle = '#6b7280';
+  ctx.font = '400 13px "Roobert", sans-serif';
+  ctx.fillText('ETHIXWEB USA LLC · WYOMING · KENT, WA & BANGALORE, IN', 80, 1058);
+  ctx.fillText('LIVE DEMO: ETHIXWEB-EIGHT.VERCEL.APP', 1540, 1058);
+  ctx.restore();
+}
+
+// -------------------------------------------------------------
+// SCENE 1: THE PROVOCATION & REVEAL (0.0s - 4.0s / frames 0-119)
+// -------------------------------------------------------------
+function renderScene1(t, f) {
+  drawGlobalBackground(t, 'dark');
+
+  // Ambient web rotating gently in background
+  if (images.spiderweb.complete) {
+    ctx.save();
+    ctx.translate(960, 540);
+    ctx.rotate(t * 0.1);
+    ctx.globalAlpha = Math.min(0.25, t * 0.15);
+    ctx.drawImage(images.spiderweb, -350, -350, 700, 700);
+    ctx.restore();
+  }
+
+  if (t < 1.6) {
+    // Phase A: The Provocation
+    const pIntro = clamp(t / 0.5);
+    const alpha = easeOutCubic(pIntro);
+    
+    ctx.save();
+    ctx.textAlign = 'center';
+    ctx.globalAlpha = alpha;
+
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '500 16px "Roobert", sans-serif';
+    ctx.fillText('THE TRUTH ABOUT OUTSOURCING', 960, 430);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 56px "Harmond", serif';
+    ctx.fillText('Traditional offshore tech is broken.', 960, 510);
+
+    ctx.fillStyle = '#6b7280';
+    ctx.font = '400 24px "Roobert", sans-serif';
+    ctx.fillText('Timezone lag · Junior delegation · Zero accountability', 960, 570);
+
+    // Crimson slash strike-through at t >= 1.0s
+    if (t >= 0.9) {
+      const pSlash = clamp((t - 0.9) / 0.35);
+      const slashWidth = 840 * easeOutExpo(pSlash);
+      ctx.strokeStyle = '#c0272d';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(960 - 420, 502);
+      ctx.lineTo(960 - 420 + slashWidth, 502);
+      ctx.stroke();
+
+      // Red spark particles
+      for (let i = 0; i < 8; i++) {
+        const sx = 960 - 420 + slashWidth + (Math.sin(i * 1.5) * 20);
+        const sy = 502 + (Math.cos(i * 2.1) * 25);
+        ctx.fillStyle = '#ff4d4d';
+        ctx.beginPath(); ctx.arc(sx, sy, 3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    ctx.restore();
+  } else {
+    // Phase B: The Big Reveal (t = 1.6s to 4.0s)
+    const pReveal = clamp((t - 1.6) / 0.7);
+    const scale = 0.85 + 0.15 * easeOutBack(pReveal);
+    const alpha = easeOutCubic(pReveal);
+
+    // Central emblem dropping in
+    ctx.save();
+    ctx.translate(960, 420);
+    ctx.scale(scale, scale);
+    ctx.globalAlpha = alpha;
+
+    if (images.emblem.complete) {
+      ctx.shadowColor = 'rgba(192, 39, 45, 0.6)';
+      ctx.shadowBlur = 40;
+      ctx.drawImage(images.emblem, -80, -80, 160, 160);
+      ctx.shadowBlur = 0;
+    }
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 84px "Harmond", serif';
+    ctx.fillText('Ethix Web', 0, 160);
+    ctx.fillStyle = '#c0272d';
+    ctx.font = 'italic 34px "RoxboroughCF", serif';
+    ctx.fillText('(OPS)', 220, 140);
+
+    ctx.fillStyle = '#d1d5db';
+    ctx.font = 'italic 36px "RoxboroughCF", serif';
+    ctx.fillText('"We run the tech. You run the business."', 0, 230);
+
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '500 18px "Roobert", sans-serif';
+    ctx.fillText('A SENIOR-LED DIGITAL OPERATIONS AGENCY · US LEGAL SOVEREIGNTY', 0, 280);
+
+    // Tag pills
+    const pills = ['Headless Cloud Platforms', 'Autonomous AI Agents', 'Direct-Revenue Systems'];
+    const pillY = 340;
+    const startX = -320;
+    pills.forEach((p, idx) => {
+      const px = startX + idx * 220;
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+      drawRoundedRect(ctx, px, pillY, 200, 38, 19);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+      ctx.stroke();
+
+      ctx.fillStyle = '#e5e7eb';
+      ctx.font = '500 13px "Roobert", sans-serif';
+      ctx.fillText(p, px + 100, pillY + 24);
+    });
+
+    ctx.restore();
+  }
+
+  drawPerimeterBar(t, 'HOME');
+}
+
+// -------------------------------------------------------------
+// SCENE 2: THE 24-HOUR VELOCITY ENGINE (4.0s - 8.5s / frames 120-254)
+// -------------------------------------------------------------
+function renderScene2(t, f) {
+  drawGlobalBackground(t, 'dark');
+
+  const pScene = clamp((t - 4.0) / 0.6);
+  const alpha = easeOutCubic(pScene);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+
+  // Scene Header
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#c0272d';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('THE DUAL-SHORE SUPERPOWER', 960, 130);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 48px "Harmond", serif';
+  ctx.fillText('Follow-the-Sun Engineering', 960, 185);
+
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '400 20px "Roobert", sans-serif';
+  ctx.fillText('12.5-Hour Time Difference Inverted into an Around-the-Clock Velocity Engine', 960, 225);
+
+  // Dual Nodes: Seattle & Bangalore
+  // Left Node: Seattle HQ
+  const cardY = 280;
+  const cardW = 440;
+  const cardH = 320;
+  
+  // Seattle Card
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+  drawRoundedRect(ctx, 220, cardY, cardW, cardH, 16);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.stroke();
+
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#38bdf8';
+  ctx.font = '600 14px "Roobert", sans-serif';
+  ctx.fillText('● US STRATEGIC LEADERSHIP', 250, cardY + 45);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 28px "Harmond", serif';
+  ctx.fillText('Seattle HQ', 250, cardY + 85);
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '500 16px "Roobert", sans-serif';
+  ctx.fillText('Pacific Time (PST / UTC-8)', 250, cardY + 115);
+
+  ctx.fillStyle = '#e5e7eb';
+  ctx.font = '400 15px "Roobert", sans-serif';
+  ctx.fillText('• 09:00 - 17:00 PST: Direct Founder Kickoffs', 250, cardY + 165);
+  ctx.fillText('• Strategic Roadmapping & UX Audits', 250, cardY + 200);
+  ctx.fillText('• US Corporate Law & MSAs (Wyoming LLC)', 250, cardY + 235);
+  ctx.fillText('• 17:30 PST: Async Daily Video Handoff', 250, cardY + 270);
+
+  // Right Node: Bangalore Hub
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+  drawRoundedRect(ctx, 1260, cardY, cardW, cardH, 16);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(192, 39, 45, 0.35)';
+  ctx.stroke();
+
+  ctx.fillStyle = '#f87171';
+  ctx.font = '600 14px "Roobert", sans-serif';
+  ctx.fillText('● CORE SENIOR ENGINEERING HUB', 1290, cardY + 45);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 28px "Harmond", serif';
+  ctx.fillText('Bangalore Hub', 1290, cardY + 85);
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '500 16px "Roobert", sans-serif';
+  ctx.fillText('India Standard Time (IST / UTC+5:30)', 1290, cardY + 115);
+
+  ctx.fillStyle = '#e5e7eb';
+  ctx.font = '400 15px "Roobert", sans-serif';
+  ctx.fillText('• 18:00 - 04:00 PST: Deep Focus Dev Shift', 1290, cardY + 165);
+  ctx.fillText('• Silicon Valley of Asia Senior Squads (6+ yrs)', 1290, cardY + 200);
+  ctx.fillText('• React 19, TypeScript, AI Agent Workflows', 1290, cardY + 235);
+  ctx.fillText('• 08:30 PST: Shipped PRs & Staging Links', 1290, cardY + 270);
+
+  // Central Connecting Energy Arc
+  const arcProgress = (t - 4.0) * 0.8;
+  ctx.beginPath();
+  ctx.moveTo(660, cardY + 160);
+  ctx.bezierCurveTo(800, cardY + 60, 1120, cardY + 60, 1260, cardY + 160);
+  ctx.strokeStyle = 'rgba(192, 39, 45, 0.4)';
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  // Pulsing energy packets moving across
+  for (let pIdx = 0; pIdx < 3; pIdx++) {
+    const pPos = ((arcProgress + pIdx * 0.33) % 1.0);
+    // Quadratic bezier point
+    const bx = (1 - pPos) * (1 - pPos) * 660 + 2 * (1 - pPos) * pPos * 960 + pPos * pPos * 1260;
+    const by = (1 - pPos) * (1 - pPos) * (cardY + 160) + 2 * (1 - pPos) * pPos * (cardY + 70) + pPos * pPos * (cardY + 160);
+    ctx.fillStyle = '#ff4d4d';
+    ctx.shadowColor = '#ff2222';
+    ctx.shadowBlur = 15;
+    ctx.beginPath(); ctx.arc(bx, by, 7, 0, Math.PI * 2); ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  // Central Badge in between nodes
+  ctx.fillStyle = '#16161c';
+  drawRoundedRect(ctx, 810, cardY + 100, 300, 120, 12);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+  ctx.stroke();
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#4ade80';
+  ctx.font = '600 13px "Roobert", sans-serif';
+  ctx.fillText('24-HOUR ACTIVE CYCLE', 960, cardY + 135);
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 24px "Harmond", serif';
+  ctx.fillText('You Sleep. We Ship.', 960, 172 + cardY);
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '400 13px "Roobert", sans-serif';
+  ctx.fillText('Never lose 24 hours to email lag', 960, 198 + cardY);
+
+  // Bottom Terminal Box showing real-time commit stream
+  const termY = 640;
+  ctx.fillStyle = '#08080a';
+  drawRoundedRect(ctx, 220, termY, 1480, 280, 14);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+  ctx.stroke();
+
+  // Terminal window dots
+  ctx.fillStyle = '#ef4444'; ctx.beginPath(); ctx.arc(250, termY + 25, 6, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#f59e0b'; ctx.beginPath(); ctx.arc(270, termY + 25, 6, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#10b981'; ctx.beginPath(); ctx.arc(290, termY + 25, 6, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#6b7280'; ctx.font = '500 13px "Roobert", sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('ethix-velocity-engine --live-telemetry', 320, termY + 30);
+
+  // Terminal lines typing in
+  const lines = [
+    { tStart: 4.2, text: '[17:00 PST] Seattle handoff: Sprint scope approved · 4 user stories assigned' },
+    { tStart: 5.2, text: '[18:30 PST] Bangalore squad begins deep engineering sprint · Branch: feat/headless-checkout' },
+    { tStart: 6.2, text: '[01:15 PST] Automated CI/CD pipeline: 142 unit tests passed · 0 lint errors' },
+    { tStart: 7.2, text: '[08:30 PST] Pull Request #48 merged to main · Production staging live: https://ethixweb-eight.vercel.app' }
+  ];
+
+  lines.forEach((l, idx) => {
+    if (t >= l.tStart) {
+      const lineY = termY + 75 + idx * 45;
+      ctx.fillStyle = idx === 3 ? '#4ade80' : '#d1d5db';
+      ctx.font = '400 16px monospace';
+      ctx.fillText(l.text, 250, lineY);
+    }
+  });
+
+  ctx.restore();
+  drawPerimeterBar(t, 'ABOUT');
+}
+
+// -------------------------------------------------------------
+// SCENE 3: REAL POSTGRES LEAD PIPELINE & SPAM SHIELD (8.5s - 13.0s / frames 255-389)
+// -------------------------------------------------------------
+function renderScene3(t, f) {
+  drawGlobalBackground(t, 'dark');
+
+  const pScene = clamp((t - 8.5) / 0.6);
+  const alpha = easeOutCubic(pScene);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#c0272d';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('LIVE BACKEND INFRASTRUCTURE', 960, 130);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 48px "Harmond", serif';
+  ctx.fillText('Neon PostgreSQL Lead Engine & Spam Shield', 960, 185);
+
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '400 20px "Roobert", sans-serif';
+  ctx.fillText('Real Database Ingestion · Three-Tier Bot Elimination · Protected Admin CRM', 960, 225);
+
+  // Left Card: Live Enquiry Form
+  const cardY = 270;
+  const leftX = 180;
+  const cardW = 720;
+  const cardH = 680;
+
+  ctx.fillStyle = '#111216';
+  drawRoundedRect(ctx, leftX, cardY, cardW, cardH, 16);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.stroke();
+
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 24px "Harmond", serif';
+  ctx.fillText('Start a Project / Submit Inquiry', leftX + 40, cardY + 55);
+
+  // Form Fields simulating real submission
+  const fields = [
+    { label: 'CLIENT NAME', val: 'Marcus Vance' },
+    { label: 'COMPANY', val: 'Apex Global Logistics LLC' },
+    { label: 'EMAIL', val: 'marcus@apexlogistics.com' },
+    { label: 'SERVICE', val: 'Headless Next.js + AI Voice Dispatcher' },
+    { label: 'BUDGET', val: '$25,000 - $50,000 USD' }
+  ];
+
+  fields.forEach((fld, idx) => {
+    const fy = cardY + 95 + idx * 75;
+    ctx.fillStyle = '#6b7280';
+    ctx.font = '600 12px "Roobert", sans-serif';
+    ctx.fillText(fld.label, leftX + 40, fy);
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+    drawRoundedRect(ctx, leftX + 40, fy + 8, 640, 42, 8);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.stroke();
+
+    ctx.fillStyle = '#f3f4f6';
+    ctx.font = '400 16px "Roobert", sans-serif';
+    ctx.fillText(fld.val, leftX + 55, fy + 35);
+  });
+
+  // 3-Tier Spam Protection Badges popping
+  const spamY = cardY + 490;
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('3-TIER SPAM VERIFICATION PROTOCOL:', leftX + 40, spamY);
+
+  const spamChecks = [
+    { name: '1. Invisible Honeypot Trap', status: 'BOT TRAP CLEAN', tDelay: 9.0 },
+    { name: '2. Human Velocity Check', status: '3.8s (HUMAN VERIFIED)', tDelay: 9.6 },
+    { name: '3. IP Rate Limiting Engine', status: 'BURST PASSED', tDelay: 10.2 }
+  ];
+
+  spamChecks.forEach((chk, idx) => {
+    const cy = spamY + 30 + idx * 46;
+    const isVerified = t >= chk.tDelay;
+
+    ctx.fillStyle = isVerified ? 'rgba(16, 185, 129, 0.15)' : 'rgba(255, 255, 255, 0.05)';
+    drawRoundedRect(ctx, leftX + 40, cy, 640, 38, 8);
+    ctx.fill();
+    ctx.strokeStyle = isVerified ? '#10b981' : 'rgba(255, 255, 255, 0.1)';
+    ctx.stroke();
+
+    ctx.fillStyle = isVerified ? '#34d399' : '#9ca3af';
+    ctx.font = '500 14px "Roobert", sans-serif';
+    ctx.fillText((isVerified ? '✓  ' : '○  ') + chk.name, leftX + 55, cy + 24);
+
+    ctx.textAlign = 'right';
+    ctx.font = '600 13px "Roobert", sans-serif';
+    ctx.fillText(chk.status, leftX + 665, cy + 24);
+    ctx.textAlign = 'left';
+  });
+
+  // Right Card: Protected Admin Portal (`/admin`)
+  const rightX = 940;
+  ctx.fillStyle = '#0f1115';
+  drawRoundedRect(ctx, rightX, cardY, 800, cardH, 16);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.stroke();
+
+  // Admin Top Bar
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 24px "Harmond", serif';
+  ctx.fillText('Admin Operations Hub', rightX + 40, cardY + 55);
+
+  ctx.fillStyle = '#10b981';
+  ctx.font = '600 13px "Roobert", sans-serif';
+  ctx.fillText('● CONNECTED: Neon Serverless PostgreSQL (`ethix_leads`)', rightX + 40, cardY + 85);
+
+  // Admin KPI Cards
+  const kpis = [
+    { label: 'TOTAL LEADS', val: '52', sub: '+18% this month' },
+    { label: 'QUALIFIED DEALS', val: '$320,000', sub: 'High-intent' },
+    { label: 'BOTS BLOCKED', val: '99.8%', sub: 'Zero spam in DB' }
+  ];
+
+  kpis.forEach((kpi, idx) => {
+    const kx = rightX + 40 + idx * 245;
+    const ky = cardY + 115;
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+    drawRoundedRect(ctx, kx, ky, 230, 95, 10);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.stroke();
+
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '500 11px "Roobert", sans-serif';
+    ctx.fillText(kpi.label, kx + 18, ky + 28);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 24px "Harmond", serif';
+    ctx.fillText(kpi.val, kx + 18, ky + 62);
+
+    ctx.fillStyle = '#10b981';
+    ctx.font = '400 12px "Roobert", sans-serif';
+    ctx.fillText(kpi.sub, kx + 18, ky + 84);
+  });
+
+  // Lead rows in Admin
+  const rowStartY = cardY + 240;
+  ctx.fillStyle = '#6b7280';
+  ctx.font = '600 12px "Roobert", sans-serif';
+  ctx.fillText('NAME & COMPANY', rightX + 40, rowStartY);
+  ctx.fillText('SERVICE REQUESTED', rightX + 300, rowStartY);
+  ctx.fillText('BUDGET', rightX + 540, rowStartY);
+  ctx.fillText('STATUS', rightX + 660, rowStartY);
+
+  const leads = [
+    { name: 'Marcus Vance · Apex Logistics', srv: 'Headless + AI Agent', bgt: '$35,000', status: 'QUALIFIED', color: '#38bdf8' },
+    { name: 'Elena Rostova · Veloce AI', srv: 'Automated Booking System', bgt: '$20,000', status: 'WON / SIGNED', color: '#4ade80' },
+    { name: 'David Cho · Harbor Health', srv: 'Full Web Operations', bgt: '$45,000', status: 'PROPOSAL', color: '#fbbf24' },
+    { name: 'Sarah Lin · CloudScale', srv: 'Vite Migration & UI', bgt: '$18,000', status: 'NEW INQUIRY', color: '#f43f5e' }
+  ];
+
+  leads.forEach((lead, idx) => {
+    const ly = rowStartY + 25 + idx * 85;
+    ctx.fillStyle = idx === 0 ? 'rgba(192, 39, 45, 0.15)' : 'rgba(255, 255, 255, 0.03)';
+    drawRoundedRect(ctx, rightX + 40, ly, 720, 68, 8);
+    ctx.fill();
+    ctx.strokeStyle = idx === 0 ? '#c0272d' : 'rgba(255, 255, 255, 0.06)';
+    ctx.stroke();
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '600 15px "Roobert", sans-serif';
+    ctx.fillText(lead.name, rightX + 55, ly + 32);
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '400 13px "Roobert", sans-serif';
+    ctx.fillText('Submitted via web enquiry form', rightX + 55, ly + 52);
+
+    ctx.fillStyle = '#d1d5db';
+    ctx.font = '400 14px "Roobert", sans-serif';
+    ctx.fillText(lead.srv, rightX + 300, ly + 40);
+
+    ctx.fillStyle = '#f3f4f6';
+    ctx.font = '600 15px "Roobert", sans-serif';
+    ctx.fillText(lead.bgt, rightX + 540, ly + 40);
+
+    // Status pill
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+    drawRoundedRect(ctx, rightX + 645, ly + 20, 100, 28, 14);
+    ctx.fill();
+    ctx.fillStyle = lead.color;
+    ctx.font = '600 11px "Roobert", sans-serif';
+    ctx.fillText(lead.status, rightX + 655, ly + 38);
+  });
+
+  ctx.restore();
+  drawPerimeterBar(t, 'CONTACT');
+}
+
+// -------------------------------------------------------------
+// SCENE 4: PAGESPEED 90+ EVERYWHERE (13.0s - 17.5s / frames 390-524)
+// -------------------------------------------------------------
+function renderScene4(t, f) {
+  drawGlobalBackground(t, 'dark');
+
+  const pScene = clamp((t - 13.0) / 0.6);
+  const alpha = easeOutCubic(pScene);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#10b981';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('RAW AUDITED PERFORMANCE', 960, 130);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 48px "Harmond", serif';
+  ctx.fillText('PageSpeed Insights 90+ Everywhere', 960, 185);
+
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '400 20px "Roobert", sans-serif';
+  ctx.fillText('Google Lighthouse Verified Audits on Live Production Vercel Edge Deployment', 960, 225);
+
+  // Dial Animation: 0 -> target
+  const pDial = clamp((t - 13.4) / 1.0);
+  const dialScoreMobile = Math.floor(easeOutCubic(pDial) * 90);
+  const dialScoreDesktop = Math.floor(easeOutCubic(pDial) * 96);
+
+  // Left Card: Mobile 90
+  const cardY = 270;
+  const leftX = 180;
+  const cardW = 720;
+  const cardH = 680;
+
+  ctx.fillStyle = '#111317';
+  drawRoundedRect(ctx, leftX, cardY, cardW, cardH, 18);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(16, 185, 129, 0.3)';
+  ctx.stroke();
+
+  // Mobile Badge
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#34d399';
+  ctx.font = '600 14px "Roobert", sans-serif';
+  ctx.fillText('● MOBILE AUDIT (MOTO G POWER · SLOW 4G)', leftX + 45, cardY + 50);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 32px "Harmond", serif';
+  ctx.fillText('Mobile Performance', leftX + 45, cardY + 95);
+
+  // Big Radial Gauge for Mobile
+  const dialCenterX = leftX + 170;
+  const dialCenterY = cardY + 240;
+  const dialRadius = 95;
+
+  ctx.beginPath();
+  ctx.arc(dialCenterX, dialCenterY, dialRadius, 0, Math.PI * 2);
+  ctx.lineWidth = 14;
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.stroke();
+
+  // Green arc
+  ctx.beginPath();
+  const startAngle = -Math.PI / 2;
+  const endAngle = startAngle + (Math.PI * 2 * (dialScoreMobile / 100));
+  ctx.arc(dialCenterX, dialCenterY, dialRadius, startAngle, endAngle);
+  ctx.strokeStyle = '#10b981';
+  ctx.lineWidth = 14;
+  ctx.stroke();
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 68px "Harmond", serif';
+  ctx.fillText(String(dialScoreMobile), dialCenterX, dialCenterY + 22);
+  ctx.fillStyle = '#10b981';
+  ctx.font = '600 16px "Roobert", sans-serif';
+  ctx.fillText('/ 100 🟢', dialCenterX, dialCenterY + 55);
+
+  // Metrics alongside dial
+  ctx.textAlign = 'left';
+  const metricsM = [
+    { label: 'Total Blocking Time (TBT)', val: '0 ms', color: '#10b981' },
+    { label: 'Cumulative Layout Shift (CLS)', val: '0', color: '#10b981' },
+    { label: 'First Contentful Paint (FCP)', val: '0.8 s', color: '#10b981' },
+    { label: 'Largest Contentful Paint (LCP)', val: '2.1 s', color: '#34d399' }
+  ];
+
+  metricsM.forEach((m, idx) => {
+    const my = cardY + 165 + idx * 48;
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '400 14px "Roobert", sans-serif';
+    ctx.fillText(m.label, leftX + 320, my);
+
+    ctx.fillStyle = m.color;
+    ctx.font = '700 18px "Roobert", sans-serif';
+    ctx.fillText(m.val, leftX + 320, my + 24);
+  });
+
+  // Embedded Screenshot of Mobile report
+  if (images.mobileShot.complete) {
+    ctx.save();
+    drawRoundedRect(ctx, leftX + 40, cardY + 380, 640, 260, 10);
+    ctx.clip();
+    // Crop upper portion of PageSpeed screenshot showing 90, 94, 100, 92
+    ctx.drawImage(images.mobileShot, 0, 0, images.mobileShot.width, images.mobileShot.height * 0.65, leftX + 40, cardY + 380, 640, 260);
+    ctx.restore();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    drawRoundedRect(ctx, leftX + 40, cardY + 380, 640, 260, 10);
+    ctx.stroke();
+  }
+
+  // Right Card: Desktop 96
+  const rightX = 940;
+  ctx.fillStyle = '#111317';
+  drawRoundedRect(ctx, rightX, cardY, cardW, cardH, 18);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(16, 185, 129, 0.3)';
+  ctx.stroke();
+
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#34d399';
+  ctx.font = '600 14px "Roobert", sans-serif';
+  ctx.fillText('● DESKTOP AUDIT (VERIFIED ON VERCEL CDN)', rightX + 45, cardY + 50);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 32px "Harmond", serif';
+  ctx.fillText('Desktop Performance', rightX + 45, cardY + 95);
+
+  const dialRightX = rightX + 170;
+  const dialRightY = cardY + 240;
+
+  ctx.beginPath();
+  ctx.arc(dialRightX, dialRightY, dialRadius, 0, Math.PI * 2);
+  ctx.lineWidth = 14;
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+  ctx.stroke();
+
+  ctx.beginPath();
+  const endAngleD = startAngle + (Math.PI * 2 * (dialScoreDesktop / 100));
+  ctx.arc(dialRightX, dialRightY, dialRadius, startAngle, endAngleD);
+  ctx.strokeStyle = '#10b981';
+  ctx.lineWidth = 14;
+  ctx.stroke();
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 68px "Harmond", serif';
+  ctx.fillText(String(dialScoreDesktop), dialRightX, dialRightY + 22);
+  ctx.fillStyle = '#10b981';
+  ctx.font = '600 16px "Roobert", sans-serif';
+  ctx.fillText('/ 100 🟢', dialRightX, dialRightY + 55);
+
+  ctx.textAlign = 'left';
+  const metricsD = [
+    { label: 'Accessibility', val: '94 / 100 🟢', color: '#10b981' },
+    { label: 'Best Practices', val: '100 / 100 🟢', color: '#10b981' },
+    { label: 'SEO Optimization', val: '92 / 100 🟢', color: '#10b981' },
+    { label: 'Total Blocking Time', val: '30 ms ⚡', color: '#34d399' }
+  ];
+
+  metricsD.forEach((m, idx) => {
+    const my = cardY + 165 + idx * 48;
+    ctx.fillStyle = '#9ca3af';
+    ctx.font = '400 14px "Roobert", sans-serif';
+    ctx.fillText(m.label, rightX + 320, my);
+
+    ctx.fillStyle = m.color;
+    ctx.font = '700 18px "Roobert", sans-serif';
+    ctx.fillText(m.val, rightX + 320, my + 24);
+  });
+
+  // Embedded Screenshot of Desktop report
+  if (images.desktopShot.complete) {
+    ctx.save();
+    drawRoundedRect(ctx, rightX + 40, cardY + 380, 640, 260, 10);
+    ctx.clip();
+    ctx.drawImage(images.desktopShot, 0, 0, images.desktopShot.width, images.desktopShot.height * 0.65, rightX + 40, cardY + 380, 640, 260);
+    ctx.restore();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    drawRoundedRect(ctx, rightX + 40, cardY + 380, 640, 260, 10);
+    ctx.stroke();
+  }
+
+  ctx.restore();
+  drawPerimeterBar(t, 'PERFORMANCE');
+}
+
+// -------------------------------------------------------------
+// SCENE 5: SHUTTER OUTRO & CALL TO ACTION (17.5s - 22.0s / frames 525-659)
+// -------------------------------------------------------------
+function renderScene5(t, f) {
+  // Shutter transition between 17.5s and 18.3s
+  const pShutter = clamp((t - 17.5) / 0.8);
+
+  drawGlobalBackground(t, 'dark');
+
+  // Draw 5 expanding editorial shutters if in transition
+  if (pShutter < 1.0) {
+    const numShutters = 6;
+    const shutterW = 1920 / numShutters;
+    const sH = 1080 * easeInOutQuad(pShutter);
+
+    ctx.fillStyle = '#c0272d';
+    for (let i = 0; i < numShutters; i++) {
+      if (i % 2 === 0) {
+        ctx.fillRect(i * shutterW, 0, shutterW + 1, sH);
+      } else {
+        ctx.fillRect(i * shutterW, 1080 - sH, shutterW + 1, sH);
+      }
+    }
+  }
+
+  // Settled Hero Launch State (frame 550 onwards)
+  const pContent = clamp((t - 18.2) / 0.6);
+  const alpha = easeOutCubic(pContent);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+
+  // Background Web with subtle pulse
+  if (images.emblem.complete) {
+    ctx.save();
+    ctx.translate(960, 360);
+    const breathe = 1.0 + 0.04 * Math.sin(t * 3);
+    ctx.scale(breathe, breathe);
+    ctx.shadowColor = 'rgba(192, 39, 45, 0.7)';
+    ctx.shadowBlur = 45;
+    ctx.drawImage(images.emblem, -90, -90, 180, 180);
+    ctx.shadowBlur = 0;
+    ctx.restore();
+  }
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 96px "Harmond", serif';
+  ctx.fillText('Ethix Web', 960, 520);
+  ctx.fillStyle = '#c0272d';
+  ctx.font = 'italic 38px "RoxboroughCF", serif';
+  ctx.fillText('(OPS)', 1220, 485);
+
+  ctx.fillStyle = '#f3f4f6';
+  ctx.font = 'italic 40px "RoxboroughCF", serif';
+  ctx.fillText('"We run the tech. You run the business."', 960, 590);
+
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '400 22px "Roobert", sans-serif';
+  ctx.fillText('Headless Cloud Platforms · Autonomous AI Booking Agents · Direct-Revenue Systems', 960, 645);
+
+  // Deliverables & Live Links Box
+  const boxY = 700;
+  const boxW = 1040;
+  const boxH = 90;
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+  drawRoundedRect(ctx, 960 - boxW / 2, boxY, boxW, boxH, 45);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+  ctx.stroke();
+
+  ctx.fillStyle = '#4ade80';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('● LIVE ON VERCEL:', 600, boxY + 52);
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 18px "Roobert", sans-serif';
+  ctx.fillText('ethixweb-eight.vercel.app', 780, boxY + 52);
+
+  ctx.fillStyle = '#38bdf8';
+  ctx.font = '600 15px "Roobert", sans-serif';
+  ctx.fillText('● ADMIN DEMO:', 1100, boxY + 52);
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 18px "Roobert", sans-serif';
+  ctx.fillText('/admin (ethix2026)', 1260, boxY + 52);
+
+  // Big Primary Call to Action Button
+  const btnY = 825;
+  const btnW = 480;
+  const btnH = 68;
+  const btnX = 960 - btnW / 2;
+
+  // Hover glow effect
+  ctx.shadowColor = 'rgba(192, 39, 45, 0.8)';
+  ctx.shadowBlur = 30;
+  ctx.fillStyle = '#c0272d';
+  drawRoundedRect(ctx, btnX, btnY, btnW, btnH, 34);
+  ctx.fill();
+  ctx.shadowBlur = 0;
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 20px "Roobert", sans-serif';
+  ctx.fillText('BOOK A 30-MIN STRATEGY CALL  ➔', 960, btnY + 42);
+
+  // Sub-text guarantee
+  ctx.fillStyle = '#6b7280';
+  ctx.font = '500 15px "Roobert", sans-serif';
+  ctx.fillText('US Legal Sovereignty (Wyoming LLC) × 24-Hour Bangalore Velocity', 960, btnY + 105);
+
+  ctx.restore();
+  drawPerimeterBar(t, 'HOME');
+}
+
+// -------------------------------------------------------------
+// MAIN FRAME ORCHESTRATOR
+// -------------------------------------------------------------
+function renderFrame(f) {
+  const t = f / FPS;
+  ctx.clearRect(0, 0, 1920, 1080);
+
+  if (f < 120) {
+    renderScene1(t, f);
+  } else if (f < 255) {
+    renderScene2(t, f);
+  } else if (f < 390) {
+    renderScene3(t, f);
+  } else if (f < 525) {
+    renderScene4(t, f);
+  } else {
+    renderScene5(t, f);
+  }
+}
+
+// Render loop running across all frames and posting to server
+async function startRender() {
+  await preloadAssets();
+  console.log('Rendering 660 frames...');
+
+  for (let f = 0; f < TOTAL_FRAMES; f++) {
+    renderFrame(f);
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.96));
+    await fetch('/frame?i=' + f, { method: 'POST', body: blob });
+    if (f % 60 === 0) {
+      console.log(`Rendered frame ${f} / ${TOTAL_FRAMES} (${(f/30).toFixed(1)}s)`);
+    }
+  }
+
+  console.log('Finished all frames. Calling /done...');
+  await fetch('/done', { method: 'POST' });
+}
+
+window.onload = startRender;
+</script>
+</body>
+</html>
