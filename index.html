@@ -58,6 +58,21 @@
       type="font/woff2"
       crossorigin
     />
+    <style>
+      body { margin: 0; background-color: #ebebeb; color: #1c1c1c; font-family: "Roobert", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .landing-root { width: 100%; min-height: 100svh; background-color: #ebebeb; }
+      .landing-hero-stage { position: relative; width: 100%; height: 100svh; min-height: 100svh; overflow: hidden; }
+      .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.4rem; }
+      .nav-left, .nav-right { display: none; }
+      @media (min-width: 769px) { .nav-left, .nav-right { display: flex; } }
+      .nav-center { font-size: 1.55rem; letter-spacing: 0.04em; font-weight: 500; text-decoration: none; color: #1c1c1c; }
+      .hello { position: absolute; left: 0; right: 0; top: 12vh; text-align: center; }
+      .hello-title { font-size: 13vw; line-height: 1; margin: 0; font-weight: 400; }
+      .hello-title-char { display: inline-block; }
+      .hello-title .font-sec { font-family: "Roxborough CF", serif; font-style: italic; }
+      .hello-title .font-bold { font-family: "Roxborough CF", serif; font-style: normal; }
+      .hello-title .badge { font-family: "Roobert", sans-serif; font-size: 2.1vw; vertical-align: super; }
+    </style>
   </head>
   <body>
     <div id="root">

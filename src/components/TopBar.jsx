@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import emblemImg from '../assets/emblem-transparent-sm.webp';
+import emblemImg from '../assets/emblem-64w.webp';
 import { useTransition } from '../context/TransitionContext';
 import '../styles/landing.css';
 

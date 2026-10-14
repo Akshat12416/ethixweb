@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import gsap from 'gsap';
+import { getGsap } from '../utils/gsapLoader';
 import {
   Menu,
   X,
@@ -17,7 +17,7 @@ import {
   Check,
 } from 'lucide-react';
 import InteractiveWeb from '../components/InteractiveWeb';
-import emblemImg from '../assets/emblem-transparent-sm.webp';
+import emblemImg from '../assets/emblem-64w.webp';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
 import '../styles/landing.css';
 
@@ -299,14 +299,16 @@ export default function HomePage() {
       const leftColEl = leftColRef.current;
       const rightColEl = rightColRef.current;
 
-      if (webEl) gsap.set(webEl, { y: 0 });
-      if (leftColEl) gsap.set(leftColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
-      if (rightColEl) gsap.set(rightColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+      getGsap().then(({ gsap }) => {
+        if (webEl) gsap.set(webEl, { y: 0 });
+        if (leftColEl) gsap.set(leftColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
+        if (rightColEl) gsap.set(rightColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
 
-      gsap.set('.hello-title-char', { yPercent: 0 });
-      gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
-      gsap.set('.landing-root .nav-row', { opacity: 1, y: 0, yPercent: -50 });
-      gsap.set('.tagline', { opacity: 1 });
+        gsap.set('.hello-title-char', { yPercent: 0 });
+        gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
+        gsap.set('.landing-root .nav-row', { opacity: 1, y: 0, yPercent: -50 });
+        gsap.set('.tagline', { opacity: 1 });
+      });
       return;
     }
 
@@ -343,40 +345,41 @@ export default function HomePage() {
       const rightOffsetX = isDesktop ? webCenterX - (rightRect.left + rightRect.width / 2) : 0;
       const initialY = isDesktop ? 0 : 25;
 
-      // 1. Initial Preloader State:
-      // Web is dead-centered vertically on the blank white canvas
-      gsap.set(webEl, { y: deltaY });
+      getGsap().then(({ gsap }) => {
+        // 1. Initial Preloader State:
+        // Web is dead-centered vertically on the blank white canvas
+        gsap.set(webEl, { y: deltaY });
 
-      // Side columns start tucked directly behind the web with opacity 0
-      gsap.set(leftColEl, { x: leftOffsetX, y: initialY, scale: 0.92, opacity: 0 });
-      gsap.set(rightColEl, { x: rightOffsetX, y: initialY, scale: 0.92, opacity: 0 });
+        // Side columns start tucked directly behind the web with opacity 0
+        gsap.set(leftColEl, { x: leftOffsetX, y: initialY, scale: 0.92, opacity: 0 });
+        gsap.set(rightColEl, { x: rightOffsetX, y: initialY, scale: 0.92, opacity: 0 });
 
-      // All other hero elements start hidden
-      gsap.set('.hello-title-char', { yPercent: 110 });
-      gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 0 });
-      gsap.set('.landing-root .nav-row', { opacity: 0, yPercent: -50 });
-      gsap.set('.tagline', { opacity: 0 });
+        // All other hero elements start hidden
+        gsap.set('.hello-title-char', { yPercent: 110 });
+        gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 0 });
+        gsap.set('.landing-root .nav-row', { opacity: 0, yPercent: -50 });
+        gsap.set('.tagline', { opacity: 0 });
 
-      // 2. Preloader finishes after 1.0s, starting the fall and emergence choreography
-      const PRELOADER_DURATION = 1.0;
+        // 2. Preloader finishes after 1.0s, starting the fall and emergence choreography
+        const PRELOADER_DURATION = 1.0;
 
-      const tl = gsap.timeline({
-        delay: PRELOADER_DURATION,
-        onStart: () => {
-          setIsPreloading(false);
-        },
-      });
+        const tl = gsap.timeline({
+          delay: PRELOADER_DURATION,
+          onStart: () => {
+            setIsPreloading(false);
+          },
+        });
 
-      // 1. The web falls down to its current place in hero section
-      tl.to(
-        webEl,
-        {
-          y: 0,
-          duration: 0.9,
-          ease: 'power4.out',
-        },
-        0
-      );
+        // 1. The web falls down to its current place in hero section
+        tl.to(
+          webEl,
+          {
+            y: 0,
+            duration: 0.9,
+            ease: 'power4.out',
+          },
+          0
+        );
 
       // 2. Bottom left and right texts come from behind it moving to their respective places with a little fade in
       tl.to(
@@ -457,6 +460,7 @@ export default function HomePage() {
         { y: 0, yPercent: -50, opacity: 1, duration: 0.7, ease: 'power3.out' },
         0.35
       );
+      });
     }
   }, []);
 
@@ -471,21 +475,23 @@ export default function HomePage() {
     const banner = document.querySelector('.nav-hover-banner');
     if (banner) {
       banner.classList.add('is-transitioning');
-      gsap.to(banner, {
-        height: '100vh',
-        duration: 0.8,
-        ease: 'power3.inOut',
-        onComplete: () => {
-          sessionStorage.setItem('showCurtain', 'true');
-          navigate(path);
-        },
-      });
+      getGsap().then(({ gsap }) => {
+        gsap.to(banner, {
+          height: '100vh',
+          duration: 0.8,
+          ease: 'power3.inOut',
+          onComplete: () => {
+            sessionStorage.setItem('showCurtain', 'true');
+            navigate(path);
+          },
+        });
 
-      gsap.to('.hover-char', {
-        color: '#ffffff',
-        scale: 1.1,
-        duration: 0.8,
-        ease: 'power3.inOut',
+        gsap.to('.hover-char', {
+          color: '#ffffff',
+          scale: 1.1,
+          duration: 0.8,
+          ease: 'power3.inOut',
+        });
       });
     } else {
       sessionStorage.setItem('showCurtain', 'true');

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import spiderwebLight from '../assets/spiderweb-light.svg';
-import emblemImg from '../assets/emblem-transparent-sm.webp';
+import emblemImg from '../assets/emblem-64w.webp';
 
 const VB_W = 1234;
 const VB_H = 772;
@@ -321,6 +321,8 @@ export default function InteractiveWeb({ isPreloading = false }) {
               src={emblemImg}
               alt="EthixWeb Emblem"
               fetchPriority="high"
+              width="52"
+              height="52"
               className="w-full h-full object-contain select-none"
               style={{
                 filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 0 8px rgba(192,39,45,0.45))', /* taste-skill-ignore */

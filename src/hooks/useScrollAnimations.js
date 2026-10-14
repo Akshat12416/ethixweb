@@ -1,8 +1,5 @@
 import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { getGsap } from '../utils/gsapLoader';
 
 /**
  * Custom hook providing GSAP ScrollTrigger animations matching akshatg-portfolio:
@@ -18,7 +15,10 @@ export function useScrollAnimations(containerRef) {
     let ctx;
     let refreshTimer;
 
-    const setupAnimations = () => {
+    const setupAnimations = async () => {
+      const { gsap, ScrollTrigger } = await getGsap();
+      if (!containerRef?.current && containerRef !== null) return;
+
       ctx = gsap.context(() => {
         // 1. Reveal animations for data-rise elements that enter the viewport
         const riseElements = gsap.utils.toArray('[data-rise]');

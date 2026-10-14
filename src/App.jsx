@@ -1,12 +1,8 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
-import 'lenis/dist/lenis.css';
-
 import { TransitionProvider } from './context/TransitionContext';
 import HomePage from './pages/HomePage';
+import { getGsap } from './utils/gsapLoader';
 
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const IndustriesPage = lazy(() => import('./pages/IndustriesPage'));
@@ -17,10 +13,7 @@ const AdminPage = lazy(() => import('./pages/AdminPage'));
 
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-
 import './styles/landing.css';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -47,7 +40,9 @@ function AnimatedRoutes() {
       setDisplayLocation(location);
 
       const timer = setTimeout(() => {
-        ScrollTrigger.refresh();
+        getGsap().then(({ ScrollTrigger }) => {
+          ScrollTrigger.refresh();
+        });
       }, 120);
       return () => clearTimeout(timer);
     }
@@ -77,13 +72,18 @@ function AnimatedRoutes() {
       setDisplayLocation(pendingLocation.current || location);
     };
 
-    const tl = gsap.timeline({
-      onComplete: () => {
-        pendingLocation.current = null;
-        setIsHomeTransitioning(false);
-        gsap.set(overlay, { autoAlpha: 0, scaleY: 0, height: '16vh' });
-      },
-    });
+    let isCancelled = false;
+
+    getGsap().then(({ gsap }) => {
+      if (isCancelled) return;
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          pendingLocation.current = null;
+          setIsHomeTransitioning(false);
+          gsap.set(overlay, { autoAlpha: 0, scaleY: 0, height: '16vh' });
+        },
+      });
 
     tl.set(overlay, {
       autoAlpha: 1,
@@ -167,7 +167,12 @@ function AnimatedRoutes() {
       2.3
     );
 
-    return () => tl.kill();
+      return () => tl.kill();
+    });
+
+    return () => {
+      isCancelled = true;
+    };
   }, [isHomeTransitioning, location]);
 
   return (
@@ -211,29 +216,43 @@ export default function App() {
       return;
     }
 
-    const lenis = new Lenis({
-      duration: 1.4,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 0,
-    });
-    window.lenis = lenis;
+    let isCancelled = false;
+    let cleanup = null;
 
-    // Sync Lenis scroll with GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
+    Promise.all([import('lenis'), getGsap()]).then(
+      ([{ default: Lenis }, { gsap, ScrollTrigger }]) => {
+        if (isCancelled) return;
 
-    const tickerCb = (time) => {
-      lenis.raf(time * 1000);
-    };
+        const lenis = new Lenis({
+          duration: 1.4,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 0,
+        });
+        window.lenis = lenis;
 
-    gsap.ticker.add(tickerCb);
-    gsap.ticker.lagSmoothing(0);
+        // Sync Lenis scroll with GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        const tickerCb = (time) => {
+          lenis.raf(time * 1000);
+        };
+
+        gsap.ticker.add(tickerCb);
+        gsap.ticker.lagSmoothing(0);
+
+        cleanup = () => {
+          gsap.ticker.remove(tickerCb);
+          lenis.destroy();
+          window.lenis = null;
+        };
+      }
+    );
 
     return () => {
-      gsap.ticker.remove(tickerCb);
-      lenis.destroy();
-      window.lenis = null;
+      isCancelled = true;
+      if (cleanup) cleanup();
     };
   }, []);
 
