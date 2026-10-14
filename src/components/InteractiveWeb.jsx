@@ -65,7 +65,7 @@ const WORK_ANCHORS = [
   {
     title: 'All Phase Plumbing',
     badge: 'AI Booking',
-    img: '/images/case-studies/all-phase-plumbing/hero-640w.webp',
+    img: '/images/case-studies/all-phase-plumbing/thumb-64w.webp',
     x: 430,
     y: 120,
     spokeIndex: 1,
@@ -73,7 +73,7 @@ const WORK_ANCHORS = [
   {
     title: 'Preventive Home',
     badge: 'Smart CRM',
-    img: '/images/case-studies/preventive-home-solutions/hero-640w.webp',
+    img: '/images/case-studies/preventive-home-solutions/thumb-64w.webp',
     x: 940,
     y: 110,
     spokeIndex: 4,
@@ -81,7 +81,7 @@ const WORK_ANCHORS = [
   {
     title: "Gary's Pipelining",
     badge: 'High-Ticket',
-    img: '/images/case-studies/garys-pipeline/hero-640w.webp',
+    img: '/images/case-studies/garys-pipeline/thumb-64w.webp',
     x: 380,
     y: 530,
     spokeIndex: 11,
@@ -89,7 +89,7 @@ const WORK_ANCHORS = [
   {
     title: 'Catching Chrome',
     badge: 'Cloud Platform',
-    img: '/images/case-studies/catching-chrome/hero-640w.webp',
+    img: '/images/case-studies/catching-chrome/thumb-64w.webp',
     x: 970,
     y: 520,
     spokeIndex: 6,

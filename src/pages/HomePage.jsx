@@ -323,15 +323,8 @@ export default function HomePage() {
 
       if (!isDesktop) {
         // Fast-path mobile rendering: Skip preloader animation delay and stagger
-        // to achieve instant paint (<0.8s FCP & LCP) and near-zero Total Blocking Time
+        // Elements are already naturally styled and visible in CSS
         setIsPreloading(false);
-        if (webEl) gsap.set(webEl, { y: 0 });
-        if (leftColEl) gsap.set(leftColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
-        if (rightColEl) gsap.set(rightColEl, { x: 0, y: 0, scale: 1, opacity: 1 });
-        gsap.set('.hello-title-char', { yPercent: 0 });
-        gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
-        gsap.set('.landing-root .nav-row', { opacity: 1, y: 0, yPercent: -50 });
-        gsap.set('.tagline', { opacity: 1 });
         return;
       }
 
