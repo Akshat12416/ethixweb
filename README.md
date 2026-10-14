@@ -181,7 +181,7 @@ npm install
 ### 2. Environment Variables
 Create a `.env` file in the root directory:
 ```env
-DATABASE_URL=postgresql://neondb_owner:<YOUR_NEON_PASSWORD>@ep-sample-pooler.region.aws.neon.tech/neondb?sslmode=require
+DATABASE_URL=postgresql://user:password@ep-sample-pooler.region.aws.neon.tech/neondb?sslmode=require
 ADMIN_SECRET=ethix2026
 ```
 
