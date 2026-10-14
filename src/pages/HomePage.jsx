@@ -1,12 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import TopBar from '../components/TopBar';
 import CapabilitySelector from '../components/CapabilitySelector';
+import { useTransition } from '../context/TransitionContext';
+import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 export default function HomePage() {
+  const containerRef = useRef(null);
+  const { navigateWithTransition } = useTransition();
+
+  useScrollAnimations(containerRef);
+
   return (
-    <div className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
+    <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
       {/* Top perimeter navigation */}
       <TopBar />
 
@@ -31,21 +37,29 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link
-              to="/contact"
+            <a
+              href="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateWithTransition('/contact', 'CONTACT');
+              }}
               data-rise="10"
               className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-sm hover:bg-[#333333] transition-colors duration-150"
             >
               Start a project
-            </Link>
-            <Link
-              to="/our-work"
+            </a>
+            <a
+              href="/our-work"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateWithTransition('/our-work', 'WORK');
+              }}
               data-rise="11"
               className="inline-flex items-center gap-1.5 px-5 py-3.5 text-sm font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
             >
               See our work
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </section>
 

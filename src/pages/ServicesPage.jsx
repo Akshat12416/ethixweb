@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
 import { ArrowUpRight, ChevronDown, CheckCircle2 } from 'lucide-react';
 import TopBar from '../components/TopBar';
+import { useTransition } from '../context/TransitionContext';
+import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 const ENGAGEMENT_STEPS = [
   {

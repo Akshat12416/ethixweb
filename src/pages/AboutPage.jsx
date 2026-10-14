@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
 import { ArrowUpRight, CheckCircle2, X } from 'lucide-react';
 import TopBar from '../components/TopBar';
+import { useTransition } from '../context/TransitionContext';
+import { useScrollAnimations } from '../hooks/useScrollAnimations';
 
 const COMPARISON = [
   {
@@ -102,8 +103,13 @@ const TEAM_PHOTOS = [
 ];
 
 export default function AboutPage() {
+  const containerRef = useRef(null);
+  const { navigateWithTransition } = useTransition();
+
+  useScrollAnimations(containerRef);
+
   return (
-    <div className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
+    <div ref={containerRef} className="min-h-[100svh] bg-[#ebebeb] text-[#1c1c1c] flex flex-col justify-between">
       {/* Perimeter top navigation */}
       <TopBar />
 
@@ -130,19 +136,27 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-1" data-rise="3">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/contact', 'CONTACT');
+                }}
                 className="inline-flex items-center justify-center px-7 py-3.5 bg-[#1c1c1c] text-[#ffffff] font-medium rounded-lg text-base hover:bg-[#333333] transition-colors duration-150"
               >
                 Start a project
-              </Link>
-              <Link
-                to="/our-work"
+              </a>
+              <a
+                href="/our-work"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/our-work', 'WORK');
+                }}
                 className="inline-flex items-center gap-1.5 px-5 py-3.5 text-base font-semibold text-[#1c1c1c] hover:text-[#c0272d] transition-colors duration-150"
               >
                 See our work
                 <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -339,19 +353,27 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/contact', 'CONTACT');
+                }}
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-[#ffffff] text-[#1c1c1c] font-semibold rounded-lg text-base hover:bg-[#e5e5e5] transition-colors duration-150"
               >
                 Start a project
-              </Link>
-              <Link
-                to="/our-work"
+              </a>
+              <a
+                href="/our-work"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateWithTransition('/our-work', 'WORK');
+                }}
                 className="inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-[#ffffff] hover:text-[#c0272d] transition-colors duration-150"
               >
                 See our work
                 <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
