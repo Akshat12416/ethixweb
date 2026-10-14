@@ -26,9 +26,16 @@ export default function TopBar({ className = '' }) {
   const handleHomeClick = (e) => {
     e.preventDefault();
     if (location.pathname === '/') {
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: false });
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true });
+    }
+    window.scrollTo(0, 0);
     navigate('/');
   };
 

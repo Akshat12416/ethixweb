@@ -30,6 +30,10 @@ export default function HomePage() {
     const shouldSkip = sessionStorage.getItem('skipPreloader') === 'true';
     if (shouldSkip) {
       sessionStorage.removeItem('skipPreloader');
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      }
+      window.scrollTo(0, 0);
       setIsPreloading(false);
       hasAnimated.current = true;
 
@@ -43,7 +47,7 @@ export default function HomePage() {
 
       gsap.set('.hello-title-char', { yPercent: 0 });
       gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 1, y: 0 });
-      gsap.set('.landing-root .nav-row', { opacity: 1, y: 0 });
+      gsap.set('.landing-root .nav-row', { opacity: 1, y: 0, yPercent: -50 });
       gsap.set('.tagline', { opacity: 1 });
       return;
     }
@@ -84,7 +88,7 @@ export default function HomePage() {
       // All other hero elements start hidden
       gsap.set('.hello-title-char', { yPercent: 110 });
       gsap.set('.landing-root .nav-left, .landing-root .nav-center, .landing-root .nav-right', { opacity: 0 });
-      gsap.set('.landing-root .nav-row', { opacity: 0 });
+      gsap.set('.landing-root .nav-row', { opacity: 0, yPercent: -50 });
       gsap.set('.tagline', { opacity: 0 });
 
       // 2. Preloader finishes after 1.0s, starting the fall and emergence choreography
@@ -180,11 +184,11 @@ export default function HomePage() {
         0.25
       );
 
-      // Nav row — slides up from below
+      // Nav row — slides up from below while maintaining vertical centering (yPercent: -50)
       tl.fromTo(
         '.landing-root .nav-row',
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
+        { y: 30, yPercent: -50, opacity: 0 },
+        { y: 0, yPercent: -50, opacity: 1, duration: 0.7, ease: 'power3.out' },
         0.35
       );
     }

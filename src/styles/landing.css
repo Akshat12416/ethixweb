@@ -175,9 +175,10 @@
 /* ── NAV ROW WITH HOVER BANNER ── */
 .landing-root .nav-row {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 0;
   width: 100%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

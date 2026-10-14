@@ -46,6 +46,12 @@ function AnimatedRoutes() {
       return () => clearTimeout(timer);
     }
 
+    // Immediately reset scroll and Lenis to prevent offset when transitioning back to home
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true });
+    }
+    window.scrollTo(0, 0);
+
     pendingLocation.current = location;
     setIsHomeTransitioning(true);
   }, [displayLocation, isHomeTransitioning, location]);
@@ -58,6 +64,10 @@ function AnimatedRoutes() {
 
     const revealHome = () => {
       sessionStorage.setItem('skipPreloader', 'true');
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      }
+      window.scrollTo(0, 0);
       setDisplayLocation(pendingLocation.current || location);
     };
 
@@ -65,7 +75,7 @@ function AnimatedRoutes() {
       onComplete: () => {
         pendingLocation.current = null;
         setIsHomeTransitioning(false);
-        gsap.set(overlay, { autoAlpha: 0 });
+        gsap.set(overlay, { autoAlpha: 0, scaleY: 0, height: '16vh' });
       },
     });
 
@@ -73,8 +83,9 @@ function AnimatedRoutes() {
       autoAlpha: 1,
       height: '16vh',
       scaleY: 0,
-      top: '50%',
+      y: 0,
       yPercent: -50,
+      top: '50%',
       transformOrigin: 'center center',
     });
 
