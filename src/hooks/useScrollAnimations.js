@@ -55,7 +55,26 @@ export function useScrollAnimations(containerRef) {
         });
       });
 
-      // 3. Scroll direction aware TopBar
+      // 3. Stage Curtain Wipe Reveal on elements with [data-curtain] (matching portfolio curtain effect)
+      const curtainElements = gsap.utils.toArray('[data-curtain]');
+      curtainElements.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { clipPath: 'inset(100% 0% 0% 0%)' },
+          {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            duration: 1.1,
+            ease: 'power4.inOut',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true,
+            },
+          }
+        );
+      });
+
+      // 4. Scroll direction aware TopBar
       const topBar = document.querySelector('header');
       if (topBar) {
         ScrollTrigger.create({
